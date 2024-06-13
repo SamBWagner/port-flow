@@ -8,5 +8,4 @@ git clone $repository
 
 yarn build
 
-pm2 stop port-flow
-pm2 start port-flow
+pm2 restart port-flow
