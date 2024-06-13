@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Create Next App",
+  title: "Sam Wagner",
   description: "Sam Wagner's personal page discussing learning Rust and game development with Bevy.",
 };
 
