@@ -15,7 +15,7 @@ export default function Home() {
               aria-label="GitHub for the project steam-port"
               target="_blank">
               steam-port
-            </a> where I'm exploring both bloging and building a full stack site using only the most basic of tools like <abbr
+            </a> where I&apos;m exploring both bloging and building a full stack site using only the most basic of tools like <abbr
               id="welcome-message-html-abbr"
               title="Hyper-text Markup Language">HTML</abbr>, <abbr
                 id="welcome-message-css-abbr"
@@ -36,7 +36,7 @@ export default function Home() {
           My first game
         </h3>
         <section>
-          <p>Starting out in the industry there's been one thing I've heard continually. <a href="https://www.rust-lang.org/" rel="nofollow" aria-label="Rust's website" target="_blank">Rust</a> is cool, and you should learn it. So, after endless nagging by a few colleagues and the swathes of social media that pushes it, I’ve made the plunge.</p>
+          <p>Starting out in the industry there&apos;s been one thing I&apos;ve heard continually. <a href="https://www.rust-lang.org/" rel="nofollow" aria-label="Rust's website" target="_blank">Rust</a> is cool, and you should learn it. So, after endless nagging by a few colleagues and the swathes of social media that pushes it, I’ve made the plunge.</p>
           <p>A few colleagues and I chose to partake in GitHub’s GameOff 2023. So, we had to choose a set of technologies to work with. In this case, we chose Rust as the language for our game. But we were left scratching our heads with what game engine to use (or indeed whether to use one at all). We boiled it down to two options: <a href="https://godotengine.org/" rel="nofollow" aria-label="Godot's website" target="_blank">Godot</a>, a relatively famous cross-platform engine which had added some support for the Rust developers, and Bevy, a lightweight, Rust first game engine that was still in its infancy. We ended up choosing Bevy in this case for a ‘full Rust experience’ as one of the members on our team who was much more into Rust said that Godot’s support for Rust was good but not great.</p>
         </section>
         <section>
@@ -88,7 +88,7 @@ export default function Home() {
         </section>
         <section>
           <h4 className="blog-section-heading">Credits</h4>
-          <p>None of this adventure would've been possible without the help of all of the people I mentioned throughout this project. I'll provide links to their GitHubs below. I hope you'll go and check them out!</p>
+          <p>None of this adventure would&apos;ve been possible without the help of all of the people I mentioned throughout this project. I&apos;ll provide links to their GitHubs below. I hope you&apos;ll go and check them out!</p>
           <ul>
             <li>Tylah Kapa - <a href="https://github.com/tkapa" rel="nofollow" aria-label="GitHub profile link: @tkapa" target="_blank">@tkapa</a></li>
             <li>Luke Parker - <a href="https://github.com/hona" rel="nofollow" aria-label="GitHub profile link: @hona" target="_blank">@hona</a></li>
