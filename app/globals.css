@@ -4,22 +4,8 @@
 /* accent1: #3cc3e0 */
 /* accent2: #eb994a */
 
-
-@font-face {
-  font-family: 'Luckiest Guy';
-  src: local('Luckiest Guy'), url('../public/fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-
-}
-
-@font-face {
-  font-family: 'Wellfleet';
-  src: local('Wellfleet'), url('../public/fonts/Wellfleet/Wellfleet-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+* {
+  font-family: 'Wellfleet', monospace;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,10 +19,6 @@ h1, h2 {
 
 h3, h4, h5, h6 {
   font-weight: 500; 
-}
-
-* {
-  font-family: 'Wellfleet', monospace;
 }
 
 body {
@@ -61,7 +43,7 @@ header {
 
 p {
   line-height: 1.5;
-
+  text-align: justify;
 }
 
 a {
