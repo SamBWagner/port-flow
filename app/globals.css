@@ -10,6 +10,7 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--luckiest-guy), 'sans-serif';
+  letter-spacing: 1.5px;
   color: #eb994a;
 }
 
