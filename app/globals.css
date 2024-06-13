@@ -5,11 +5,11 @@
 /* accent2: #eb994a */
 
 * {
-  font-family: 'Wellfleet', monospace;
+  font-family: var(--wellfleet), monospace;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Luckiest Guy', 'sans-serif';
+  font-family: var(--luckiest-guy), 'sans-serif';
   color: #eb994a;
 }
 
