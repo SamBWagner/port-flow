@@ -1,0 +1,30 @@
+.mainContainer {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom:auto;
+    width: auto;
+}
+
+.byLine {
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #3cc3e0;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.socials p {
+    width: auto;
+    text-align: center;
+}
+
+.blogLinkContainer {
+    display: flex;
+    justify-content: center;
+}

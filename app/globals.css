@@ -8,18 +8,27 @@
   font-family: var(--wellfleet), monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--luckiest-guy), 'sans-serif';
   letter-spacing: 1.5px;
   color: #eb994a;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: 600;
 }
 
-h3, h4, h5, h6 {
-  font-weight: 500; 
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
 }
 
 body {

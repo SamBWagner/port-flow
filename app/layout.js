@@ -1,21 +1,22 @@
 import "./globals.css";
-import {Luckiest_Guy, Wellfleet} from "next/font/google"
+import { Luckiest_Guy, Wellfleet } from "next/font/google";
 
 export const metadata = {
   title: "Sam Wagner",
-  description: "Sam Wagner's personal page discussing learning Rust and game development with Bevy.",
+  description:
+    "Sam Wagner's personal page discussing learning Rust and game development with Bevy.",
 };
 
-const luckiestGuy = Luckiest_Guy({ 
-  subsets: ["latin"], 
+const luckiestGuy = Luckiest_Guy({
+  subsets: ["latin"],
   weight: "400",
-  variable: "--luckiest-guy"
- });
+  variable: "--luckiest-guy",
+});
 const wellFleet = Wellfleet({
-   subsets: ["latin"], 
-   weight: "400",
-   variable: "--wellfleet"
-   });
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--wellfleet",
+});
 
 export default function RootLayout({ children }) {
   return (
