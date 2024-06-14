@@ -1,5 +1,5 @@
 export default function Footer() {
-  <footer id="page-footer">
+  <footer className="container" id="page-footer">
     <ul>
       <li id="sams-footer-github-label">
         GitHub:{" "}
@@ -24,5 +24,5 @@ export default function Footer() {
         </a>
       </li>
     </ul>
-  </footer>;
+  </footer>
 }

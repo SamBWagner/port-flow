@@ -66,3 +66,8 @@ a:hover {
   color: #53d4f0;
   text-decoration: none;
 }
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

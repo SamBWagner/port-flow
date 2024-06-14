@@ -7,8 +7,8 @@ export default function home() {
     <main className={styles.mainContainer}>
       <Header />
 
-      <h2 className={styles.byLine}>Develop · Deploy · Deliver</h2>
-      <div className={styles.socials}>
+      <h2 className={`container ${styles.byLine}`}>Develop · Deploy · Deliver</h2>
+      <div className={`container ${styles.socials}`}>
         <p>
           GitHub: <a href="https://github.com/SamBWagner">@SamBWagner</a>
         </p>
@@ -25,7 +25,7 @@ export default function home() {
         </p>
       </div>
 
-      <div className={styles.blogLinkContainer}>
+      <div className={`container ${styles.blogLinkContainer}`}>
         <p>
           Check out my <a href="rust-game">blogs!</a>
         </p>

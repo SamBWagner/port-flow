@@ -5,11 +5,12 @@ export default function Page() {
   return (
     <main>
       <Header />
-      <h2 id="learning-rust-blog-heading" className="blog-heading">
+
+      <h2 id="learning-rust-blog-heading" className="container blog-heading">
         Learning Rust
       </h2>
-      <h3 className="blog-subheading">My first game</h3>
-      <section>
+      <h3 className="container blog-subheading">My first game</h3>
+      <section className="container">
         <p>
           Starting out in the industry there&apos;s been one thing I&apos;ve
           heard continually.{" "}
@@ -47,7 +48,7 @@ export default function Page() {
           was good but not great.
         </p>
       </section>
-      <section>
+      <section className="container">
         <h4 className="blog-section-heading">So, how’s Rust?</h4>
         <p>
           Well, I found Rust to be a rather refreshing affair. Rust’s borrowing
@@ -71,7 +72,7 @@ export default function Page() {
           whatever you need. But I’ll leave that to your own investigations.
         </p>
       </section>
-      <section>
+      <section className="container">
         <h4 className="blog-section-heading">How’s Bevy?</h4>
         <p>
           Bevy is an{" "}
@@ -133,7 +134,7 @@ export default function Page() {
           found it to be great for learning!
         </p>
       </section>
-      <section>
+      <section className="container">
         <h4 className="blog-section-heading">Conclusions</h4>
         <p>
           I found that both Rust and Bevy were, when combined, an excellent
@@ -191,7 +192,7 @@ export default function Page() {
           </li>
         </ol>
       </section>
-      <section>
+      <section className="container">
         <h4 className="blog-section-heading">Credits</h4>
         <p>
           None of this adventure would&apos;ve been possible without the help of
@@ -252,6 +253,7 @@ export default function Page() {
           <a href="/">back home</a>
         </p>
       </section>
+
       <Footer />
     </main>
   );
