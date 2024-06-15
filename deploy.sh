@@ -15,7 +15,5 @@ pm2 restart port-flow
 cd $pathToAPI
 dotnet publish
 
-# Stop the API
-
-# Run the API
-
+sudo systemctl stop api.port-flow.service
+sudo systemctl start api.port-flow.service
