@@ -13,4 +13,6 @@ app.UseForwardedHeaders( new ForwardedHeadersOptions
 
 app.MapGet("/", () => "Hello world!");
 
+app.MapGet("/dong", () => "8==>");
+
 app.Run();
