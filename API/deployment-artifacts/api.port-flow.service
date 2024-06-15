@@ -1,0 +1,14 @@
+[Unit]
+Description=Service for running the api for port-flow
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=samwagner
+ExecStart=/var/www/port-flow/API/bin/Release/net8.0/publish/API
+
+[Install]
+WantedBy=multi-user.target
