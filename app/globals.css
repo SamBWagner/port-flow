@@ -34,7 +34,7 @@ h6 {
 body {
   background-color: #38385b;
   color: #fffffd;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   width: 100%;
