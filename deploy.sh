@@ -8,6 +8,7 @@ cd $path
 git pull 
 
 cd $pathToUI
+yarn install
 yarn build
 pm2 restart port-flow
 
