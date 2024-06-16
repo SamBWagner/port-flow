@@ -6,9 +6,7 @@ public static class ServerService
 {
     public static async Task<string> RunDeployScript()
     {
-        // Get the current directory and build the absolute path
-        var currentDirectory = Directory.GetCurrentDirectory();
-        var scriptPath = Path.Combine(currentDirectory, "../deploy.sh");
+        const string scriptPath = "/var/www/port-flow/deploy.sh";
         
         var startInfo = new ProcessStartInfo
         {
