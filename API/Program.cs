@@ -14,6 +14,8 @@ app.UseForwardedHeaders( new ForwardedHeadersOptions
 
 app.MapGet("/", () => "Hello world!");
 
+app.MapGet("/Health", () => "Server running.");
+
 app.MapGet("/deploy", ServerService.RunDeployScript);
 
 app.Run();
