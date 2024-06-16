@@ -6,8 +6,10 @@ public static class ServerService
 {
     public static async Task<string> RunDeployScript()
     {
-        const string scriptPath = "../deploy.sh";
-
+        // Get the current directory and build the absolute path
+        var currentDirectory = Directory.GetCurrentDirectory();
+        var scriptPath = Path.Combine(currentDirectory, "../deploy.sh");
+        
         var startInfo = new ProcessStartInfo
         {
             FileName = "/bin/bash",
