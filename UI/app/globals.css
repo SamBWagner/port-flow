@@ -5,7 +5,7 @@
 /* accent2: #f4963e */
 
 * {
-  font-family: var(--wellfleet), monospace;
+  font-family: var(--open-sans), 'sans-serif';
 }
 
 h1,
@@ -14,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--luckiest-guy), 'sans-serif';
+  font-family: var(--montserrat), 'sans-serif';
   letter-spacing: 1.5px;
   color: #f4963e;
 }
@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
+  font-weight: 800;
 }
 
 body {
