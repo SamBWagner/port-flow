@@ -2,7 +2,7 @@
 /* black: #16171e */
 /* background-color: #38385b */
 /* accent1: #3cc3e0 */
-/* accent2: #eb994a */
+/* accent2: #f4963e */
 
 * {
   font-family: var(--wellfleet), monospace;
@@ -16,7 +16,7 @@ h5,
 h6 {
   font-family: var(--luckiest-guy), 'sans-serif';
   letter-spacing: 1.5px;
-  color: #eb994a;
+  color: #f4963e;
 }
 
 h1,
@@ -32,7 +32,7 @@ h6 {
 }
 
 body {
-  background-color: #38385b;
+  background-color: #35355a;
   color: #fffffd;
   height: 100dvh;
   display: flex;
