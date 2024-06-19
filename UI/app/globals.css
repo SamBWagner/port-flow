@@ -1,8 +1,13 @@
-/* white: #fffffd */
-/* black: #16171e */
-/* background-color: #38385b */
-/* accent1: #3cc3e0 */
-/* accent2: #f4963e */
+:root {
+  --white: #fffffd;
+  --black: #16171e;
+  --background-color: #38385b;
+  --background-color-lightened: #48486b;
+  --accent1: #3cc3e0;
+  --accent2: #f4963e;
+
+  --base-line-height: 1.8;
+}
 
 * {
   font-family: var(--open-sans), 'sans-serif';
@@ -50,9 +55,10 @@ body>* {
 header {
   width: 100%;
 }
-
+ol,
+ul,
 p {
-  line-height: 1.8;
+  line-height: var(--base-line-height);
   text-align: justify;
 }
 
@@ -65,6 +71,12 @@ a {
 a:hover {
   color: #53d4f0;
   text-decoration: none;
+}
+
+code {
+  font-family: var(--fira-code), monospace;
+  border-radius: 0.2rem;
+  background-color: var(--background-color-lightened)
 }
 
 .container {

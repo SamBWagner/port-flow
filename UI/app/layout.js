@@ -1,5 +1,5 @@
 import "./globals.css";
-import {  Open_Sans, Montserrat } from "next/font/google";
+import {  Open_Sans, Montserrat, Fira_Code } from "next/font/google";
 
 export const metadata = {
   title: "Sam Wagner",
@@ -17,11 +17,16 @@ const wellFleet = Open_Sans({
   weight: "400",
   variable: "--open-sans",
 });
+const firaCode = Fira_Code({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--fira-code",
+});
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${v2323.variable} ${wellFleet.variable}`}>
+      <body className={`${firaCode.variable} ${v2323.variable} ${wellFleet.variable}`}>
         {children}
       </body>
     </html>
