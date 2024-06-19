@@ -76,7 +76,9 @@ a:hover {
 code {
   font-family: var(--fira-code), monospace;
   border-radius: 0.2rem;
-  background-color: var(--background-color-lightened)
+  background-color: var(--background-color-lightened);
+  padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+  
 }
 
 .container {

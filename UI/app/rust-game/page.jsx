@@ -1,10 +1,13 @@
 import Footer from "../components/footer";
 import Header from "../components/header";
+import style from "./style.module.css";
 
 export default function Page() {
   return (
     <main>
-      <Header />
+      <a href="/" className={style.headerLink}>
+        <Header />
+      </a>
 
       <h2 id="learning-rust-blog-heading" className="container blog-heading">
         Learning Rust
