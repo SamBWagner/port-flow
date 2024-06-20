@@ -1,4 +1,6 @@
 .mainContainer {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -7,9 +9,26 @@
     width: auto;
 }
 
-.byLine {
-    padding-bottom: 1rem;
-    border-bottom: 3px solid #3cc3e0;
+.divider {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 1px;
+    height: 3px;
+    background-color: var(--accent1);
+
+    animation: grow 0.4s ease-in-out forwards;
+    transform-origin: left;
+}
+
+@keyframes grow {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+    
 }
 
 .socials {

@@ -8,6 +8,7 @@ export default function home() {
       <Header />
 
       <h2 className={`${styles.byLine}`}>Develop · Deploy · Deliver</h2>
+      <hr className={`${styles.divider}`}></hr>
       <div className={`${styles.socials}`}>
         <p>
           GitHub: <a href="https://github.com/SamBWagner">@SamBWagner</a>
