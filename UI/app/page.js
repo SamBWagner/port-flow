@@ -4,7 +4,7 @@ import Footer from "./components/footer";
 
 export default function home() {
   return (
-    <main className={styles.mainContainer}>
+    <main className={`container ${styles.mainContainer}`}>
       <Header />
 
       <h2 className={`container ${styles.byLine}`}>Develop · Deploy · Deliver</h2>
