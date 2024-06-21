@@ -1,5 +1,5 @@
 import "./globals.css";
-import {  Open_Sans, Montserrat, Fira_Code } from "next/font/google";
+import {  Cabin, Neuton, Fira_Code } from "next/font/google";
 
 export const metadata = {
   title: "Sam Wagner",
@@ -7,15 +7,15 @@ export const metadata = {
     "Sam Wagner's personal page discussing learning Rust and game development with Bevy.",
 };
 
-const v2323 = Montserrat({
+const v2323 = Neuton({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--montserrat",
+  weight: ["200", "300", "400", "700", "800"],
+  variable: "--neuton",
 });
-const wellFleet = Open_Sans({
+const wellFleet = Cabin({
   subsets: ["latin"],
   weight: "400",
-  variable: "--open-sans",
+  variable: "--cabin",
 });
 const firaCode = Fira_Code({
   subsets: ["latin"],
