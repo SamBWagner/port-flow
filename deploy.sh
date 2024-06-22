@@ -9,15 +9,18 @@ cd $path || { echo "Failed to change directory to $path"; exit 1; }
 date=$(date)
 
 if [ -f "$HOME/.bash_profile" ]; then
-    source "$HOME/.bash_profile"
+    source "$HOME/.bash_profile"; else
+    echo "No .bash_profile found" >> $pathToLogFile
 fi
 
 if [ -f "$HOME/.bashrc" ]; then
-    source "$HOME/.bashrc"
+    source "$HOME/.bashrc"; else
+    echo "No .bashrc found" >> $pathToLogFile
 fi
 
 if [ -f "$HOME/.profile" ]; then
-    source "$HOME/.profile"
+    source "$HOME/.profile"; else 
+    echo "No .profile found" >> $pathToLogFile
 fi
 
 if [ ! -f $pathToLogFile ]; then
