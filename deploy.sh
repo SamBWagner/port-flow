@@ -26,13 +26,16 @@ fi
 # Ensure the PATH includes the NVM binaries
 export PATH="$NVM_DIR/versions/node/$(nvm current)/bin:$PATH"
 
+# Log the PATH for debugging
+echo "PATH: $PATH" >> $pathToLogFile
+
 if [ ! -f $pathToLogFile ]; then
     touch $pathToLogFile || { echo "Failed to create log file"; exit 1; }
 fi
 
 echo "-----------------------------------" >> $pathToLogFile
 echo "Deployment started at: ${date}" >> $pathToLogFile
-echo "Runninng as $(whoami)" >> $pathToLogFile
+echo "Running as $(whoami)" >> $pathToLogFile
 
 if ! git pull >> $pathToLogFile 2>&1; then
     echo "ERROR: Git pull failed" >> $pathToLogFile
