@@ -12,6 +12,7 @@ if [ ! -f $pathToLogFile ]; then
     touch $pathToLogFile || { echo "Failed to create log file"; exit 1; }
 fi
 
+echo "-----------------------------------" >> $pathToLogFile
 echo "Deployment started at: ${date}" >> $pathToLogFile
 
 if ! git pull >> $pathToLogFile 2>&1; then
@@ -72,3 +73,4 @@ else
 fi
 
 echo "Deployment finished at: $(date)" >> $pathToLogFile
+echo "-----------------------------------" >> $pathToLogFile
