@@ -14,7 +14,7 @@ fi
 
 echo "Deployment started at: ${date}" >> $pathToLogFile
 
-if ! git pull >> $pathToLogFile; then
+if ! git pull >> $pathToLogFile 2>&1; then
     echo "ERROR: Git pull failed" >> $pathToLogFile
     echo "Stopping deployment" >> $pathToLogFile
     echo "-----------------------------------" >> $pathToLogFile
@@ -22,21 +22,21 @@ if ! git pull >> $pathToLogFile; then
 fi
 
 cd $pathToUI || { echo "Failed to change directory to $pathToUI"; exit 1; }
-if ! yarn install >> $pathToLogFile; then
+if ! yarn install >> $pathToLogFile 2>&1; then
     echo "ERROR: Yarn install failed" >> $pathToLogFile
     echo "Stopping deployment" >> $pathToLogFile
     echo "-----------------------------------" >> $pathToLogFile
     exit 1
 fi
 
-if ! yarn build; then
+if ! yarn build >> $pathToLogFile 2>&1; then
     echo "ERROR: Yarn build failed" >> $pathToLogFile
     echo "Stopping deployment" >> $pathToLogFile
     echo "-----------------------------------" >> $pathToLogFile
     exit 1
 fi
 
-if ! pm2 restart port-flow; then
+if ! pm2 restart port-flow >> $pathToLogFile 2>&1; then
     echo "ERROR: PM2 restart failed" >> $pathToLogFile
     echo "Stopping deployment" >> $pathToLogFile
     echo "-----------------------------------" >> $pathToLogFile
@@ -44,7 +44,7 @@ if ! pm2 restart port-flow; then
 fi
 
 cd $pathToAPI || { echo "Failed to change directory to $pathToAPI"; exit 1; }
-if dotnet publish; then
+if dotnet publish >> $pathToLogFile 2>&1; then
     echo "API published" >> $pathToLogFile
 else
     echo "ERROR: API not published" >> $pathToLogFile
@@ -53,7 +53,7 @@ else
     exit 1
 fi
 
-if sudo systemctl stop api.port-flow.service; then
+if sudo systemctl stop api.port-flow.service >> $pathToLogFile 2>&1; then
     echo "Service stopped" >> $pathToLogFile
 else
     echo "ERROR: Service not stopped" >> $pathToLogFile
@@ -62,7 +62,7 @@ else
     exit 1
 fi
 
-if sudo systemctl start api.port-flow.service; then
+if sudo systemctl start api.port-flow.service >> $pathToLogFile 2>&1; then
     echo "Service started" >> $pathToLogFile
 else
     echo "ERROR: Service not started" >> $pathToLogFile
