@@ -5,6 +5,9 @@ pathToUI="/var/www/port-flow/UI/"
 pathToAPI="/var/www/port-flow/API/"
 pathToLogFile="/var/www/port-flow/deploy.log"
 
+$YARN_PATH ="/home/samwagner/.nvm/versions/node/v20.14.0/bin/yarn"
+
+
 cd $path || { echo "Failed to change directory to $path"; exit 1; }
 date=$(date)
 
@@ -24,14 +27,14 @@ if ! git pull >> $pathToLogFile 2>&1; then
 fi
 
 cd $pathToUI || { echo "Failed to change directory to $pathToUI"; exit 1; }
-if ! yarn install >> $pathToLogFile 2>&1; then
+if ! $YARN_PATH install >> $pathToLogFile 2>&1; then
     echo "ERROR: Yarn install failed" >> $pathToLogFile
     echo "Stopping deployment" >> $pathToLogFile
     echo "-----------------------------------" >> $pathToLogFile
     exit 1
 fi
 
-if ! yarn build >> $pathToLogFile 2>&1; then
+if ! $YARN_PATH build >> $pathToLogFile 2>&1; then
     echo "ERROR: Yarn build failed" >> $pathToLogFile
     echo "Stopping deployment" >> $pathToLogFile
     echo "-----------------------------------" >> $pathToLogFile
