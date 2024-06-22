@@ -78,7 +78,7 @@ fi
 
 # Debugging: Log before stopping the service
 echo "Stopping service..." >> $pathToLogFile
-if sudo systemctl stop api.port-flow.service >> $pathToLogFile 2>&1; then
+if sudo -n systemctl stop api.port-flow.service >> $pathToLogFile 2>&1; then
     echo "Service stopped" >> $pathToLogFile
 else
     echo "ERROR: Service not stopped" >> $pathToLogFile
@@ -89,7 +89,7 @@ fi
 
 # Debugging: Log before starting the service
 echo "Starting service..." >> $pathToLogFile
-if sudo systemctl start api.port-flow.service >> $pathToLogFile 2>&1; then
+if sudo -n systemctl start api.port-flow.service >> $pathToLogFile 2>&1; then
     echo "Service started" >> $pathToLogFile
 else
     echo "ERROR: Service not started" >> $pathToLogFile
