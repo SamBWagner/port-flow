@@ -8,8 +8,17 @@ pathToLogFile="/var/www/port-flow/deploy.log"
 cd $path || { echo "Failed to change directory to $path"; exit 1; }
 date=$(date)
 
-echo $PATH >> $pathToLogFile 2>&1
-echo $(ls -la /home/samwagner/.nvm/versions/node/v20.14.0/bin) >> $pathToLogFile 2>&1
+if [ -f "$HOME/.bash_profile" ]; then
+    source "$HOME/.bash_profile"
+fi
+
+if [ -f "$HOME/.bashrc" ]; then
+    source "$HOME/.bashrc"
+fi
+
+if [ -f "$HOME/.profile" ]; then
+    source "$HOME/.profile"
+fi
 
 if [ ! -f $pathToLogFile ]; then
     touch $pathToLogFile || { echo "Failed to create log file"; exit 1; }
