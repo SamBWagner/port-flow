@@ -5,7 +5,7 @@ pathToUI="/var/www/port-flow/UI/"
 pathToAPI="/var/www/port-flow/API/"
 pathToLogFile="/var/www/port-flow/deploy.log"
 
-$YARN_PATH ="/home/samwagner/.nvm/versions/node/v20.14.0/bin/yarn"
+$YARN_PATH="/home/samwagner/.nvm/versions/node/v20.14.0/bin/yarn"
 
 
 cd $path || { echo "Failed to change directory to $path"; exit 1; }
