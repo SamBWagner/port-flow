@@ -15,6 +15,8 @@ fi
 echo "-----------------------------------" >> $pathToLogFile
 echo "Deployment started at: ${date}" >> $pathToLogFile
 
+echo "Runninng as $(whoami)" >> $pathToLogFile
+
 if ! git pull >> $pathToLogFile 2>&1; then
     echo "ERROR: Git pull failed" >> $pathToLogFile
     echo "Stopping deployment" >> $pathToLogFile
