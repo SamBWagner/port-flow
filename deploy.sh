@@ -8,20 +8,23 @@ pathToLogFile="/var/www/port-flow/deploy.log"
 cd $path || { echo "Failed to change directory to $path"; exit 1; }
 date=$(date)
 
-if [ -f "$HOME/.bash_profile" ]; then
-    source "$HOME/.bash_profile"; else
-    echo "No .bash_profile found" >> $pathToLogFile
+# Source NVM and set up Node environment
+export NVM_DIR="$HOME/.nvm"
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+    . "$NVM_DIR/nvm.sh"
+else
+    echo "ERROR: NVM is not installed or nvm.sh not found" >> $pathToLogFile
+    exit 1
 fi
 
-if [ -f "$HOME/.bashrc" ]; then
-    source "$HOME/.bashrc"; else
-    echo "No .bashrc found" >> $pathToLogFile
+# Verify if yarn is available
+if ! command -v yarn &> /dev/null; then
+    echo "ERROR: Yarn is not installed or not in the PATH" >> $pathToLogFile
+    exit 1
 fi
 
-if [ -f "$HOME/.profile" ]; then
-    source "$HOME/.profile"; else 
-    echo "No .profile found" >> $pathToLogFile
-fi
+# Ensure the PATH includes the NVM binaries
+export PATH="$NVM_DIR/versions/node/$(nvm current)/bin:$PATH"
 
 if [ ! -f $pathToLogFile ]; then
     touch $pathToLogFile || { echo "Failed to create log file"; exit 1; }
