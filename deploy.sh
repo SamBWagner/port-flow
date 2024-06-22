@@ -9,7 +9,7 @@ cd $path || { echo "Failed to change directory to $path"; exit 1; }
 date=$(date)
 
 echo $PATH >> $pathToLogFile 2>&1
-echo ls -la /home/samwagner/.nvm/versions/node/v20.14.0/bin >> $pathToLogFile 2>&1
+echo $(ls -la /home/samwagner/.nvm/versions/node/v20.14.0/bin) >> $pathToLogFile 2>&1
 
 if [ ! -f $pathToLogFile ]; then
     touch $pathToLogFile || { echo "Failed to create log file"; exit 1; }
