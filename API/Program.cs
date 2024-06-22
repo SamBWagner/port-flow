@@ -16,6 +16,10 @@ app.MapGet("/", () => "Hello world!");
 
 app.MapGet("/Health", () => "Server running.");
 
-app.MapGet("/deploy", ServerService.RunDeployScript);
+app.MapGet("/deploy", () =>
+{
+    ServerService.RunDeployScript();
+    return "Deploying.";
+});
 
 app.Run();
