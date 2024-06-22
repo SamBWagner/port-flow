@@ -14,24 +14,32 @@ fi
 
 echo "Deployment started at: ${date}" >> $pathToLogFile
 
-if ! git pull; then
-    echo "Git pull failed" >> $pathToLogFile
+if ! git pull >> $pathToLogFile; then
+    echo "ERROR: Git pull failed" >> $pathToLogFile
+    echo "Stopping deployment" >> $pathToLogFile
+    echo "-----------------------------------" >> $pathToLogFile
     exit 1
 fi
 
 cd $pathToUI || { echo "Failed to change directory to $pathToUI"; exit 1; }
-if ! yarn install; then
-    echo "Yarn install failed" >> $pathToLogFile
+if ! yarn install >> $pathToLogFile; then
+    echo "ERROR: Yarn install failed" >> $pathToLogFile
+    echo "Stopping deployment" >> $pathToLogFile
+    echo "-----------------------------------" >> $pathToLogFile
     exit 1
 fi
 
 if ! yarn build; then
-    echo "Yarn build failed" >> $pathToLogFile
+    echo "ERROR: Yarn build failed" >> $pathToLogFile
+    echo "Stopping deployment" >> $pathToLogFile
+    echo "-----------------------------------" >> $pathToLogFile
     exit 1
 fi
 
 if ! pm2 restart port-flow; then
-    echo "PM2 restart failed" >> $pathToLogFile
+    echo "ERROR: PM2 restart failed" >> $pathToLogFile
+    echo "Stopping deployment" >> $pathToLogFile
+    echo "-----------------------------------" >> $pathToLogFile
     exit 1
 fi
 
@@ -39,21 +47,27 @@ cd $pathToAPI || { echo "Failed to change directory to $pathToAPI"; exit 1; }
 if dotnet publish; then
     echo "API published" >> $pathToLogFile
 else
-    echo "API not published" >> $pathToLogFile
+    echo "ERROR: API not published" >> $pathToLogFile
+    echo "Stopping deployment" >> $pathToLogFile
+    echo "-----------------------------------" >> $pathToLogFile
     exit 1
 fi
 
 if sudo systemctl stop api.port-flow.service; then
     echo "Service stopped" >> $pathToLogFile
 else
-    echo "Service not stopped" >> $pathToLogFile
+    echo "ERROR: Service not stopped" >> $pathToLogFile
+    echo "Stopping deployment" >> $pathToLogFile
+    echo "-----------------------------------" >> $pathToLogFile
     exit 1
 fi
 
 if sudo systemctl start api.port-flow.service; then
     echo "Service started" >> $pathToLogFile
 else
-    echo "Service not started" >> $pathToLogFile
+    echo "ERROR: Service not started" >> $pathToLogFile
+    echo "Stopping deployment" >> $pathToLogFile
+    echo "-----------------------------------" >> $pathToLogFile
     exit 1
 fi
 
