@@ -8,15 +8,6 @@ pathToLogFile="/var/www/port-flow/deploy.log"
 cd $path || { echo "Failed to change directory to $path"; exit 1; }
 date=$(date)
 
-$YARN_BINARY=$(which yarn)
-
-if [ -z $YARN_BINARY ]; then
-    echo "ERROR: Yarn not found" >> $pathToLogFile
-    echo "Stopping deployment" >> $pathToLogFile
-    echo "-----------------------------------" >> $pathToLogFile
-    exit 1
-fi
-
 if [ ! -f $pathToLogFile ]; then
     touch $pathToLogFile || { echo "Failed to create log file"; exit 1; }
 fi
