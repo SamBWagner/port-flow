@@ -8,8 +8,6 @@ pathToLogFile="./deploy.log"
 cd $path
 date=$(date)
 
-cd $pathToLogFile
-
 if [ ! -f $pathToLogFile ]; then
     touch $pathToLogFile
 fi
