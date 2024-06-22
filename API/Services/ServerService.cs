@@ -4,10 +4,10 @@ namespace API.Services;
 
 public static class ServerService
 {
-    public static async Task<string> RunDeployScript()
+    public static void RunDeployScript()
     {
         const string scriptPath = "/var/www/port-flow/deploy.sh";
-        
+
         var startInfo = new ProcessStartInfo
         {
             FileName = "/bin/bash",
@@ -22,19 +22,6 @@ public static class ServerService
         process.StartInfo = startInfo;
 
         process.Start();
-
-        var output = await process.StandardOutput.ReadToEndAsync();
-        var errors = await process.StandardError.ReadToEndAsync();
-
-        await process.WaitForExitAsync();
-
-        if (process.ExitCode == 0)
-        {
-            Console.WriteLine("Output: " + output);
-            return $"Success: {output}";
-        }
-
-        Console.WriteLine("Errors: " + errors);
-        return $"Failure: {errors}";
-    }    
+    }
+    
 }
