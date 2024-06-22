@@ -11,7 +11,7 @@ public static class ServerService
         var startInfo = new ProcessStartInfo
         {
             FileName = "/bin/bash",
-            Arguments = scriptPath,
+            Arguments = "-l -c 'source ~/.bash_profile && " + scriptPath + "'",
             RedirectStandardOutput = true,
             RedirectStandardError = true,
             UseShellExecute = false,
