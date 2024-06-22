@@ -5,16 +5,17 @@ pathToUI="/var/www/port-flow/UI/"
 pathToAPI="/var/www/port-flow/API/"
 pathToLogFile="./deploy.log"
 
+cd $path
 date=$(date)
 
 cd $pathToLogFile
+
 if [ ! -f $pathToLogFile ]; then
     touch $pathToLogFile
 fi
 
 echo "Deployment started at: "${date} >> $pathToLogFile
 
-cd $path
 git pull 
 
 cd $pathToUI
