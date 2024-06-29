@@ -1,4 +1,3 @@
-using API.Services;
 using Microsoft.AspNetCore.HttpOverrides;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,11 +14,5 @@ app.UseForwardedHeaders( new ForwardedHeadersOptions
 app.MapGet("/", () => "Hello world!");
 
 app.MapGet("/Health", () => "Server running.");
-
-app.MapGet("/deploy", () =>
-{
-    ServerService.RunDeployScript();
-    return "Deploying.";
-});
 
 app.Run();
