@@ -21,7 +21,7 @@ export default function home() {
             aria-labelledby="sams-footer-linkedin-label"
             target="_blank"
           >
-            Sam Wagner
+            Sam Wagner test
           </a>
         </p>
       </div>
