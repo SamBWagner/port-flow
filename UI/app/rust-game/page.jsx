@@ -4,7 +4,7 @@ import style from "./style.module.css";
 
 export default function Page() {
   return (
-    <main>
+    <main className={style.mainContainer}>
       <a href="/" className={style.headerLink}>
         <Header />
       </a>

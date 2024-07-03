@@ -1,0 +1,25 @@
+.cardLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+
+    background-color: var(--background-color-lightened);
+
+    transition: transform 0.1s ease-in-out, box-shadow 0.4s ease-in-out;
+    transform-origin: center;
+}
+
+.card p {
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: scale(1.01);
+}

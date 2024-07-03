@@ -3,10 +3,14 @@
   --black: #16171e;
   --background-color: #34344A;
   --background-color-lightened: #48486b;
+  --background-color-darkened: #1f1f2e;
   --accent1: #3cc3e0;
   --accent2: #f4963e;
 
   --base-line-height: 1.8;
+  --footer-height: 100px;
+
+  --border-radius: 8px;
 }
 
 * {

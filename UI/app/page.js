@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 import Header from "./components/header";
-import Footer from "./components/footer";
+import BlogCard from "./components/blogCard";
 
 export default function home() {
   return (
@@ -9,6 +9,18 @@ export default function home() {
 
       <h2 className={`${styles.byLine}`}>Develop · Deploy · Deliver</h2>
       <hr className={`${styles.divider}`}></hr>
+      <div className={`${styles.blogCardContainer}`}>
+        <BlogCard url="rust-game">
+          <h3>Learning Rust</h3>
+          <p>
+            Starting out in the industry there&apos;s been one thing I&apos;ve
+            heard continually. Rust is cool, and you should learn it. So, after
+            endless nagging by a few colleagues and the swathes of social media
+            that pushes it, I’ve made the plunge.
+          </p>
+        </BlogCard>
+      </div>
+
       <div className={`${styles.socials}`}>
         <p>
           GitHub: <a href="https://github.com/SamBWagner">@SamBWagner</a>
@@ -25,14 +37,6 @@ export default function home() {
           </a>
         </p>
       </div>
-
-      <div className={`${styles.blogLinkContainer}`}>
-        <p>
-          Check out my <a href="rust-game">blogs!</a>
-        </p>
-      </div>
-
-      <Footer />
     </main>
   );
 }

@@ -1,0 +1,19 @@
+.container {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color-darkened);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    border-radius: var(--border-radius);
+}
+
+.ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    gap: 1rem;
+}
