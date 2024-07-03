@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import style from "./style.module.css";
@@ -5,9 +6,9 @@ import style from "./style.module.css";
 export default function Page() {
   return (
     <main className={style.mainContainer}>
-      <a href="/" className={style.headerLink}>
+      <Link href="/" className={style.headerLink}>
         <Header />
-      </a>
+      </Link>
 
       <h2 id="learning-rust-blog-heading" className="container blog-heading">
         Learning Rust
@@ -253,7 +254,7 @@ export default function Page() {
         </p>
 
         <p>
-          <a href="/">back home</a>
+          <Link href="/">back home</Link>
         </p>
       </section>
 
