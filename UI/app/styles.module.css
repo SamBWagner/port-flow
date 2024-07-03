@@ -54,3 +54,13 @@
     display: flex;
     justify-content: center;
 }
+
+.blogCardReadMore {
+    display: flex;
+    justify-content: end;
+}
+
+.blogCardReadMore p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
