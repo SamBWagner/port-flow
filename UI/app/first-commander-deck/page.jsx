@@ -703,14 +703,20 @@ export default function Page() {
 
             <ul>
               <li>
-                <a href="https://scryfall.com/card/nec/88/sram-senior-edificer">
+                <a
+                  href="https://scryfall.com/card/nec/88/sram-senior-edificer"
+                  target="_blank"
+                >
                   Sram, Senior Edificer
                 </a>{" "}
                 - This card is great because it draws us cards whenever we play
                 an equipment.
               </li>
               <li>
-                <a href="https://scryfall.com/card/cmr/324/mask-of-memory">
+                <a
+                  href="https://scryfall.com/card/cmr/324/mask-of-memory"
+                  target="_blank"
+                >
                   Mask of Memory
                 </a>{" "}
                 - A great card for us as it rewards us for aggressively swinging
@@ -720,15 +726,24 @@ export default function Page() {
 
             <p>
               There are a few more cards like:{" "}
-              <a href="https://scryfall.com/card/cmm/335/akiri-fearless-voyager">
+              <a
+                href="https://scryfall.com/card/cmm/335/akiri-fearless-voyager"
+                target="_blank"
+              >
                 Akiri, Fearless Voyager
               </a>
               ,{" "}
-              <a href="https://scryfall.com/card/cmm/51/puresteel-paladin">
+              <a
+                href="https://scryfall.com/card/cmm/51/puresteel-paladin"
+                target="_blank"
+              >
                 Puresteel Paladin
               </a>
               , and{" "}
-              <a href="https://scryfall.com/card/jmp/479/rogues-gloves">
+              <a
+                href="https://scryfall.com/card/jmp/479/rogues-gloves"
+                target="_blank"
+              >
                 Rogue's Gloves
               </a>
               . But, I'll stop going through every card from here on and just
@@ -750,16 +765,25 @@ export default function Page() {
               include cards that don't directly help your commander, but are
               still important to have in your deck. In this case, our only
               option was to include a copy of{" "}
-              <a href="https://scryfall.com/card/afc/198/argentum-armor">
+              <a
+                href="https://scryfall.com/card/afc/198/argentum-armor"
+                target="_blank"
+              >
                 Argentum Armor
               </a>
               . The rest we filled out with some more general removal spells
               like{" "}
-              <a href="https://scryfall.com/card/dsc/106/swords-to-plowshares">
+              <a
+                href="https://scryfall.com/card/dsc/106/swords-to-plowshares"
+                target="_blank"
+              >
                 Swords to Plowshares
               </a>
               , and{" "}
-              <a href="https://scryfall.com/card/otc/85/path-to-exile">
+              <a
+                href="https://scryfall.com/card/otc/85/path-to-exile"
+                target="_blank"
+              >
                 Path to Exile
               </a>
               . You should never feel bad about including these cards as
@@ -779,14 +803,20 @@ export default function Page() {
 
             <ul>
               <li>
-                <a href="https://scryfall.com/card/c19/62/divine-reckoning">
+                <a
+                  href="https://scryfall.com/card/c19/62/divine-reckoning"
+                  target="_blank"
+                >
                   Divine Reckoning
                 </a>{" "}
                 - This card is great because it allows us to keep our commander
                 while also dealing with our opponents' threats.
               </li>
               <li>
-                <a href="https://scryfall.com/card/cmr/47/slash-the-ranks">
+                <a
+                  href="https://scryfall.com/card/cmr/47/slash-the-ranks"
+                  target="_blank"
+                >
                   Slash the Ranks
                 </a>{" "}
                 - This card is great for the same reasons as Divine Reckoning.
@@ -813,7 +843,10 @@ export default function Page() {
 
             <ul>
               <li>
-                <a href="https://scryfall.com/card/otc/316/scavenger-grounds">
+                <a
+                  href="https://scryfall.com/card/otc/316/scavenger-grounds"
+                  target="_blank"
+                >
                   Scavenger Grounds
                 </a>{" "}
                 - A quick and easy way to handle any and all graveyard
@@ -822,7 +855,10 @@ export default function Page() {
                 some graveyard shenanigans yourself.
               </li>
               <li>
-                <a href="https://scryfall.com/card/neo/26/lion-sash">
+                <a
+                  href="https://scryfall.com/card/neo/26/lion-sash"
+                  target="_blank"
+                >
                   Lion Sash
                 </a>{" "}
                 - A super cool pickup for our deck, it gives us both a way to
@@ -837,7 +873,10 @@ export default function Page() {
               might've heard people say that land destruction is a bit of a
               no-no in commander. While this isn't entirely true, it's wise to
               note here that I'm not advocating for you to include cards like
-              <a href="https://scryfall.com/card/a25/5/armageddon">
+              <a
+                href="https://scryfall.com/card/a25/5/armageddon"
+                target="_blank"
+              >
                 Armageddon
               </a>{" "}
               which just wholesale slow the game down and lead to a miserable
@@ -848,14 +887,20 @@ export default function Page() {
 
             <ul>
               <li>
-                <a href="https://scryfall.com/card/cm2/253/ghost-quarter">
+                <a
+                  href="https://scryfall.com/card/cm2/253/ghost-quarter"
+                  target="_blank"
+                >
                   Ghost Quarter
                 </a>{" "}
                 - A card that we can also slot into our 40 lands that we can use
                 to handle 1 of our opponents' pesky lands.
               </li>
               <li>
-                <a href="https://scryfall.com/card/otc/283/demolition-field">
+                <a
+                  href="https://scryfall.com/card/otc/283/demolition-field"
+                  target="_blank"
+                >
                   Demolition Field
                 </a>{" "}
                 - Another card just like Ghost Quarter that we can use to handle
@@ -883,7 +928,10 @@ export default function Page() {
                 Now for the pice de resistance. The card that you're the{" "}
                 <strong>most</strong> excited to play. This is the card that
                 makes you go "Woh!" when you draw it. For me, I chose to include
-                <a href="https://scryfall.com/card/neo/7/brilliant-restoration">
+                <a
+                  href="https://scryfall.com/card/neo/7/brilliant-restoration"
+                  target="_blank"
+                >
                   Brilliant Restoration
                 </a>{" "}
                 as I know the "Voltron" strategy can be a bit fragile and I
@@ -922,7 +970,9 @@ export default function Page() {
             <ol>
               <li>
                 Open the Playtester in{" "}
-                <a href="https://www.archidekt.com/">Archidekt</a>
+                <a href="https://www.archidekt.com/" target="_blank">
+                  Archidekt
+                </a>
               </li>
               <li>
                 Draw your opening hand and play the game as you would normally.
@@ -962,7 +1012,7 @@ export default function Page() {
             <h3>Conclusion</h3>
 
             <p>
-              You've now got your first commander deck! Well done! Take it to 
+              You've now got your first commander deck! Well done! Take it to
               your local game store and get in some games! I hope you found this
               guide helpful!
             </p>
