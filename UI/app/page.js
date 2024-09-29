@@ -13,6 +13,7 @@ export default function home() {
         <BlogCard
           url="first-commander-deck"
           urlAria="navigate to the Build your first commander deck article"
+          releaseDate={"September 29th 2024"}
         >
           <h3>Build your first Magic: The Gathering - Commander deck</h3>
           <p>
@@ -25,12 +26,13 @@ export default function home() {
             Finally, we'll give you a few extra tools to help you refine your
             deck as you play and make it your own!
           </p>
-          <div className={styles.blogCardReadMore}>
-            <p>Click to read more</p>
-          </div>
         </BlogCard>
 
-        <BlogCard url="rust-game" urlAria="navigate to Learning Rust blog post">
+        <BlogCard
+          url="rust-game"
+          urlAria="navigate to Learning Rust blog post"
+          releaseDate={"December 10th 2023"}
+        >
           <h3>Learning Rust</h3>
           <p>
             Starting out in the industry there&apos;s been one thing I&apos;ve
