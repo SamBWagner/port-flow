@@ -662,8 +662,8 @@ export default function Page() {
             </ul>
 
             <p>
-              You'll notice that I only list 3 cards here. This isn't because 
-              I'm keeping the list short, it's because there were no other 
+              You'll notice that I only list 3 cards here. This isn't because
+              I'm keeping the list short, it's because there were no other
               options that I could find that worked. So, I'll have to fill out
               the rest of the category with other cards that accelerate my mana,
               but don't directly help my commander.
@@ -671,12 +671,19 @@ export default function Page() {
 
             <ul>
               <li>
-                <a href="https://scryfall.com/card/dsc/94/sol-ring" target="_blank">
+                <a
+                  href="https://scryfall.com/card/dsc/94/sol-ring"
+                  target="_blank"
+                >
                   Sol Ring
-                </a> - Classic ramp card that's in every commander deck.
+                </a>{" "}
+                - Classic ramp card that's in every commander deck.
               </li>
               <li>
-                <a href="https://scryfall.com/card/dsc/92/arcane-signet" target="_blank">
+                <a
+                  href="https://scryfall.com/card/dsc/92/arcane-signet"
+                  target="_blank"
+                >
                   Arcane Signet
                 </a>
               </li>
