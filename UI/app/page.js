@@ -40,9 +40,6 @@ export default function home() {
             endless nagging by a few colleagues and the swathes of social media
             that pushes it, I’ve made the plunge&hellip;
           </p>
-          <div className={styles.blogCardReadMore}>
-            <p>Click to read more</p>
-          </div>
         </BlogCard>
       </div>
 
