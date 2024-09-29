@@ -115,7 +115,7 @@ export default function Page() {
               </li>
               <li>
                 <p>
-                  <strong>Has a clear way to win or progress the game -</strong>
+                  <strong>Has a clear way to win or progress the game</strong> -
                   Having a commander that allows you to play the game is good.
                   But, having a commander that also helps you understand how to
                   win the game is even better.
