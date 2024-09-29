@@ -884,7 +884,7 @@ export default function Page() {
               Ok. So. You'll have to hear me out with this category as you
               might've heard people say that land destruction is a bit of a
               no-no in commander. While this isn't entirely true, it's wise to
-              note here that I'm not advocating for you to include cards like
+              note here that I'm not advocating for you to include cards like{" "}
               <a
                 href="https://scryfall.com/card/a25/5/armageddon"
                 target="_blank"
@@ -939,7 +939,7 @@ export default function Page() {
               <p>
                 Now for the pice de resistance. The card that you're the{" "}
                 <strong>most</strong> excited to play. This is the card that
-                makes you go "Woh!" when you draw it. For me, I chose to include
+                makes you go "Woh!" when you draw it. For me, I chose to include{" "}
                 <a
                   href="https://scryfall.com/card/neo/7/brilliant-restoration"
                   target="_blank"
@@ -959,7 +959,7 @@ export default function Page() {
             <p>
               Now you've got your deck built, you're ready to start playing
               right? Well, yes. If you think you're good to go then head to a
-              site like
+              site like{" "}
               <a href="https://www.mtgmate.com.au/" target="_blank">
                 MTGMate.com.au
               </a>
