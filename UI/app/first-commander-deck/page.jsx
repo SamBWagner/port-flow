@@ -688,6 +688,284 @@ export default function Page() {
                 </a>
               </li>
             </ul>
+
+            <h4>Card draw, 9 cards</h4>
+            <p>
+              Now that we've got our ramp sorted, we need to start looking for
+              cards that help us draw more cards. This is important because it
+              helps us keep our hand full of options and allows us to keep
+              playing the game. No cards, no Magic!
+            </p>
+
+            <p>
+              Here's a few cards that I found that should work well for Wyleth:
+            </p>
+
+            <ul>
+              <li>
+                <a href="https://scryfall.com/card/nec/88/sram-senior-edificer">
+                  Sram, Senior Edificer
+                </a>{" "}
+                - This card is great because it draws us cards whenever we play
+                an equipment.
+              </li>
+              <li>
+                <a href="https://scryfall.com/card/cmr/324/mask-of-memory">
+                  Mask of Memory
+                </a>{" "}
+                - A great card for us as it rewards us for aggressively swinging
+                Wyleth at our opponents. It also helps us filter our draws.
+              </li>
+            </ul>
+
+            <p>
+              There are a few more cards like:{" "}
+              <a href="https://scryfall.com/card/cmm/335/akiri-fearless-voyager">
+                Akiri, Fearless Voyager
+              </a>
+              ,{" "}
+              <a href="https://scryfall.com/card/cmm/51/puresteel-paladin">
+                Puresteel Paladin
+              </a>
+              , and{" "}
+              <a href="https://scryfall.com/card/jmp/479/rogues-gloves">
+                Rogue's Gloves
+              </a>
+              . But, I'll stop going through every card from here on and just
+              list the cards that I think are the best examples of how I'd
+              recommend filling out the category.
+            </p>
+
+            <h4>Spot removal, 9 cards</h4>
+            <p>
+              Now that we've got our ramp and card draw sorted, we need to start
+              looking for cards that help us deal with our opponents' threats.
+              This is important because it helps us keep our opponents from
+              winning the game.
+            </p>
+
+            <p>
+              This category is an example of where you might not get many
+              options that work well with your commander. You might have to
+              include cards that don't directly help your commander, but are
+              still important to have in your deck. In this case, our only
+              option was to include a copy of{" "}
+              <a href="https://scryfall.com/card/afc/198/argentum-armor">
+                Argentum Armor
+              </a>
+              . The rest we filled out with some more general removal spells
+              like{" "}
+              <a href="https://scryfall.com/card/dsc/106/swords-to-plowshares">
+                Swords to Plowshares
+              </a>
+              , and{" "}
+              <a href="https://scryfall.com/card/otc/85/path-to-exile">
+                Path to Exile
+              </a>
+              . You should never feel bad about including these cards as
+              regardless of their ability to synergies with your commander,
+              they're always going to be useful.
+            </p>
+
+            <h4>Board wipes, 2 cards</h4>
+            <p>
+              Now that we've got our spot removal sorted, we need to think about
+              what we do when our game hasn't gone too well, or, our oppponents
+              have gotten a bit out of hand. This is where board wipes come in.
+              Again, try to pick a pair that synergies well with your game plan.
+            </p>
+
+            <p>In this case I've gone with:</p>
+
+            <ul>
+              <li>
+                <a href="https://scryfall.com/card/c19/62/divine-reckoning">
+                  Divine Reckoning
+                </a>{" "}
+                - This card is great because it allows us to keep our commander
+                while also dealing with our opponents' threats.
+              </li>
+              <li>
+                <a href="https://scryfall.com/card/cmr/47/slash-the-ranks">
+                  Slash the Ranks
+                </a>{" "}
+                - This card is great for the same reasons as Divine Reckoning.
+              </li>
+            </ul>
+
+            <h4>Graveyard hate, 2 cards</h4>
+            <p>
+              These next two categories are a bit more niche, but they're still
+              important to have in your deck. Graveyard hate is important as
+              is't a super popular strategy, and, if no one has any way to deal
+              with it. Anyone playing a graveyard strategy will basically, win
+              the game. This is no fun for you as you really do want to have a
+              back and forth game.
+            </p>
+
+            <p>
+              This is also a category where you might find that you're not able
+              to find cards that directly slot into your commander's strategy.
+              However, in this case, we've also decided to choose 1 card that
+              overlaps with our land slots and gives us 1 more card in our
+              "core" category. Pretty cool huh?
+            </p>
+
+            <ul>
+              <li>
+                <a href="https://scryfall.com/card/otc/316/scavenger-grounds">
+                  Scavenger Grounds
+                </a>{" "}
+                - A quick and easy way to handle any and all graveyard
+                strategies that are going on. Do be careful that you don't
+                accidentally exile your own graveyard if you're looking to do
+                some graveyard shenanigans yourself.
+              </li>
+              <li>
+                <a href="https://scryfall.com/card/neo/26/lion-sash">
+                  Lion Sash
+                </a>{" "}
+                - A super cool pickup for our deck, it gives us both a way to
+                deal with some sneaky threats lurking in a players graveyard,
+                and it also gives us a way to pump up our commander!
+              </li>
+            </ul>
+
+            <h4>Land destruction, 2 cards</h4>
+            <p>
+              Ok. So. You'll have to hear me out with this category as you
+              might've heard people say that land destruction is a bit of a
+              no-no in commander. While this isn't entirely true, it's wise to
+              note here that I'm not advocating for you to include cards like
+              <a href="https://scryfall.com/card/a25/5/armageddon">
+                Armageddon
+              </a>{" "}
+              which just wholesale slow the game down and lead to a miserable
+              experience. Instead, I'm advocating that you include at least 2
+              cards that can deal with some of the more powerful lands that are
+              out there.
+            </p>
+
+            <ul>
+              <li>
+                <a href="https://scryfall.com/card/cm2/253/ghost-quarter">
+                  Ghost Quarter
+                </a>{" "}
+                - A card that we can also slot into our 40 lands that we can use
+                to handle 1 of our opponents' pesky lands.
+              </li>
+              <li>
+                <a href="https://scryfall.com/card/otc/283/demolition-field">
+                  Demolition Field
+                </a>{" "}
+                - Another card just like Ghost Quarter that we can use to handle
+                our opponents' lands.
+              </li>
+
+              <p>
+                It's important to note here that we again have a pair of cards
+                which don't directly help our commander. This means that we're
+                going to add 2 more cards into our "core" category! Letting us
+                pick a few more cards that are just cool and fun to play with.
+                In the attached{" "}
+                <a
+                  href="https://www.archidekt.com/decks/9388445/starter_deck_boros_voltron"
+                  target="_blank"
+                >
+                  Archidekt list
+                </a>
+                , I've listed the 3 cards that I chose as extras under the
+                "Extras" category.
+              </p>
+
+              <h4>Sudden "I Win" Card, 1 card</h4>
+              <p>
+                Now for the pice de resistance. The card that you're the{" "}
+                <strong>most</strong> excited to play. This is the card that
+                makes you go "Woh!" when you draw it. For me, I chose to include
+                <a href="https://scryfall.com/card/neo/7/brilliant-restoration">
+                  Brilliant Restoration
+                </a>{" "}
+                as I know the "Voltron" strategy can be a bit fragile and I
+                wanted to include a card that would help me recover from a board
+                wipe in a super flashy way!
+              </p>
+            </ul>
+          </section>
+
+          <section id="buying-and-goldfishing" className="container">
+            <h3>What now?</h3>
+
+            <p>
+              Now you've got your deck built, you're ready to start playing
+              right? Well, yes. If you think you're good to go then head to a
+              site like
+              <a href="https://www.mtgmate.com.au/" target="_blank">
+                MTGMate.com.au
+              </a>
+              , punch in your decklist and start playing! But, if you're a
+              little worried about whether your deck is good or not, I'd
+              recommend one simple thing. Goldfish your deck!
+            </p>
+
+            <h4>Goldfishing</h4>
+            <p>
+              Goldfishing is the act of taking a deck, and sitting a theoretical
+              goldfish across from you and playing the game. This is a great way
+              to see how your deck plays out without the pressure of having an
+              opponent. It can also help you see if you've got the right amount
+              of lands, ramp, card draw, etc.
+            </p>
+
+            <p>Here's my go-to strategy with Goldfishing:</p>
+
+            <ol>
+              <li>
+                Open the Playtester in{" "}
+                <a href="https://www.archidekt.com/">Archidekt</a>
+              </li>
+              <li>
+                Draw your opening hand and play the game as you would normally.
+                <ol>
+                  <li>Is there enough lands? 3 or more is ideal</li>
+                  <li>
+                    Are there cards you can play? Is everything too expensive?
+                  </li>
+                  <li>
+                    Are you happy that you'll be able to play your commander and
+                    "Do the thing" that you designed the deck around doing?
+                  </li>
+                </ol>
+              </li>
+              <li>
+                Play the game to turn 5 and ask yourself the question
+                <ol>
+                  <li>Did I get to play the game?</li>
+                  <li>
+                    Do I have some idea on what I'll be doing for the rest of
+                    the game?
+                  </li>
+                </ol>
+              </li>
+            </ol>
+
+            <p>
+              If you find that you're never able to answer those questions
+              positively, I'd go back to your core cards and maybe make some
+              adjustments. If you're finding that you're always able to answer
+              those questions positively, then congratulations! You've built a
+              great deck!
+            </p>
+          </section>
+
+          <section id="conclusion" className="container">
+            <h3>Conclusion</h3>
+
+            <p>
+              You've now got your first commander deck! Well done! Take it to 
+              your local game store and get in some games! I hope you found this
+              guide helpful!
+            </p>
           </section>
         </div>
       </main>
