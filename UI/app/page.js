@@ -10,6 +10,26 @@ export default function home() {
       <h2 className={`${styles.byLine}`}>Develop · Deploy · Deliver</h2>
       <hr className={`${styles.divider}`}></hr>
       <div className={`${styles.blogCardContainer}`}>
+        <BlogCard
+          url="first-commander-deck"
+          urlAria="navigate to the Build your first commander deck article"
+        >
+          <h3>Build your first Magic: The Gathering - Commander deck</h3>
+          <p>
+            Building your first Commander deck can be both exciting and
+            overwhelming. With thousands of cards to choose from and countless
+            strategies to explore, it's easy to feel lost. This guide is
+            designed to help new players step into the world of Commander. We'll
+            start by commanders that are perfect for beginners. Then, we'll walk
+            you through a simple framework for building your first deck.
+            Finally, we'll give you a few extra tools to help you refine your
+            deck as you play and make it your own!
+          </p>
+          <div className={styles.blogCardReadMore}>
+            <p>Click to read more</p>
+          </div>
+        </BlogCard>
+
         <BlogCard url="rust-game" urlAria="navigate to Learning Rust blog post">
           <h3>Learning Rust</h3>
           <p>

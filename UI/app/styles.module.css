@@ -52,6 +52,8 @@
 .blogCardContainer {
     padding-top: 3rem;;
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
     justify-content: center;
 }
 
