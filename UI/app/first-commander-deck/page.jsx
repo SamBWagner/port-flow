@@ -617,6 +617,70 @@ export default function Page() {
                 - What's better than one combat? Two combats!
               </li>
             </ul>
+
+            <h4>Ramp, 9 cards</h4>
+            <p>
+              So now we've built out our core cards, we need to start filling
+              out the cards in the template. Your goal here is to find as many
+              cards as you can that fulfill the goal of the category, while also
+              working well with your commander. In this case, becase we're
+              building a deck around Wyleth, we're going to want to find cards
+              that both get us more mana and power up our commander.
+            </p>
+
+            <p>Here's a few of the cards that fit the bill:</p>
+
+            <ul>
+              <li>
+                <a
+                  href="https://scryfall.com/card/mom/131/beamtown-beatstick"
+                  target="_blank"
+                >
+                  Beamtown Beatstick
+                </a>{" "}
+                - This card gets us some treasure which can accelerate our mana
+                while also strapping wyleth up with some evasion and power.
+              </li>
+              <li>
+                <a
+                  href="https://scryfall.com/card/lci/143/diamond-pick-axe"
+                  target="_blank"
+                >
+                  Diamond Pick Axe
+                </a>{" "}
+                - This is the same as the Beatstick above.
+              </li>
+              <li>
+                <a
+                  href="https://scryfall.com/card/cmm/380/explorers-scope"
+                  target="_blank"
+                >
+                  Explorer's Scope
+                </a>{" "}
+                - This card could get us some extra lands in the early game!
+              </li>
+            </ul>
+
+            <p>
+              You'll notice that I only list 3 cards here. This isn't because 
+              I'm keeping the list short, it's because there were no other 
+              options that I could find that worked. So, I'll have to fill out
+              the rest of the category with other cards that accelerate my mana,
+              but don't directly help my commander.
+            </p>
+
+            <ul>
+              <li>
+                <a href="https://scryfall.com/card/dsc/94/sol-ring" target="_blank">
+                  Sol Ring
+                </a> - Classic ramp card that's in every commander deck.
+              </li>
+              <li>
+                <a href="https://scryfall.com/card/dsc/92/arcane-signet" target="_blank">
+                  Arcane Signet
+                </a>
+              </li>
+            </ul>
           </section>
         </div>
       </main>
