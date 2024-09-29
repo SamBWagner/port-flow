@@ -1091,7 +1091,7 @@ export default function Page() {
             </p>
 
             <p>
-              <a href="/">Back home</a>
+              <Link href="/">back home</Link>
             </p>
           </section>
         </div>
