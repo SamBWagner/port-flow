@@ -524,6 +524,18 @@ export default function Page() {
             </p>
           </section>
 
+          <section id="skip-the-example-section" className="container">
+            <p>
+              If you don't want to go through an example with me, you can jump
+              to the next section where I'll give you a few extra tools to help
+              you with your post deck-building experience.
+            </p>
+
+            <p>
+              <a href="#buying-and-goldfishing">Skip the example</a>
+            </p>
+          </section>
+
           <section id="example" className="container">
             <h3>Example: Wyleth, Soul of Steel</h3>
             <p></p>
