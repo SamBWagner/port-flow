@@ -630,6 +630,31 @@ export default function Page() {
               </li>
             </ul>
 
+            <h4>Land, 40 cards</h4>
+            <p>
+              Now we've got our core cards that we've chosen to build around
+              Wyleth, we need to start filling out the rest of the deck. The
+              next part of the puzzle is our lands. I've chosen to suggest a
+              solid 40 lands for all beginner deck brewers to start with. I
+              would simply look at your colors at this point and do an even
+              split between the one/two/three colors you've chosen.
+            </p>
+
+            <p>
+              For Wyleth, that means that I've chosen to do a simple split of 20
+              plains and 20 mountains. Now, if you've looked at the decklist in{" "}
+              <a href="https://www.archidekt.com/decks/9388445/starter_deck_boros_voltron">
+                Archidekt
+              </a>{" "}
+              you may have noticed that there is another land in there called{" "}
+              <a href="https://scryfall.com/card/dsc/96/command-tower">
+                Command Tower
+              </a>
+              . This is a card that comes in untapped and creates both of our
+              colors. In this case, I simply removed a mountain and swapped the
+              command tower in.
+            </p>
+
             <h4>Ramp, 9 cards</h4>
             <p>
               So now we've built out our core cards, we need to start filling
@@ -864,7 +889,7 @@ export default function Page() {
                 - A quick and easy way to handle any and all graveyard
                 strategies that are going on. Do be careful that you don't
                 accidentally exile your own graveyard if you're looking to do
-                some graveyard shenanigans yourself.
+                some graveyard shenanigans yourself. -1 Mountain
               </li>
               <li>
                 <a
@@ -906,7 +931,7 @@ export default function Page() {
                   Ghost Quarter
                 </a>{" "}
                 - A card that we can also slot into our 40 lands that we can use
-                to handle 1 of our opponents' pesky lands.
+                to handle 1 of our opponents' pesky lands. -1 Plains.
               </li>
               <li>
                 <a
@@ -916,7 +941,7 @@ export default function Page() {
                   Demolition Field
                 </a>{" "}
                 - Another card just like Ghost Quarter that we can use to handle
-                our opponents' lands.
+                our opponents' lands. -1 Mountain
               </li>
 
               <p>
@@ -950,6 +975,42 @@ export default function Page() {
                 wanted to include a card that would help me recover from a board
                 wipe in a super flashy way!
               </p>
+            </ul>
+
+            <h4>Extras! 3 cards</h4>
+            <p>
+              Throughout this process, I've been adding cards to the deck and on
+              some occasions, I've been able to find some cards that can fit
+              into a few different categories. This means that I have a few
+              extra slots that I can roll back into my "core" category! In this
+              case I felt like I wanted some ways to protect Wyleth, and to
+              throw in a couple of cool red and white legendary creatures that I
+              found during my search.
+            </p>
+
+            <ul>
+              <li>
+                <a href="https://scryfall.com/card/mom/41/surge-of-salvation">
+                  Surge of Salvation
+                </a>{" "}
+                - A powerful 1 mana instant that we can deploy when Wyleth is
+                about to be removed.
+              </li>
+              <li>
+                <a href="https://scryfall.com/card/afr/219/bruenor-battlehammer">
+                  Bruenor Battlehammer
+                </a>{" "}
+                - This little dude seems super cool and makes Wyleth into an
+                absolute monster!
+              </li>
+              <li>
+                <a href="https://scryfall.com/card/mat/36/nahiri-forged-in-fury">
+                  Nahiri, Forged in Fury
+                </a>{" "}
+                - She seems like a powerhouse to drop onto our board if we draw
+                her and could very well have been put in the "Sudden I Win
+                Category".
+              </li>
             </ul>
           </section>
 
