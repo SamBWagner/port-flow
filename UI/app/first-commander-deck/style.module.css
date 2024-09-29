@@ -1,0 +1,7 @@
+.headerLink {
+    text-decoration: none;
+}
+
+.mainContainer {
+    min-height: calc(100vh - var(--footer-height));
+}
