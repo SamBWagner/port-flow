@@ -25,11 +25,12 @@ export default function Page() {
         <Header />
       </Link>
 
-      <main className="container">
+      <main>
         <h2 className="container">
           Beginner's Guide to Your First Magic: The Gathering - Commander Deck
         </h2>
 
+        <div className="contentContainer">
         <section id="introduction" className="container">
           <p>
             Building your first Commander deck can be both exciting and
@@ -466,9 +467,10 @@ export default function Page() {
             won't explain how to use scryfall in this article but this query is
             asking for any card that's in the commander identity of Red and
             White, is legal in commander, is an equipment, and costs less than 2
-            dollars.
+            dollars (I thought it best to keep to a budget).
           </p>
         </section>
+        </div>
       </main>
 
       <Footer />
