@@ -1,7 +1,13 @@
 import Link from "next/link";
 import styles from "./blogCard.module.css";
 
-export default function BlogCard({ children, title, url, urlAria, releaseDate }) {
+export default function BlogCard({
+  children,
+  title,
+  url,
+  urlAria,
+  releaseDate,
+}) {
   return (
     <Link href={url} className={styles.cardLink}>
       <article className={styles.card}>

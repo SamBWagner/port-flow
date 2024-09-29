@@ -1,5 +1,5 @@
 import "./globals.css";
-import {  Cabin, Neuton, Fira_Code } from "next/font/google";
+import { Cabin, Neuton, Fira_Code } from "next/font/google";
 
 export const metadata = {
   title: "Sam Wagner",
@@ -26,7 +26,9 @@ const firaCode = Fira_Code({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${firaCode.variable} ${v2323.variable} ${wellFleet.variable}`}>
+      <body
+        className={`${firaCode.variable} ${v2323.variable} ${wellFleet.variable}`}
+      >
         {children}
       </body>
     </html>
