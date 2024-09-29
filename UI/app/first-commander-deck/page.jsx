@@ -200,7 +200,7 @@ export default function Page() {
                     Jor Kadeen, First Goldwarden
                   </a>{" "}
                   - Rewards you for playing and equipping creatures. His ability
-                  boosts your team, promoting an aggressive playstyle.
+                  boosts your team, promoting an aggressive play style.
                 </p>
               </li>
               <li>
@@ -307,7 +307,7 @@ export default function Page() {
                     Rigo, Streetwise Mentor
                   </a>{" "}
                   - A commander that offers protection for himself with his
-                  shield counter. He encounrages you to flood the board with 1/1
+                  shield counter. He encourages you to flood the board with 1/1
                   creatures and repeatedly attack.
                 </p>
               </li>
@@ -342,7 +342,7 @@ export default function Page() {
               A well built deck is one that offers you a many opportunities to
               make decisions that impact the game and that allows you to play
               the game the way you want to play it. To that end, a good deck
-              ought to fullfill the following quotas:
+              ought to fulfill the following quotas:
             </p>
 
             <ul>
@@ -393,7 +393,7 @@ export default function Page() {
                   with one of Magic's most common strategies: using the
                   graveyard as a resource. If you don't have any of these, you
                   might find yourself losing to a deck that uses the graveyard
-                  with little to no ways to interact with it. We're maximising
+                  with little to no ways to interact with it. We're maximizing
                   our opportunities to make choices so that you can have more
                   fun!
                 </p>
@@ -401,7 +401,7 @@ export default function Page() {
               <li>
                 <p>
                   <strong>Land destruction (2)</strong> - This is a
-                  contraversial category, but I think it's important to have at
+                  controversial category, but I think it's important to have at
                   least a few ways of dealing with lands. This is because there
                   are many lands that can be very powerful and can win the game
                   on their own. Having some ways to deal with them can be very
@@ -422,7 +422,7 @@ export default function Page() {
                   >
                     Ghost quarter
                   </a>{" "}
-                  as they are next to free to just throw into your decklist and
+                  as they are next to free to just throw into your deck list and
                   can be very impactful.
                 </p>
               </li>
@@ -537,7 +537,7 @@ export default function Page() {
                 Wyleth, Soul of Steel
               </a>{" "}
               as our commander. We'll start with the core of the deck and then
-              fill in the rest. I'd recommend opening the finished decklist on
+              fill in the rest. I'd recommend opening the finished deck list on
               my{" "}
               <a
                 href="https://www.archidekt.com/decks/9388445/starter_deck_boros_voltron"
@@ -555,7 +555,7 @@ export default function Page() {
                 Scryfall
               </a>{" "}
               to search for cards that work well with Wyleth. I'll be looking
-              for cards that fullfill this query{" "}
+              for cards that fulfill this query{" "}
               <code>ci:boros legal:commander type:equipment usd&lt;2</code>. I
               won't explain how to use scryfall in this article but this query
               is asking for any card that's in the commander identity of Red and
@@ -623,7 +623,7 @@ export default function Page() {
               So now we've built out our core cards, we need to start filling
               out the cards in the template. Your goal here is to find as many
               cards as you can that fulfill the goal of the category, while also
-              working well with your commander. In this case, becase we're
+              working well with your commander. In this case, because we're
               building a deck around Wyleth, we're going to want to find cards
               that both get us more mana and power up our commander.
             </p>
@@ -639,7 +639,7 @@ export default function Page() {
                   Beamtown Beatstick
                 </a>{" "}
                 - This card gets us some treasure which can accelerate our mana
-                while also strapping wyleth up with some evasion and power.
+                while also strapping Wyleth up with some evasion and power.
               </li>
               <li>
                 <a
@@ -794,7 +794,7 @@ export default function Page() {
             <h4>Board wipes, 2 cards</h4>
             <p>
               Now that we've got our spot removal sorted, we need to think about
-              what we do when our game hasn't gone too well, or, our oppponents
+              what we do when our game hasn't gone too well, or, our opponents
               have gotten a bit out of hand. This is where board wipes come in.
               Again, try to pick a pair that synergies well with your game plan.
             </p>
@@ -951,7 +951,7 @@ export default function Page() {
               <a href="https://www.mtgmate.com.au/" target="_blank">
                 MTGMate.com.au
               </a>
-              , punch in your decklist and start playing! But, if you're a
+              , punch in your deck list and start playing! But, if you're a
               little worried about whether your deck is good or not, I'd
               recommend one simple thing. Goldfish your deck!
             </p>
@@ -969,7 +969,7 @@ export default function Page() {
 
             <ol>
               <li>
-                Open the Playtester in{" "}
+                Open the Play tester in{" "}
                 <a href="https://www.archidekt.com/" target="_blank">
                   Archidekt
                 </a>
