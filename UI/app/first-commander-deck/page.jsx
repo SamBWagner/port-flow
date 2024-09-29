@@ -1089,6 +1089,10 @@ export default function Page() {
               your local game store and get in some games! I hope you found this
               guide helpful!
             </p>
+
+            <p>
+              <a href="/">Back home</a>
+            </p>
           </section>
         </div>
       </main>
