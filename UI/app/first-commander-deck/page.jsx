@@ -863,7 +863,7 @@ export default function Page() {
             <p>
               These next two categories are a bit more niche, but they're still
               important to have in your deck. Graveyard hate is important as
-              is't a super popular strategy, and, if no one has any way to deal
+              it's a super popular strategy, and, if no one has any way to deal
               with it. Anyone playing a graveyard strategy will basically, win
               the game. This is no fun for you as you really do want to have a
               back and forth game.
