@@ -503,8 +503,7 @@ export default function Page() {
               Now that you've chosen a set of core cards that you think are
               super cool and work well with your commander, you should now start
               filling up the cards in the above categories. I would stick to
-              these
-              <strong>very</strong> closely. They're, I believe, a great
+              these <strong>very</strong> closely. They're, I believe, a great
               guideline for what you need in your deck to make sure you're
               having fun.
             </p>
@@ -889,7 +888,7 @@ export default function Page() {
                 - A quick and easy way to handle any and all graveyard
                 strategies that are going on. Do be careful that you don't
                 accidentally exile your own graveyard if you're looking to do
-                some graveyard shenanigans yourself. -1 Mountain
+                some graveyard shenanigans yourself. Remove one Mountain.
               </li>
               <li>
                 <a
@@ -931,7 +930,7 @@ export default function Page() {
                   Ghost Quarter
                 </a>{" "}
                 - A card that we can also slot into our 40 lands that we can use
-                to handle 1 of our opponents' pesky lands. -1 Plains.
+                to handle 1 of our opponents' pesky lands. Remove one Plains.
               </li>
               <li>
                 <a
@@ -941,7 +940,7 @@ export default function Page() {
                   Demolition Field
                 </a>{" "}
                 - Another card just like Ghost Quarter that we can use to handle
-                our opponents' lands. -1 Mountain
+                our opponents' lands. Remove one Mountain.
               </li>
 
               <p>
