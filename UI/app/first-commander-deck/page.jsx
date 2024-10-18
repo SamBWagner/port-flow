@@ -6,8 +6,8 @@ import style from "./style.module.css";
 export default function Page() {
   return (
     <>
-      <Link href="/" className={"container" + style.headerLink}>
-        <Header />
+      <Link href="/" className={`${style.headerLink}`}>
+        <Header className={`container`} />
       </Link>
 
       <main>

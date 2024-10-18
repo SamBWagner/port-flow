@@ -4,13 +4,14 @@ import BlogCard from "./components/blogCard";
 
 export default function home() {
   return (
-    <main className={`container ${styles.mainContainer}`}>
-      <Header />
+    <main className={`${styles.mainContainer}`}>
+      <Header className={`${styles.header}`} />
 
       <h2 className={`${styles.byLine}`}>Develop · Deploy · Deliver</h2>
-      <hr className={`${styles.divider}`}></hr>
       <div className={`${styles.blogCardContainer}`}>
+        <h3 className={`container ${styles.blogContainerHeading}`}>Blogs</h3>
         <BlogCard
+          className={`container`}
           url="first-commander-deck"
           urlAria="navigate to the Build your first commander deck article"
           releaseDate={"September 29th 2024"}
@@ -29,6 +30,7 @@ export default function home() {
         </BlogCard>
 
         <BlogCard
+          className={`container`}
           url="rust-game"
           urlAria="navigate to Learning Rust blog post"
           releaseDate={"December 10th 2023"}
@@ -43,7 +45,7 @@ export default function home() {
         </BlogCard>
       </div>
 
-      <div className={`${styles.socials}`}>
+      <div className={`container ${styles.socials}`}>
         <p>
           GitHub: <a href="https://github.com/SamBWagner">@SamBWagner</a>
         </p>

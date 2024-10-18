@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./blogCard.module.css";
 
 export default function BlogCard({
+  className,
   children,
   title,
   url,
@@ -9,7 +10,7 @@ export default function BlogCard({
   releaseDate,
 }) {
   return (
-    <Link href={url} className={styles.cardLink}>
+    <Link href={url} className={`${className} ${styles.cardLink}`}>
       <article className={styles.card}>
         <h2>{title}</h2>
         {children}
