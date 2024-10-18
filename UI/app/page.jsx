@@ -1,6 +1,8 @@
 import styles from "./styles.module.css";
 import Header from "./components/header";
 import BlogCard from "./components/blogCard";
+import { SlSocialGithub } from "react-icons/sl";
+import { SlSocialLinkedin } from "react-icons/sl";
 
 export default function home() {
   return (
@@ -47,17 +49,18 @@ export default function home() {
 
       <div className={`container ${styles.socials}`}>
         <p>
-          GitHub: <a href="https://github.com/SamBWagner">@SamBWagner</a>
+          <a href="https://github.com/SamBWagner">
+            <SlSocialGithub className={`${styles.gitHub}`} />
+          </a>
         </p>
         <p>
-          LinkedIn:{" "}
           <a
             href="https://www.linkedin.com/in/sam-b-wagner"
             rel="nofollow"
             aria-labelledby="sams-footer-linkedin-label"
             target="_blank"
           >
-            Sam Wagner
+            <SlSocialLinkedin className={`${styles.linkedIn}`} />
           </a>
         </p>
       </div>

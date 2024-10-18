@@ -20,7 +20,7 @@
 .socials {
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 1rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
     gap: 1rem;
     flex-wrap: wrap;
@@ -44,4 +44,16 @@
 .blogContainerHeading {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.gitHub, .linkedIn {
+    font-size: 2rem;
+    color: var(--accent1);
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.gitHub:hover, .linkedIn:hover {
+    cursor: pointer;
+    color: var(--accent1-link-hover);
+    transform: scale(1.2);
 }

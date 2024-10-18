@@ -4,7 +4,9 @@
   --background-color: #34344A;
   --background-color-lightened: #48486b;
   --background-color-darkened: #1f1f2e;
-  --accent1: #3cc3e0;
+  --accent1: mediumpurple;
+  --accent1-hover: #b299e5;
+  --accent1-link-hover: #fabdff;
   --accent2: #f4963e;
 
   --accent1-hover: #f3b984;
@@ -181,13 +183,13 @@ ul:not(#footer-list) li:nth-child(11)::before {
 }
 
 a {
-  color: #3cc3e0;
+  color: var(--accent1);
   text-decoration: underline;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 a:hover {
-  color: #53d4f0;
+  color: var(--accent1-link-hover);
   text-decoration: none;
 }
 

@@ -36,6 +36,13 @@
 
 .seeMoreIcon {
     height: 32px;
+    color: var(--accent1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover .seeMoreIcon {
+    color: var(--accent1-link-hover);
+    transform: scale(1.2);
 }
 
 .releaseDate {
