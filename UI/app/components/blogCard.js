@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./blogCard.module.css";
+import { ArrowRightIcon } from '@heroicons/react/24/solid'
 
 export default function BlogCard({
   className,
@@ -16,7 +17,7 @@ export default function BlogCard({
         {children}
         <div className={styles.cardEnd}>
           <p className={styles.releaseDate}>{releaseDate}</p>
-          <p>Click to read more</p>
+          <ArrowRightIcon className={`${styles.seeMoreIcon}`} />
         </div>
       </article>
     </Link>
