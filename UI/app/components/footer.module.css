@@ -1,11 +1,11 @@
-.container {
-    background-color: var(--background-color-darkened);
+.footer {
     padding-top: 1rem;
     padding-bottom: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 100;
+    max-width: var(--max-width);
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
 }

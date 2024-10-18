@@ -6,7 +6,7 @@ import style from "./style.module.css";
 export default function Page() {
   return (
     <>
-      <Link href="/" className={style.headerLink}>
+      <Link href="/" className={"container" + style.headerLink}>
         <Header />
       </Link>
 
@@ -15,7 +15,7 @@ export default function Page() {
           Beginner's Guide to Your First Magic: The Gathering - Commander Deck
         </h2>
 
-        <div className="contentContainer">
+        <div className="container contentContainer">
           <section id="introduction" className="container">
             <p>
               Building your first Commander deck can be both exciting and

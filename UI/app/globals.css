@@ -13,6 +13,8 @@
   --footer-height: 100px;
 
   --border-radius: 8px;
+
+  --max-width: 52rem;
 }
 
 * {
@@ -91,7 +93,6 @@ body {
 }
 
 body>* {
-  max-width: 80ch;
   width: 100%;
 }
 
@@ -203,6 +204,9 @@ strong {
 }
 
 .container {
+  max-width: var(--max-width);
+  margin-right: auto;
+  margin-left: auto;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -214,7 +218,7 @@ strong {
     margin-bottom: 2rem;
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 880px) {
   .contentContainer {
     padding-left: 0.5rem;
     padding-right: 0.5rem;

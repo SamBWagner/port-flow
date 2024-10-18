@@ -6,7 +6,7 @@ import style from "./style.module.css";
 export default function Page() {
   return (
     <>
-      <Link href="/" className={style.headerLink}>
+      <Link href="/" className={"container" + style.headerLink}>
         <Header />
       </Link>
 
@@ -15,7 +15,7 @@ export default function Page() {
           Learning Rust
         </h2>
 
-        <div className="contentContainer">
+        <div className="container contentContainer">
           <h3 className="container blog-subheading">My first game</h3>
           <section className="container">
             <p>

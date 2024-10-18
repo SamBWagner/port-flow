@@ -2,7 +2,8 @@ import styles from "./footer.module.css";
 
 export default function Footer() {
   return (
-    <footer className={styles.container} id="pageFooter">
+    <div className="container">
+    <footer className={styles.footer} id="pageFooter">
       <ul id="footer-list" className={styles.ul}>
         <li id="sams-footer-github-label">
           GitHub:{" "}
@@ -28,5 +29,6 @@ export default function Footer() {
         </li>
       </ul>
     </footer>
+    </div>
   );
 }
