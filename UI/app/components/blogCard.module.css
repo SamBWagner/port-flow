@@ -7,11 +7,11 @@
     padding: 20px;
     border-radius: 8px;
     cursor: pointer;
-    transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.2s ease;
 
     background-color: var(--background-color-lightened);
 
-    transition: transform 0.1s ease-in-out, box-shadow 0.4s ease-in-out;
+    transition: transform 0.2s ease, box-shadow 0.3s ease-in-out;
     transform-origin: center;
 
     color: var(--white);
@@ -37,7 +37,7 @@
 .seeMoreIcon {
     height: 32px;
     color: var(--accent1);
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 .card:hover .seeMoreIcon {

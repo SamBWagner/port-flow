@@ -185,7 +185,7 @@ ul:not(#footer-list) li:nth-child(11)::before {
 a {
   color: var(--accent1);
   text-decoration: underline;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
 a:hover {

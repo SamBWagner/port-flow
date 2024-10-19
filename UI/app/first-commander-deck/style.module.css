@@ -1,3 +1,9 @@
 .headerLink {
     text-decoration: none;
 }
+
+.goBackLink {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}

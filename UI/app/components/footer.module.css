@@ -20,7 +20,7 @@
 .gitHub, .linkedIn {
     font-size: 2rem;
     color: var(--accent1);
-    transition: fill 0.3s ease, transform 0.3s ease;
+    transition: fill 0.2s ease, transform 0.2s ease;
 }
 
 .gitHub:hover, .linkedIn:hover {

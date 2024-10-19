@@ -1,16 +1,17 @@
 import Link from "next/link";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import style from "./style.module.css";
+import styles from "./style.module.css";
+import { IoIosArrowBack } from "react-icons/io";
 
 export default function Page() {
   return (
     <>
-      <Link href="/" className={`${style.headerLink}`}>
+      <Link href="/" className={`${styles.headerLink}`}>
         <Header className={`container`} />
       </Link>
 
-      <main className={style.mainContainer}>
+      <main className={styles.mainContainer}>
         <h2 id="learning-rust-blog-heading" className="container blog-heading">
           Learning Rust
         </h2>
@@ -261,7 +262,10 @@ export default function Page() {
             </p>
 
             <p>
-              <Link href="/">back home</Link>
+              <Link href="/" className={`${styles.goBackLink}`}>
+                <IoIosArrowBack />
+                back home
+              </Link>
             </p>
           </section>
         </div>
