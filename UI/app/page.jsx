@@ -9,7 +9,9 @@ export default function home() {
     <main className={`${styles.mainContainer}`}>
       <Header className={`${styles.header}`} />
 
-      <h2 className={`${styles.byLine}`}>Develop · Deploy · Deliver</h2>
+      <div className={`container ${styles.byLineContainer}`}>
+        <h2 className={`${styles.byLine}`}>Develop · Deploy · Deliver</h2>
+      </div>
       <div className={`${styles.blogCardContainer}`}>
         <h3 className={`container ${styles.blogContainerHeading}`}>Blogs</h3>
         <BlogCard

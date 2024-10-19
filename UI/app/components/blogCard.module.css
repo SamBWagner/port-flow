@@ -46,5 +46,5 @@
 }
 
 .releaseDate {
-
+    text-wrap: wrap;
 }

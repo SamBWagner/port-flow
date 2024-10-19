@@ -9,12 +9,31 @@
     margin-bottom: 1rem;
 }
 
+.byLineContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
 .byLine {
     font-weight: 600;
     font-size: 2.5rem;
-    text-decoration: underline;
-    text-decoration-line: overline;
     padding-bottom: 2rem;
+}
+
+@media (max-width: 505px) {
+    .byLine {
+        font-size: 2rem;
+    }
+}
+
+.byLine::before {
+    content: " ";
+    display: block;
+    width: auto;
+    border-bottom: 3px solid var(--accent2);
 }
 
 .socials {
@@ -32,8 +51,8 @@
 }
 
 .blogCardContainer {
-    padding: 2rem;
     padding-bottom: 4rem;
+    padding-top:2rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
