@@ -26,13 +26,19 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H "${{ secrets.VPS_IP }}" >> ~/.ssh/known_hosts
 
+      - name: Clean up Docker on VPS
+        run: |
+          ssh "${{ secrets.VPS_SSH_LOGIN }}" "
+            docker system prune -af --volumes
+          "
+
       - name: Deploy to VPS
         run: |
           ssh "${{ secrets.VPS_SSH_LOGIN }}" "
             cd /var/www/port-flow &&
-            docker login --username sambwagner --password ${{ secrets.GHCR_PAT }} ghcr.io
+            docker login --username sambwagner --password ${{ secrets.GHCR_PAT }} ghcr.io &&
             docker pull ghcr.io/sambwagner/port-flow-ui:latest &&
             docker stop port-flow-ui || true &&
-            docker rm port-flow-ui || true &&
+            docker rm -f port-flow-ui || true &&
             docker run -d --name port-flow-ui -p 3000:3000 ghcr.io/sambwagner/port-flow-ui:latest
           "
