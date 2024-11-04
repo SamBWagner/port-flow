@@ -1,6 +1,11 @@
 # steam-port
-porfolio site exploring building a site in the most traditional way possible HTML -> CSS -> JS.
 
-The site is now hosted on a VPS which uses NGINX to serve the content. 
+My portfolio site! The primary use is a static site where my blogs are stored.
+
+## Technologies
+
+- [NextJS](https://nextjs.org/)
+- [NGINX](https://nginx.org/en/)
+- [.NET](https://dotnet.microsoft.com/en-us/)
 
 You can find it at [samwagner.dev](https://samwagner.dev).
