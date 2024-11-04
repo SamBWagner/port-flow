@@ -30,6 +30,7 @@ jobs:
         run: |
           ssh "${{ secrets.VPS_SSH_LOGIN }}" "
             cd /var/www/port-flow &&
+            docker login --username sambwagner --password ${{ secrets.GHCR_PAT }} ghcr.io
             docker pull ghcr.io/sambwagner/port-flow-ui:latest &&
             docker stop port-flow-ui || true &&
             docker rm port-flow-ui || true &&
