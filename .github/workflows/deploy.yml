@@ -11,19 +11,27 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
       - name: Build and push Docker image
         run: |
           docker login --username sambwagner --password ${{ secrets.GHCR_PAT }} ghcr.io
           cd UI
-          docker build . -t ghcr.io/sambwagner/port-flow:latest
-          docker push ghcr.io/sambwagner/port-flow:latest
+          docker build . -t ghcr.io/sambwagner/port-flow-ui:latest
+          docker push ghcr.io/sambwagner/port-flow-ui:latest
 
-      # - name: Set up SSH key
-      #   run: |
-      #     mkdir -p ~/.ssh
-      #     echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-      #     chmod 600 ~/.ssh/id_rsa
-      #     ssh-keyscan -H "${{ secrets.VPS_IP }}" >> ~/.ssh/known_hosts
+      - name: Set up SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H "${{ secrets.VPS_IP }}" >> ~/.ssh/known_hosts
 
-      # - name: Deploy to VPS
-      #   run: ssh "${{ secrets.VPS_SSH_LOGIN }}" "cd /var/www/port-flow && ./deploy.sh"
+      - name: Deploy to VPS
+        run: |
+          ssh "${{ secrets.VPS_SSH_LOGIN }}" "
+            cd /var/www/port-flow &&
+            docker pull ghcr.io/sambwagner/port-flow-ui:latest &&
+            docker stop port-flow-ui || true &&
+            docker rm port-flow-ui || true &&
+            docker run -d --name port-flow-ui -p 3000:3000 ghcr.io/sambwagner/port-flow-ui:latest
+          "
