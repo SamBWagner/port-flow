@@ -110,6 +110,10 @@ p {
   text-align: justify;
 }
 
+ol li::marker {
+  color: var(--accent2)
+}
+
 ul {
   list-style-type: none;
   margin: 0;
