@@ -19,14 +19,13 @@ export default function Page() {
         <div className="container contentContainer">
           <section id="introduction" className="container">
             <p>
-              Building your first Commander deck can be both exciting and
-              overwhelming. With thousands of cards to choose from and countless
-              strategies to explore, it's easy to feel lost. This guide is
-              designed to help new players step into the world of Commander.
-              We'll start by commanders that are perfect for beginners. Then,
-              we'll walk you through a simple framework for building your first
-              deck. Finally, we'll give you a few extra tools to help you refine
-              your deck as you play and make it your own!
+              Have you ever had a moment where you find a commander and you
+              think it’s cool but you’re not sure if there will be enough cards
+              available to make the deck run smoothly, or you weren’t sure if it
+              will feel good to play so you’ve not wanted to waste time brewing
+              up a 100-card deck? Well, in this guide, I’m going to show you how
+              you can dramatically reduce the time it takes to test out a deck
+              idea or even just a commander.
             </p>
           </section>
 
@@ -212,9 +211,9 @@ export default function Page() {
                   >
                     Finneas, Ace Archer
                   </a>{" "}
-                  - Focuses on creating tokens (like rabbits) and attacking. His
-                  simple game plan of "going wide" is a recipe for success and a
-                  proven strategy.
+                  - Focuses on creating tokens {"("}like rabbits{")"} and
+                  attacking. His simple game plan of "going wide" is a recipe
+                  for success and a proven strategy.
                 </p>
               </li>
             </ul>
@@ -437,9 +436,13 @@ export default function Page() {
               </li>
             </ul>
 
-            <h4>Building the core of your deck</h4>
+            <h4 id="building-the-core-of-your-deck">
+              Building the core of your deck
+            </h4>
 
-            <h5>List of online tools for building your deck</h5>
+            <h5 id="list-of-online-tools-for-building-your-deck">
+              List of online tools for building your deck
+            </h5>
 
             <ul>
               <li>
@@ -1101,7 +1104,6 @@ export default function Page() {
       </main>
 
       <Footer />
-
     </>
   );
 }
