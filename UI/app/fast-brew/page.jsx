@@ -275,10 +275,15 @@ export default function Page() {
               <li>Rishkar, Peema Renegade</li>
               <li>Savvy Hunter</li>
               <li>Vinereap Mentor</li>
-
+              <li>1 Syr Ginger, the Meal Ender</li>
+              <li>1 Tireless Provisioner</li>
+              <li>1 Tough Cookie</li>
+              <li>1 Tuskguard Captain</li>
+              <li>1 Vinereap Mentor</li>
               <li>Voracious Fell Beast</li>
               <li>Welcome to Sweettooth</li>
             </ul>
+            1 Savvy Hunter 1 Voracious Fell Beast 1 Welcome to Sweettooth
             <p>
               Each of these cards offers us some way of interacting with or
               creating food and interacting with or creating +1/+1 counters.
