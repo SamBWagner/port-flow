@@ -283,7 +283,6 @@ export default function Page() {
               <li>Voracious Fell Beast</li>
               <li>Welcome to Sweettooth</li>
             </ul>
-            1 Savvy Hunter 1 Voracious Fell Beast 1 Welcome to Sweettooth
             <p>
               Each of these cards offers us some way of interacting with or
               creating food and interacting with or creating +1/+1 counters.
