@@ -7,11 +7,12 @@ import { SlSocialLinkedin } from "react-icons/sl";
 export default function home() {
   return (
     <main className={`${styles.mainContainer}`}>
-      <Header className={`${styles.header}`} />
+      <Header className={`${styles.header}`}>
+        <div className={`container ${styles.byLineContainer}`}>
+          <h2 className={`${styles.byLine}`}>Develop · Deploy · Deliver</h2>
+        </div>
+      </Header>
 
-      <div className={`container ${styles.byLineContainer}`}>
-        <h2 className={`${styles.byLine}`}>Develop · Deploy · Deliver</h2>
-      </div>
       <div className={`${styles.blogCardContainer}`}>
         <h3 className={`container ${styles.blogContainerHeading}`}>Blogs</h3>
         <BlogCard

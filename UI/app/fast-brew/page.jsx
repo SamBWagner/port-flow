@@ -462,7 +462,7 @@ export default function Page() {
               }}
             />
             <p>
-              <string>Figure: The End-game</string>
+              <strong>Figure: The End-game</strong>
             </p>
             <p>
               And for the grand finale, we ended up hitting for a total of 56

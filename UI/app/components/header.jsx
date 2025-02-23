@@ -1,12 +1,10 @@
-export default function Header({className}) {
+export default function Header({ className, children }) {
   return (
-    <header>
-      <h1
-        id="heading-page-name"
-        className={`heading-page-name heading-name ${className}`}
-      >
+    <header className={className}>
+      <h1 id="heading-page-name" className="heading-page-name heading-name">
         Sam Wagner
       </h1>
+      {children}
     </header>
   );
 }
