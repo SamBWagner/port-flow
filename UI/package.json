@@ -2,6 +2,7 @@
   "name": "port-flow",
   "version": "0.1.0",
   "private": true,
+  "preinstall": "npx only-allow pnpm",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +10,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.2.3",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-icons": "^5.3.0"
+    "next": "15.1.7",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3",
-    "prettier": "^3.3.3"
+    "eslint": "^8.57.1",
+    "eslint-config-next": "15.1.7",
+    "prettier": "^3.5.2"
   }
 }
