@@ -7,6 +7,14 @@ import { IoIosArrowBack } from "react-icons/io";
 export default function Page() {
   return (
     <>
+      <Head>
+        <title>Learning Rust</title>
+        <meta
+          name="descriptionIn this guide, I'll show you how to quickly test whether a deck idea is a viable choice in less than 10 minutes."
+          content="My first steps with the Rust programming language and game development with Bevy."
+        />
+      </Head>
+
       <Link href="/" className={`${styles.headerLink}`}>
         <Header className={`container`} />
       </Link>

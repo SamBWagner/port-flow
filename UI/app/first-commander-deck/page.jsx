@@ -7,13 +7,22 @@ import { IoIosArrowBack } from "react-icons/io";
 export default function Page() {
   return (
     <>
+      <Head>
+        <title>
+          Beginner's Guide: Your First Magic: The Gathering Commander Deck
+        </title>
+        <meta
+          name="description"
+          content="In this guide, I'm going to teach you all the basics you'll need to build your very first commander deck!"
+        />
+      </Head>
       <Link href="/" className={`${styles.headerLink}`}>
         <Header className={`container`} />
       </Link>
 
       <main>
         <h2 className="container">
-          Beginner's Guide to Your First Magic: The Gathering - Commander Deck
+          Beginner's Guide: Your First Magic: The Gathering Commander Deck
         </h2>
 
         <div className="container contentContainer">

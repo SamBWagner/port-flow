@@ -15,6 +15,14 @@ import React from "react";
 export default function Page() {
   return (
     <>
+      <Head>
+        <title>Advanced Deck-building: Fast Brewing</title>
+        <meta
+          name="description"
+          content="In this guide, I'll show you how to quickly test whether a deck idea is a viable choice in less than 10 minutes."
+        />
+      </Head>
+
       <Link href="/" className={`${styles.headerLink}`}>
         <Header className={`container`} />
       </Link>
