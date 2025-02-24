@@ -15,7 +15,7 @@ export default function BlogCard({
       <article className={`card ${styles.card}`}>
         <h3>{title}</h3>
         <p className={styles.releaseDate}>{releaseDate}</p>
-        <div className="cardContent">{children}</div>
+        <div className={styles.cardContent}>{children}</div>
         <div className={styles.cardEnd}>
           <SlArrowRight className={`${styles.seeMoreIcon}`} />
         </div>
