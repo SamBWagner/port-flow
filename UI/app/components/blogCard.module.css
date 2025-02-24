@@ -29,11 +29,11 @@
 
 .cardEnd {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     gap: 1rem;
 
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .seeMoreIcon {
@@ -48,5 +48,8 @@
 }
 
 .releaseDate {
+    color: var(--accent1);
+    font-style: italic;
+    font-size: medium;
     text-wrap: wrap;
 }

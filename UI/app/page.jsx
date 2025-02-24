@@ -16,11 +16,11 @@ export default function home() {
       <div className={`${styles.blogCardContainer}`}>
         <BlogCard
           className={`container`}
+          title={"Advanced Deck-building: Fast Brewing"}
           url="fast-brew"
           urlAria="navigate to the Advanced Deck-building: Fast Brew article"
           releaseDate={"December 29th 2024"}
         >
-          <h3>Advanced Deck-building: Fast Brewing</h3>
           <p>
             Have you ever had a moment where you find a commander and you think
             it’s cool but you’re not sure if there will be enough cards
@@ -34,10 +34,10 @@ export default function home() {
         <BlogCard
           className={`container`}
           url="first-commander-deck"
+          title={"Build your first Magic: The Gathering - Commander deck"}
           urlAria="navigate to the Build your first commander deck article"
           releaseDate={"September 29th 2024"}
         >
-          <h3>Build your first Magic: The Gathering - Commander deck</h3>
           <p>
             Building your first Commander deck can be both exciting and
             overwhelming. With thousands of cards to choose from and countless
@@ -52,11 +52,11 @@ export default function home() {
 
         <BlogCard
           className={`container`}
+          title={"Learning Rust"}
           url="rust-game"
           urlAria="navigate to Learning Rust blog post"
           releaseDate={"December 10th 2023"}
         >
-          <h3>Learning Rust</h3>
           <p>
             Starting out in the industry there&apos;s been one thing I&apos;ve
             heard continually. Rust is cool, and you should learn it. So, after
