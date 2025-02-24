@@ -12,10 +12,10 @@ export default function BlogCard({
 }) {
   return (
     <Link href={url} className={`${className} ${styles.cardLink}`}>
-      <article className={styles.card}>
+      <article className={`card ${styles.card}`}>
         <h3>{title}</h3>
         <p className={styles.releaseDate}>{releaseDate}</p>
-        {children}
+        <div className="cardContent">{children}</div>
         <div className={styles.cardEnd}>
           <SlArrowRight className={`${styles.seeMoreIcon}`} />
         </div>

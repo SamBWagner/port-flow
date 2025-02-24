@@ -17,6 +17,10 @@ export default function Page() {
         </h2>
 
         <div className="container contentContainer">
+          <div className="container">
+            <p className={styles.releaseDate}>December 10th 2023</p>
+          </div>
+
           <h3 className="container blog-subheading">My first game</h3>
           <section className="container">
             <p>

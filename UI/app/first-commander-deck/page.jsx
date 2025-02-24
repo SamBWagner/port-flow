@@ -17,6 +17,10 @@ export default function Page() {
         </h2>
 
         <div className="container contentContainer">
+          <div className="container">
+            <p className={styles.releaseDate}>September 29th 2024</p>
+          </div>
+
           <section id="introduction" className="container">
             <p>
               Have you ever had a moment where you find a commander and you
