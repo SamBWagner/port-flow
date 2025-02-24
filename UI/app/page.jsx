@@ -14,7 +14,6 @@ export default function home() {
       </Header>
 
       <div className={`${styles.blogCardContainer}`}>
-        <h3 className={`container ${styles.blogContainerHeading}`}>Blogs</h3>
         <BlogCard
           className={`container`}
           url="fast-brew"
