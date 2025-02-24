@@ -9,6 +9,7 @@ import setupComplete from "../../public/fast-brew/setupComplete.png";
 import midgameComplete from "../../public/fast-brew/midgameComplete.png";
 import endgameComplete from "../../public/fast-brew/endgameComplete.png";
 import { IoIosArrowBack } from "react-icons/io";
+import Head from "next/head";
 
 import React from "react";
 

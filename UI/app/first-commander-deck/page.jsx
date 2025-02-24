@@ -3,6 +3,7 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import styles from "./style.module.css";
 import { IoIosArrowBack } from "react-icons/io";
+import Head from "next/head";
 
 export default function Page() {
   return (
