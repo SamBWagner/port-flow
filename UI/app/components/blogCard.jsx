@@ -13,8 +13,8 @@ export default function BlogCard({
   return (
     <Link href={url} className={`${className} ${styles.cardLink}`}>
       <article className={`card ${styles.card}`}>
-        <h3>{title}</h3>
         <p className={styles.releaseDate}>{releaseDate}</p>
+        <h3>{title}</h3>
         <div className={styles.cardContent}>{children}</div>
         <div className={styles.cardEnd}>
           <SlArrowRight className={`${styles.seeMoreIcon}`} />
