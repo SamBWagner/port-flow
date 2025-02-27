@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Footer from "../components/footer";
-import Header from "../components/header";
 import styles from "./style.module.css";
 import { IoIosArrowBack } from "react-icons/io";
 import Head from "next/head";
@@ -17,9 +16,12 @@ export default function Page() {
           content="In this guide, I'm going to teach you all the basics you'll need to build your very first commander deck!"
         />
       </Head>
-      <Link title="Go back home" href="/" className={`${styles.headerLink}`}>
-        <Header h2={true} className={`container`} />
-      </Link>
+
+      <header className={`container`}>
+        <Link title="Go back home" href="/" className={`${styles.headerLink}`}>
+          <p className={styles.blogPageHeader}>Sam Wagner</p>
+        </Link>
+      </header>
 
       <main>
         <div className={styles.blogHeader}>

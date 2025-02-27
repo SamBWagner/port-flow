@@ -139,7 +139,7 @@ h6 {
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--background-color-darkened);
   color: #fffffd;
   height: 100dvh;
   display: flex;
@@ -276,7 +276,6 @@ img {
 }
 
 .contentContainer {
-    background-color: var(--background-color-darkened);
     border-radius: var(--border-radius);
     padding: 1rem;
     margin-bottom: 2rem;

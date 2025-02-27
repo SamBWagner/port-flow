@@ -66,7 +66,7 @@ export default function home() {
         </BlogCard>
       </div>
 
-      <div className={`container ${styles.socials}`}>
+      <div className={`${styles.socials}`}>
         <p>
           <a href="https://github.com/SamBWagner">
             <SlSocialGithub className={`${styles.gitHub}`} />

@@ -1,5 +1,5 @@
 .footer {
-    padding-top: 1rem;
+    padding-top: 2rem;
     padding-bottom: 1rem;
     display: flex;
     justify-content: center;
@@ -8,6 +8,9 @@
     max-width: var(--max-width);
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
+
+    background-color: var(--background-color-lightened);
+    width: 100%;
 }
 
 .ul {
@@ -19,7 +22,7 @@
 
 .gitHub, .linkedIn {
     font-size: 2rem;
-    color: var(--accent1);
+    color: var(--accent-1);
     transition: fill 0.2s ease, transform 0.2s ease;
 }
 

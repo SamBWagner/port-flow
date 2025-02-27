@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Footer from "../components/footer";
-import Header from "../components/header";
 import styles from "./style.module.css";
 import { IoIosArrowBack } from "react-icons/io";
 import Head from "next/head";
@@ -16,9 +15,11 @@ export default function Page() {
         />
       </Head>
 
-      <Link title="Go back home" href="/" className={`${styles.headerLink}`}>
-        <Header h2={true} className={`container`} />
-      </Link>
+      <header className={`container`}>
+        <Link title="Go back home" href="/" className={`${styles.headerLink}`}>
+          <p className={styles.blogPageHeader}>Sam Wagner</p>
+        </Link>
+      </header>
 
       <main className={styles.mainContainer}>
         <div className={styles.blogHeader}>

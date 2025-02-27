@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Footer from "../components/footer";
-import Header from "../components/header";
 import styles from "./style.module.css";
 import Image from "next/image";
 import fullDeckList from "../../public/fast-brew/fullDeckList.png";
@@ -24,9 +23,11 @@ export default function Page() {
         />
       </Head>
 
-      <Link title="Go back home" href="/" className={`${styles.headerLink}`}>
-        <Header h2={true} className={`container`} />
-      </Link>
+      <header className={`container`}>
+        <Link title="Go back home" href="/" className={`${styles.headerLink}`}>
+          <p className={styles.blogPageHeader}>Sam Wagner</p>
+        </Link>
+      </header>
 
       <main>
         <div className={styles.blogHeader}>

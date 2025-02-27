@@ -1,3 +1,11 @@
+.blogPageHeader {
+  font-size: 2rem;
+  font-family: var(--neuton), 'sans-serif';
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #f4963e;
+}
+
 .headerLink {
     display: flex;
     justify-content: center;
@@ -10,7 +18,6 @@
 .goBackLink {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     margin-top: 3rem;
     gap: 0.2rem;
 }
