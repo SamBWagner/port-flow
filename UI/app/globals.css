@@ -23,6 +23,10 @@
   font-family: var(--cabin), 'sans-serif';
 }
 
+:focus {
+  outline: none;
+}
+
 h1,
 h2,
 h3,
