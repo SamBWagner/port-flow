@@ -263,6 +263,10 @@ strong {
   font-weight: 700;
 }
 
+img {
+  border-radius: var(--border-radius);
+}
+
 .container {
   max-width: var(--max-width);
   margin-right: auto;
