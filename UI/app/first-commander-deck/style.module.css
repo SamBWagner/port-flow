@@ -1,5 +1,8 @@
 .headerLink {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     text-decoration: none;
+    text-align: center;
 }
 
 .goBackLink {
@@ -10,9 +13,27 @@
     gap: 0.2rem;
 }
 
+.blogHeader {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.blogHeader p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.blogHeader h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .releaseDate {
     color: var(--accent1);
     font-style: italic;
     font-size: medium;
     text-wrap: wrap;
+    text-align: center;
 }

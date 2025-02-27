@@ -25,18 +25,20 @@ export default function Page() {
       </Head>
 
       <Link href="/" className={`${styles.headerLink}`}>
-        <Header className={`container`} />
+        <Header h2={true} className={`container`} />
       </Link>
 
       <main>
-        <h2 id="fast-brewing-title" className="container">
-          Advanced Deck-building: Fast Brewing
-        </h2>
-
-        <div className="container contentContainer">
+        <div className={styles.blogHeader}>
           <div className="container">
             <p className={styles.releaseDate}>December 29th 2024</p>
           </div>
+          <h1 id="fast-brewing-title" className="container">
+            Fast Brewing
+          </h1>
+        </div>
+
+        <div className="container contentContainer">
           <section id="introduction" className="container">
             <p>
               Have you ever had a moment where you find a commander and you

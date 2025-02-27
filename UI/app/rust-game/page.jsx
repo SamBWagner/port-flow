@@ -17,19 +17,22 @@ export default function Page() {
       </Head>
 
       <Link href="/" className={`${styles.headerLink}`}>
-        <Header className={`container`} />
+        <Header h2={true} className={`container`} />
       </Link>
 
       <main className={styles.mainContainer}>
-        <h2 id="learning-rust-blog-heading" className="container blog-heading">
-          Learning Rust
-        </h2>
-
-        <div className="container contentContainer">
+        <div className={styles.blogHeader}>
           <div className="container">
             <p className={styles.releaseDate}>December 10th 2023</p>
           </div>
-
+          <h1
+            id="learning-rust-blog-heading"
+            className="container blog-heading"
+          >
+            Learning Rust
+          </h1>
+        </div>
+        <div className="container contentContainer">
           <h3 className="container blog-subheading">My first game</h3>
           <section className="container">
             <p>

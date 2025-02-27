@@ -18,19 +18,20 @@ export default function Page() {
         />
       </Head>
       <Link href="/" className={`${styles.headerLink}`}>
-        <Header className={`container`} />
+        <Header h2={true} className={`container`} />
       </Link>
 
       <main>
-        <h2 className="container">
-          Beginner's Guide: Your First Magic: The Gathering Commander Deck
-        </h2>
-
-        <div className="container contentContainer">
+        <div className={styles.blogHeader}>
           <div className="container">
             <p className={styles.releaseDate}>September 29th 2024</p>
           </div>
+          <h1 className="container">
+            Your First Magic: The Gathering Commander Deck
+          </h1>
+        </div>
 
+        <div className="container contentContainer">
           <section id="introduction" className="container">
             <p>
               Have you ever had a moment where you find a commander and you
