@@ -17,7 +17,7 @@ export default function Page() {
           content="In this guide, I'm going to teach you all the basics you'll need to build your very first commander deck!"
         />
       </Head>
-      <Link href="/" className={`${styles.headerLink}`}>
+      <Link title="Go back home" href="/" className={`${styles.headerLink}`}>
         <Header h2={true} className={`container`} />
       </Link>
 

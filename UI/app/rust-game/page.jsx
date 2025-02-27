@@ -16,7 +16,7 @@ export default function Page() {
         />
       </Head>
 
-      <Link href="/" className={`${styles.headerLink}`}>
+      <Link title="Go back home" href="/" className={`${styles.headerLink}`}>
         <Header h2={true} className={`container`} />
       </Link>
 
