@@ -5,7 +5,11 @@ import { SlSocialLinkedin } from "react-icons/sl";
 
 export default function Footer() {
   return (
-    <footer className={styles.footer} id="pageFooter">
+    <footer className={`container ${styles.footer}`} id="pageFooter">
+      <Link className={styles.homeLink} href={"/"} title="Go home">
+        Sam Wagner
+      </Link>
+
       <ul id="footer-list" className={styles.ul}>
         <li id="sams-footer-github-label">
           <Link

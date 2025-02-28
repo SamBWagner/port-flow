@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Footer from "../components/footer";
 import styles from "./style.module.css";
-import { IoIosArrowBack } from "react-icons/io";
 import Head from "next/head";
 
 export default function Page() {
@@ -1108,13 +1107,6 @@ export default function Page() {
               You've now got your first commander deck! Well done! Take it to
               your local game store and get in some games! I hope you found this
               guide helpful!
-            </p>
-
-            <p>
-              <Link href="/" className={`${styles.goBackLink}`}>
-                <IoIosArrowBack />
-                back home
-              </Link>
             </p>
           </section>
         </div>

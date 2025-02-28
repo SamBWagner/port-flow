@@ -7,7 +7,6 @@ import openingSeven from "../../public/fast-brew/openingSeven.png";
 import setupComplete from "../../public/fast-brew/setupComplete.png";
 import midgameComplete from "../../public/fast-brew/midgameComplete.png";
 import endgameComplete from "../../public/fast-brew/endgameComplete.png";
-import { IoIosArrowBack } from "react-icons/io";
 import Head from "next/head";
 
 import React from "react";
@@ -552,12 +551,6 @@ export default function Page() {
             <p>
               I hope you found this guide helpful, and I hope that you find some
               cool commanders and brew up some even cooler decks!
-            </p>
-            <p>
-              <Link href="/" className={`${styles.goBackLink}`}>
-                <IoIosArrowBack />
-                back home
-              </Link>
             </p>
           </section>
         </div>

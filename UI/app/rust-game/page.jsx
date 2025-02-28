@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Footer from "../components/footer";
 import styles from "./style.module.css";
-import { IoIosArrowBack } from "react-icons/io";
 import Head from "next/head";
 
 export default function Page() {
@@ -276,13 +275,6 @@ export default function Page() {
               where you can play it on the site through Web Assembly (
               <abbr title="Web Assembly">WASM</abbr>), or download it for either
               Windows of MacOS.
-            </p>
-
-            <p>
-              <Link href="/" className={`${styles.goBackLink}`}>
-                <IoIosArrowBack />
-                back home
-              </Link>
             </p>
           </section>
         </div>

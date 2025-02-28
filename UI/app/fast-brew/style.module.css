@@ -16,6 +16,12 @@
 }
 
 .goBackLink {
+    padding: 1rem 1.2rem 1rem 1.2rem;
+    border-radius: var(--border-radius);
+    background-color: var(--background-color-lightened);
+    color: var(--white);
+    width: fit-content;
+
     display: flex;
     align-items: center;
     margin-top: 3rem;

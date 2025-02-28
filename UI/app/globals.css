@@ -242,6 +242,7 @@ ul:not(#footer-list) li:nth-child(11)::before {
 
 a {
   color: var(--accent1);
+  font-size: large;
   text-decoration: underline;
   transition: color 0.2s ease, text-decoration 0.2s ease;
 }
