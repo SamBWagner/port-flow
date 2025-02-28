@@ -19,10 +19,11 @@
   letter-spacing: 1.5px;
   color: #f4963e;
   text-decoration: none;
+  transition: transform 0.2s ease-in-out;
 }
 
 .homeLink:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: fill 0.2s ease-in-out, transform 0.2s ease;
 }
 
