@@ -38,14 +38,14 @@ export default function Page() {
             <p>
               Starting out in the industry there&apos;s been one thing I&apos;ve
               heard continually.{" "}
-              <a
+              <Link
                 href="https://www.rust-lang.org/"
                 rel="nofollow"
                 aria-label="Rust's website"
                 target="_blank"
               >
                 Rust
-              </a>{" "}
+              </Link>{" "}
               is cool, and you should learn it. So, after endless nagging by a
               few colleagues and the swathes of social media that pushes it,
               I’ve made the plunge.
@@ -56,14 +56,14 @@ export default function Page() {
               case, we chose Rust as the language for our game. But we were left
               scratching our heads with what game engine to use (or indeed
               whether to use one at all). We boiled it down to two options:{" "}
-              <a
+              <Link
                 href="https://godotengine.org/"
                 rel="nofollow"
                 aria-label="Godot's website"
                 target="_blank"
               >
                 Godot
-              </a>
+              </Link>
               , a relatively famous cross-platform engine which had added some
               support for the Rust developers, and Bevy, a lightweight, Rust
               first game engine that was still in its infancy. We ended up
@@ -101,13 +101,13 @@ export default function Page() {
             <h4 className="blog-section-heading">How’s Bevy?</h4>
             <p>
               Bevy is an{" "}
-              <a
+              <Link
                 href="https://en.wikipedia.org/wiki/Entity_component_system"
                 rel="nofollow"
                 target="_blank"
               >
                 entity component system
-              </a>{" "}
+              </Link>{" "}
               (<abbr title="entity components system">ECS</abbr>), which means
               that when you’re writing the game code, you’ll be predominently
               following these few core steps:
@@ -196,14 +196,14 @@ export default function Page() {
                     will take you through building a full game in Bevy! I found
                     it much better than the book. However, not because the book
                     was bad. I just prefer video where possible.{" "}
-                    <a
+                    <Link
                       href="https://www.youtube.com/watch?v=TQt-v_bFdao"
                       rel="nofollow"
                       aria-label="YouTube link to Jaques Bevy tutorial"
                       target="_blank"
                     >
                       Jaques Bevy tutorial
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     There’s a caveat to both suggestions though. As Bevy is a
@@ -231,47 +231,47 @@ export default function Page() {
             <ul>
               <li>
                 Tylah Kapa -{" "}
-                <a
+                <Link
                   href="https://github.com/tkapa"
                   rel="nofollow"
                   aria-label="GitHub profile link: @tkapa"
                   target="_blank"
                 >
                   @tkapa
-                </a>
+                </Link>
               </li>
               <li>
                 Luke Parker -{" "}
-                <a
+                <Link
                   href="https://github.com/hona"
                   rel="nofollow"
                   aria-label="GitHub profile link: @hona"
                   target="_blank"
                 >
                   @hona
-                </a>
+                </Link>
               </li>
               <li>
                 Brook Jeynes -{" "}
-                <a
+                <Link
                   href="https://github.com/BrookJeynes"
                   rel="nofollow"
                   aria-label="GitHub profile link: @BrookJeynes"
                   target="_blank"
                 >
                   @BrookJeynes
-                </a>
+                </Link>
               </li>
             </ul>
             <p>
               Also, feel free to play the game on{" "}
-              <a
+              <Link
                 href="https://kapa.itch.io/gone-fish"
                 rel="ugc"
                 aria-label="gone-fish on Itch.io"
               >
                 Itch.io
-              </a>{" "}
+              </Link>{" "}
               where you can play it on the site through Web Assembly (
               <abbr title="Web Assembly">WASM</abbr>), or download it for either
               Windows of MacOS.

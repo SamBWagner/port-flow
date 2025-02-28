@@ -3,6 +3,7 @@ import Header from "./components/header";
 import BlogCard from "./components/blogCard";
 import { SlSocialGithub } from "react-icons/sl";
 import { SlSocialLinkedin } from "react-icons/sl";
+import Link from "next/link";
 
 export default function home() {
   return (
@@ -68,19 +69,19 @@ export default function home() {
 
       <div className={`${styles.socials}`}>
         <p>
-          <a href="https://github.com/SamBWagner">
+          <Link href="https://github.com/SamBWagner">
             <SlSocialGithub className={`${styles.gitHub}`} />
-          </a>
+          </Link>
         </p>
         <p>
-          <a
+          <Link
             href="https://www.linkedin.com/in/sam-b-wagner"
             rel="nofollow"
             aria-labelledby="sams-footer-linkedin-label"
             target="_blank"
           >
             <SlSocialLinkedin className={`${styles.linkedIn}`} />
-          </a>
+          </Link>
         </p>
       </div>
     </main>

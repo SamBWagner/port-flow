@@ -111,20 +111,20 @@ export default function Page() {
                 </p>
                 <p>
                   For example:{" "}
-                  <a
+                  <Link
                     href="https://scryfall.com/card/cmr/362/wyleth-soul-of-steel"
                     target="_blank"
                   >
                     Wyleth, Soul of Steel
-                  </a>{" "}
+                  </Link>{" "}
                   rewards you for playing Auras and Equipment, so you know you
                   should include those in your deck. Whereas{" "}
-                  <a
+                  <Link
                     href="https://scryfall.com/card/c16/46/thrasios-triton-hero"
                     target="_blank"
                   >
                     Thrasios, Triton Hero
-                  </a>
+                  </Link>
                   , while a powerful commander, doesn't give you much guidance
                   on what to include in your deck.
                 </p>
@@ -156,12 +156,12 @@ export default function Page() {
             <ul>
               <li>
                 <p>
-                  <a
+                  <Link
                     href="https://scryfall.com/card/cmr/362/wyleth-soul-of-steel"
                     target="_blank"
                   >
                     Wyleth, Soul of Steel
-                  </a>{" "}
+                  </Link>{" "}
                   - A Voltron-style commander who encourages you to equip him
                   with Auras and Equipment and swing in for a win via commander
                   damage! He draws you cards whenever he attacks, keeping your
@@ -170,12 +170,12 @@ export default function Page() {
               </li>
               <li>
                 <p>
-                  <a
+                  <Link
                     href="https://scryfall.com/card/40k/112/commissar-severina-raine"
                     target="_blank"
                   >
                     Commissar Severina Raine
-                  </a>{" "}
+                  </Link>{" "}
                   - Focuses on creating token creatures and draining your
                   opponents' life. Her abilities provide clear direction: amass
                   an army and overwhelm your foes.
@@ -183,12 +183,12 @@ export default function Page() {
               </li>
               <li>
                 <p>
-                  <a
+                  <Link
                     href="https://scryfall.com/card/lcc/274/kumena-tyrant-of-orazca"
                     target="_blank"
                   >
                     Kumena, Tyrant of Orazca
-                  </a>{" "}
+                  </Link>{" "}
                   - A merfolk tribal commander who rewards you for playing
                   merfolk and attacking. He offers multiple abilities that
                   enhance your creatures and draw cards.
@@ -196,12 +196,12 @@ export default function Page() {
               </li>
               <li>
                 <p>
-                  <a
+                  <Link
                     href="https://scryfall.com/card/mat/45/samut-vizier-of-naktamun"
                     target="_blank"
                   >
                     Samut, Vizier of Naktamun
-                  </a>{" "}
+                  </Link>{" "}
                   - Encourages you to play creatures with haste and attack
                   aggressively. Her abilities make combat exciting and
                   straightforward.
@@ -209,24 +209,24 @@ export default function Page() {
               </li>
               <li>
                 <p>
-                  <a
+                  <Link
                     href="https://scryfall.com/card/one/203/jor-kadeen-first-goldwarden"
                     target="_blank"
                   >
                     Jor Kadeen, First Goldwarden
-                  </a>{" "}
+                  </Link>{" "}
                   - Rewards you for playing and equipping creatures. His ability
                   boosts your team, promoting an aggressive play style.
                 </p>
               </li>
               <li>
                 <p>
-                  <a
+                  <Link
                     href="https://scryfall.com/card/blb/212/finneas-ace-archer"
                     target="_blank"
                   >
                     Finneas, Ace Archer
-                  </a>{" "}
+                  </Link>{" "}
                   - Focuses on creating tokens {"("}like rabbits{")"} and
                   attacking. His simple game plan of "going wide" is a recipe
                   for success and a proven strategy.
@@ -243,12 +243,12 @@ export default function Page() {
             <ul>
               <li>
                 <p>
-                  <a
+                  <Link
                     href="https://scryfall.com/card/acr/49/basim-ibn-ishaq"
                     target="_blank"
                   >
                     Basim, Ibn Ishaq
-                  </a>{" "}
+                  </Link>{" "}
                   - Focuses on cumulative commander damage. Encourages you to
                   attack repeatedly with your commander to win.
                 </p>
@@ -259,12 +259,12 @@ export default function Page() {
               </li>
               <li>
                 <p>
-                  <a
+                  <Link
                     href="https://scryfall.com/card/cmm/335/akiri-fearless-voyager"
                     target="_blank"
                   >
                     Akiri, Fearless Voyager
-                  </a>{" "}
+                  </Link>{" "}
                   - Rewards you for equipping creatures and attacking. She also
                   protects your equipped creatures, adding a layer of strategy.
                 </p>
@@ -272,30 +272,30 @@ export default function Page() {
                   As a suggestion, there are equipment cards that come in
                   already attached to a creature. They're a great pick for
                   Akiri! Here are a few examples:{" "}
-                  <a
+                  <Link
                     href="https://scryfall.com/card/onc/14/hexplate-wallbreaker"
                     target="_blank"
                   >
                     Hexplate Wallbreaker
-                  </a>
+                  </Link>
                   ,{" "}
-                  <a
+                  <Link
                     href="https://scryfall.com/card/mh3/34/mandibular-kite"
                     target="_blank"
                   >
                     Mandibular Kite
-                  </a>
+                  </Link>
                   .
                 </p>
               </li>
               <li>
                 <p>
-                  <a
+                  <Link
                     href="https://scryfall.com/card/ltr/215/merry-esquire-of-rohan"
                     target="_blank"
                   >
                     Merry, Esquire of Rohan
-                  </a>{" "}
+                  </Link>{" "}
                   - Benefits from being equipped and attacking with legendary
                   creatures. Encourages you to play legendary creatures and
                   attack.
@@ -303,12 +303,12 @@ export default function Page() {
               </li>
               <li>
                 <p>
-                  <a
+                  <Link
                     href="https://scryfall.com/card/blb/205/baylen-the-haymaker"
                     target="_blank"
                   >
                     Baylen, the Haymaker
-                  </a>{" "}
+                  </Link>{" "}
                   - Focuses on creating tokens and powering them up for massive
                   attacks. It's also nice that he provides you with quite a few
                   options on how you use those tokens.
@@ -316,12 +316,12 @@ export default function Page() {
               </li>
               <li>
                 <p>
-                  <a
+                  <Link
                     href="https://scryfall.com/card/snc/215/rigo-streetwise-mentor"
                     target="_blank"
                   >
                     Rigo, Streetwise Mentor
-                  </a>{" "}
+                  </Link>{" "}
                   - A commander that offers protection for himself with his
                   shield counter. He encourages you to flood the board with 1/1
                   creatures and repeatedly attack.
@@ -329,12 +329,12 @@ export default function Page() {
               </li>
               <li>
                 <p>
-                  <a
+                  <Link
                     href="https://scryfall.com/card/lci/232/kutzil-malamet-exemplar"
                     target="_blank"
                   >
                     Kutzil, Malamet Exemplar
-                  </a>{" "}
+                  </Link>{" "}
                   - Encourages you to play and buff creatures, then attack.
                   Offers an aggressive strategy with room for growth.
                 </p>
@@ -425,19 +425,19 @@ export default function Page() {
                 </p>
                 <p>
                   I'd recommend looking into cards like:{" "}
-                  <a
+                  <Link
                     href="https://scryfall.com/card/otc/283/demolition-field"
                     target="_blank"
                   >
                     Demolition field
-                  </a>
+                  </Link>
                   , and{" "}
-                  <a
+                  <Link
                     href="https://scryfall.com/card/cm2/253/ghost-quarter"
                     target="_blank"
                   >
                     Ghost quarter
-                  </a>{" "}
+                  </Link>{" "}
                   as they are next to free to just throw into your deck list and
                   can be very impactful.
                 </p>
@@ -462,30 +462,30 @@ export default function Page() {
 
             <ul>
               <li>
-                <a href="https://www.archidekt.com/" target="_blank">
+                <Link href="https://www.archidekt.com/" target="_blank">
                   Archidekt
-                </a>{" "}
+                </Link>{" "}
                 - To build out your deck
               </li>
               <li>
-                <a href="https://www.scryfall.com" target="_blank">
+                <Link href="https://www.scryfall.com" target="_blank">
                   Scryfall
-                </a>{" "}
+                </Link>{" "}
                 - To find your cards
               </li>
               <li>
-                <a href="https://edhrec.com" target="_blank">
+                <Link href="https://edhrec.com" target="_blank">
                   EDHREC
-                </a>{" "}
+                </Link>{" "}
                 - To find inspiration for cards you might want to look for
               </li>
               <li>
-                <a
+                <Link
                   href="https://commanderspellbook.com/find-my-combos/"
                   target="_blank"
                 >
                   Commander Spellbook - Combo finder
-                </a>{" "}
+                </Link>{" "}
                 - To find out if your deck has any sneaky combos that you
                 weren't aware of.
               </li>
@@ -507,12 +507,12 @@ export default function Page() {
 
             <p>
               For example, if you're playing{" "}
-              <a
+              <Link
                 href="https://scryfall.com/card/cmr/362/wyleth-soul-of-steel"
                 target="_blank"
               >
                 Wyleth, Soul of Steel
-              </a>
+              </Link>
               , you would find yourself 25 aura's and equipment cards that would
               work well with him. You might also include some cards that help
               you protect him as he's so important to your strategy.
@@ -533,12 +533,12 @@ export default function Page() {
               the category, but also work well with your commander. For example,
               if you're playing Wyleth and you're trying to fill out your ramp
               list, you might want to include{" "}
-              <a
+              <Link
                 href="https://scryfall.com/card/ori/240/sword-of-the-animist"
                 target="_blank"
               >
                 Sword of the Animist
-              </a>
+              </Link>
               .
             </p>
           </section>
@@ -551,7 +551,7 @@ export default function Page() {
             </p>
 
             <p>
-              <a href="#buying-and-goldfishing">Skip the example</a>
+              <Link href="#buying-and-goldfishing">Skip the example</Link>
             </p>
           </section>
 
@@ -561,30 +561,30 @@ export default function Page() {
 
             <p>
               Let's walk through building a deck with{" "}
-              <a
+              <Link
                 href="https://scryfall.com/card/cmr/362/wyleth-soul-of-steel"
                 target="_blank"
               >
                 Wyleth, Soul of Steel
-              </a>{" "}
+              </Link>{" "}
               as our commander. We'll start with the core of the deck and then
               fill in the rest. I'd recommend opening the finished deck list on
               my{" "}
-              <a
+              <Link
                 href="https://www.archidekt.com/decks/9388445/starter_deck_boros_voltron"
                 target="_blank"
               >
                 Archidekt
-              </a>
+              </Link>
               .
             </p>
 
             <h4>Core, 25 cards</h4>
             <p>
               To complete this task, I'll primarily be using{" "}
-              <a href="https://scryfall.com/" target="_blank">
+              <Link href="https://scryfall.com/" target="_blank">
                 Scryfall
-              </a>{" "}
+              </Link>{" "}
               to search for cards that work well with Wyleth. I'll be looking
               for cards that fulfill this query{" "}
               <code>ci:boros legal:commander type:equipment usd&lt;2</code>. I
@@ -601,50 +601,50 @@ export default function Page() {
 
             <ul>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/mh2/233/colossus-hammer"
                   target="_blank"
                 >
                   Colossus Hammer
-                </a>{" "}
+                </Link>{" "}
                 - We've got to get our commander big and strong.
               </li>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/uma/18/hyena-umbra"
                   target="_blank"
                 >
                   Hyena Umbra
-                </a>{" "}
+                </Link>{" "}
                 - He's our only threat so we've got to protect him.
               </li>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/c21/249/loxodon-warhammer"
                   target="_blank"
                 >
                   Loxodon Warhammer
-                </a>{" "}
+                </Link>{" "}
                 - We've only really got the one creature, so we might need to
                 gain some life.
               </li>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/otc/268/swiftfoot-boots"
                   target="_blank"
                 >
                   Swiftfoot Boots
-                </a>{" "}
+                </Link>{" "}
                 - Haste seems like a good thing to have available if he were to
                 die. Hexproof helps us protect him too!
               </li>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/onc/14/hexplate-wallbreaker"
                   target="_blank"
                 >
                   Hexplate Wallbreaker
-                </a>{" "}
+                </Link>{" "}
                 - What's better than one combat? Two combats!
               </li>
             </ul>
@@ -662,13 +662,13 @@ export default function Page() {
             <p>
               For Wyleth, that means that I've chosen to do a simple split of 20
               plains and 20 mountains. Now, if you've looked at the decklist in{" "}
-              <a href="https://www.archidekt.com/decks/9388445/starter_deck_boros_voltron">
+              <Link href="https://www.archidekt.com/decks/9388445/starter_deck_boros_voltron">
                 Archidekt
-              </a>{" "}
+              </Link>{" "}
               you may have noticed that there is another land in there called{" "}
-              <a href="https://scryfall.com/card/dsc/96/command-tower">
+              <Link href="https://scryfall.com/card/dsc/96/command-tower">
                 Command Tower
-              </a>
+              </Link>
               . This is a card that comes in untapped and creates both of our
               colors. In this case, I simply removed a mountain and swapped the
               command tower in.
@@ -688,31 +688,31 @@ export default function Page() {
 
             <ul>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/mom/131/beamtown-beatstick"
                   target="_blank"
                 >
                   Beamtown Beatstick
-                </a>{" "}
+                </Link>{" "}
                 - This card gets us some treasure which can accelerate our mana
                 while also strapping Wyleth up with some evasion and power.
               </li>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/lci/143/diamond-pick-axe"
                   target="_blank"
                 >
                   Diamond Pick Axe
-                </a>{" "}
+                </Link>{" "}
                 - This is the same as the Beatstick above.
               </li>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/cmm/380/explorers-scope"
                   target="_blank"
                 >
                   Explorer's Scope
-                </a>{" "}
+                </Link>{" "}
                 - This card could get us some extra lands in the early game!
               </li>
             </ul>
@@ -727,21 +727,21 @@ export default function Page() {
 
             <ul>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/dsc/94/sol-ring"
                   target="_blank"
                 >
                   Sol Ring
-                </a>{" "}
+                </Link>{" "}
                 - Classic ramp card that's in every commander deck.
               </li>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/dsc/92/arcane-signet"
                   target="_blank"
                 >
                   Arcane Signet
-                </a>
+                </Link>
               </li>
             </ul>
 
@@ -759,22 +759,22 @@ export default function Page() {
 
             <ul>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/nec/88/sram-senior-edificer"
                   target="_blank"
                 >
                   Sram, Senior Edificer
-                </a>{" "}
+                </Link>{" "}
                 - This card is great because it draws us cards whenever we play
                 an equipment.
               </li>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/cmr/324/mask-of-memory"
                   target="_blank"
                 >
                   Mask of Memory
-                </a>{" "}
+                </Link>{" "}
                 - A great card for us as it rewards us for aggressively swinging
                 Wyleth at our opponents. It also helps us filter our draws.
               </li>
@@ -782,26 +782,26 @@ export default function Page() {
 
             <p>
               There are a few more cards like:{" "}
-              <a
+              <Link
                 href="https://scryfall.com/card/cmm/335/akiri-fearless-voyager"
                 target="_blank"
               >
                 Akiri, Fearless Voyager
-              </a>
+              </Link>
               ,{" "}
-              <a
+              <Link
                 href="https://scryfall.com/card/cmm/51/puresteel-paladin"
                 target="_blank"
               >
                 Puresteel Paladin
-              </a>
+              </Link>
               , and{" "}
-              <a
+              <Link
                 href="https://scryfall.com/card/jmp/479/rogues-gloves"
                 target="_blank"
               >
                 Rogue's Gloves
-              </a>
+              </Link>
               . But, I'll stop going through every card from here on and just
               list the cards that I think are the best examples of how I'd
               recommend filling out the category.
@@ -821,27 +821,27 @@ export default function Page() {
               include cards that don't directly help your commander, but are
               still important to have in your deck. In this case, our only
               option was to include a copy of{" "}
-              <a
+              <Link
                 href="https://scryfall.com/card/afc/198/argentum-armor"
                 target="_blank"
               >
                 Argentum Armor
-              </a>
+              </Link>
               . The rest we filled out with some more general removal spells
               like{" "}
-              <a
+              <Link
                 href="https://scryfall.com/card/dsc/106/swords-to-plowshares"
                 target="_blank"
               >
                 Swords to Plowshares
-              </a>
+              </Link>
               , and{" "}
-              <a
+              <Link
                 href="https://scryfall.com/card/otc/85/path-to-exile"
                 target="_blank"
               >
                 Path to Exile
-              </a>
+              </Link>
               . You should never feel bad about including these cards as
               regardless of their ability to synergies with your commander,
               they're always going to be useful.
@@ -859,22 +859,22 @@ export default function Page() {
 
             <ul>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/c19/62/divine-reckoning"
                   target="_blank"
                 >
                   Divine Reckoning
-                </a>{" "}
+                </Link>{" "}
                 - This card is great because it allows us to keep our commander
                 while also dealing with our opponents' threats.
               </li>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/cmr/47/slash-the-ranks"
                   target="_blank"
                 >
                   Slash the Ranks
-                </a>{" "}
+                </Link>{" "}
                 - This card is great for the same reasons as Divine Reckoning.
               </li>
             </ul>
@@ -899,24 +899,24 @@ export default function Page() {
 
             <ul>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/otc/316/scavenger-grounds"
                   target="_blank"
                 >
                   Scavenger Grounds
-                </a>{" "}
+                </Link>{" "}
                 - A quick and easy way to handle any and all graveyard
                 strategies that are going on. Do be careful that you don't
                 accidentally exile your own graveyard if you're looking to do
                 some graveyard shenanigans yourself. Remove one Mountain.
               </li>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/neo/26/lion-sash"
                   target="_blank"
                 >
                   Lion Sash
-                </a>{" "}
+                </Link>{" "}
                 - A super cool pickup for our deck, it gives us both a way to
                 deal with some sneaky threats lurking in a players graveyard,
                 and it also gives us a way to pump up our commander!
@@ -929,12 +929,12 @@ export default function Page() {
               might've heard people say that land destruction is a bit of a
               no-no in commander. While this isn't entirely true, it's wise to
               note here that I'm not advocating for you to include cards like{" "}
-              <a
+              <Link
                 href="https://scryfall.com/card/a25/5/armageddon"
                 target="_blank"
               >
                 Armageddon
-              </a>{" "}
+              </Link>{" "}
               which just wholesale slow the game down and lead to a miserable
               experience. Instead, I'm advocating that you include at least 2
               cards that can deal with some of the more powerful lands that are
@@ -943,22 +943,22 @@ export default function Page() {
 
             <ul>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/cm2/253/ghost-quarter"
                   target="_blank"
                 >
                   Ghost Quarter
-                </a>{" "}
+                </Link>{" "}
                 - A card that we can also slot into our 40 lands that we can use
                 to handle 1 of our opponents' pesky lands. Remove one Plains.
               </li>
               <li>
-                <a
+                <Link
                   href="https://scryfall.com/card/otc/283/demolition-field"
                   target="_blank"
                 >
                   Demolition Field
-                </a>{" "}
+                </Link>{" "}
                 - Another card just like Ghost Quarter that we can use to handle
                 our opponents' lands. Remove one Mountain.
               </li>
@@ -969,12 +969,12 @@ export default function Page() {
                 going to add 2 more cards into our "core" category! Letting us
                 pick a few more cards that are just cool and fun to play with.
                 In the attached{" "}
-                <a
+                <Link
                   href="https://www.archidekt.com/decks/9388445/starter_deck_boros_voltron"
                   target="_blank"
                 >
                   Archidekt list
-                </a>
+                </Link>
                 , I've listed the 3 cards that I chose as extras under the
                 "Extras" category.
               </p>
@@ -984,12 +984,12 @@ export default function Page() {
                 Now for the pice de resistance. The card that you're the{" "}
                 <strong>most</strong> excited to play. This is the card that
                 makes you go "Woh!" when you draw it. For me, I chose to include{" "}
-                <a
+                <Link
                   href="https://scryfall.com/card/neo/7/brilliant-restoration"
                   target="_blank"
                 >
                   Brilliant Restoration
-                </a>{" "}
+                </Link>{" "}
                 as I know the "Voltron" strategy can be a bit fragile and I
                 wanted to include a card that would help me recover from a board
                 wipe in a super flashy way!
@@ -1009,23 +1009,23 @@ export default function Page() {
 
             <ul>
               <li>
-                <a href="https://scryfall.com/card/mom/41/surge-of-salvation">
+                <Link href="https://scryfall.com/card/mom/41/surge-of-salvation">
                   Surge of Salvation
-                </a>{" "}
+                </Link>{" "}
                 - A powerful 1 mana instant that we can deploy when Wyleth is
                 about to be removed.
               </li>
               <li>
-                <a href="https://scryfall.com/card/afr/219/bruenor-battlehammer">
+                <Link href="https://scryfall.com/card/afr/219/bruenor-battlehammer">
                   Bruenor Battlehammer
-                </a>{" "}
+                </Link>{" "}
                 - This little dude seems super cool and makes Wyleth into an
                 absolute monster!
               </li>
               <li>
-                <a href="https://scryfall.com/card/mat/36/nahiri-forged-in-fury">
+                <Link href="https://scryfall.com/card/mat/36/nahiri-forged-in-fury">
                   Nahiri, Forged in Fury
-                </a>{" "}
+                </Link>{" "}
                 - She seems like a powerhouse to drop onto our board if we draw
                 her and could very well have been put in the "Sudden I Win
                 Category".
@@ -1040,9 +1040,9 @@ export default function Page() {
               Now you've got your deck built, you're ready to start playing
               right? Well, yes. If you think you're good to go then head to a
               site like{" "}
-              <a href="https://www.mtgmate.com.au/" target="_blank">
+              <Link href="https://www.mtgmate.com.au/" target="_blank">
                 MTGMate.com.au
-              </a>
+              </Link>
               , punch in your deck list and start playing! But, if you're a
               little worried about whether your deck is good or not, I'd
               recommend one simple thing. Goldfish your deck!
@@ -1062,9 +1062,9 @@ export default function Page() {
             <ol>
               <li>
                 Open the Play tester in{" "}
-                <a href="https://www.archidekt.com/" target="_blank">
+                <Link href="https://www.archidekt.com/" target="_blank">
                   Archidekt
-                </a>
+                </Link>
               </li>
               <li>
                 Draw your opening hand and play the game as you would normally.

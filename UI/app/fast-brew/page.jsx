@@ -97,19 +97,19 @@ export default function Page() {
               want to run Ramp, Removal, or any other secondary or tertiary card
               category in our 25. A great example here would be if we were
               running a commander like{" "}
-              <a
+              <Link
                 target="_blank"
                 href="https://scryfall.com/card/mat/45/samut-vizier-of-naktamun"
               >
                 Samut, Vizier of Naktamun
-              </a>{" "}
+              </Link>{" "}
               . At first glance the card{" "}
-              <a
+              <Link
                 target="_blank"
                 href="https://scryfall.com/card/zen/127/goblin-ruinblaster"
               >
                 Goblin Ruinblaster
-              </a>{" "}
+              </Link>{" "}
               seems like a great pick because he is a creature with Haste,
               meaning he can attack on the turn he entered the battlefield.
               That’s what Samut wants you to do! But, as its primary role in the
@@ -117,12 +117,12 @@ export default function Page() {
               should skip over it here and pick something else. We’re really
               looking for cards that progress the game to an end. In Samut’s
               case, we want creatures like{" "}
-              <a
+              <Link
                 target="_blank"
                 href="https://scryfall.com/card/gtc/97/legion-loyalist"
               >
                 Legion Loyalist
-              </a>
+              </Link>
               , which buffs up our board and pushes the game to an end via
               creature damage.
             </p>
@@ -143,9 +143,9 @@ export default function Page() {
               The purpose of this part of the play test is to show you what your
               deck can do during the early stages of a game. Using your deck
               building app of choice, mine is{" "}
-              <a href="https://www.archidekt.com/" target="_blank">
+              <Link href="https://www.archidekt.com/" target="_blank">
                 Archidekt
-              </a>
+              </Link>
               , or a real set of 25 cards, simulate the first 3 turns of the
               game. To do this, shuffle up and:{" "}
             </p>
@@ -224,12 +224,12 @@ export default function Page() {
             <p>
               It’s all well and good to give you a guide, but let’s see it in
               action. In this case, we’re going to use the commander{" "}
-              <a
+              <Link
                 target="_blank"
                 href="https://scryfall.com/card/woe/205/greta-sweettooth-scourge"
               >
                 Greta, Sweettooth Scourge
-              </a>
+              </Link>
               . This commander offers us a few ways to build but is still mostly
               within the barriers of what I’d call a beginner-friendly
               commander. In this case, we’re going to just hydrate the deck with
@@ -237,19 +237,19 @@ export default function Page() {
               <strong> make food</strong> or{" "}
               <strong>make/interact with counters</strong>. Here’s a link to the
               deck-list in{" "}
-              <a
+              <Link
                 href="https://www.archidekt.com/decks/10638046/backers_dozen_advanced_deckbuilding_guide"
                 target="_blank"
               >
                 Archidekt
-              </a>{" "}
+              </Link>{" "}
               that I’ve built by using this{" "}
-              <a
+              <Link
                 href="https://scryfall.com/search?q=legal:commander+ci:golgari+(o:food+or+(o:counter+and+o:%22+1%22))+usd%3C3&unique=cards&as=grid&order=edhrec"
                 target="_blank"
               >
                 Scryfall
-              </a>{" "}
+              </Link>{" "}
               search query:
             </p>
             <p>
