@@ -14,7 +14,7 @@ export default function home() {
         </div>
       </Header>
 
-      <div className={`${styles.blogCardContainer}`}>
+      <section className={`${styles.blogCardContainer}`}>
         <BlogCard
           className={`container`}
           title={"Advanced Deck-building: Fast Brewing"}
@@ -65,9 +65,9 @@ export default function home() {
             that pushes it, I’ve made the plunge&hellip;
           </p>
         </BlogCard>
-      </div>
+      </section>
 
-      <div className={`${styles.socials}`}>
+      <footer className={`${styles.socials}`}>
         <p>
           <Link
             href="https://github.com/SamBWagner"
@@ -86,7 +86,7 @@ export default function home() {
             <SlSocialLinkedin className={`${styles.linkedIn}`} />
           </Link>
         </p>
-      </div>
+      </footer>
     </main>
   );
 }
