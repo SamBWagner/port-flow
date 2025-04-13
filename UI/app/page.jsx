@@ -69,7 +69,11 @@ export default function home() {
 
       <div className={`${styles.socials}`}>
         <p>
-          <Link href="https://github.com/SamBWagner">
+          <Link
+            href="https://github.com/SamBWagner"
+            rel="nofollow"
+            target="_blank"
+          >
             <SlSocialGithub className={`${styles.gitHub}`} />
           </Link>
         </p>
@@ -77,7 +81,6 @@ export default function home() {
           <Link
             href="https://www.linkedin.com/in/sam-b-wagner"
             rel="nofollow"
-            aria-labelledby="sams-footer-linkedin-label"
             target="_blank"
           >
             <SlSocialLinkedin className={`${styles.linkedIn}`} />
