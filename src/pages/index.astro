@@ -1,0 +1,197 @@
+---
+import Header from "../components/Header.astro";
+import BlogCard from "../components/BlogCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import { Icon } from "astro-icon/components";
+
+const byline = "Develop · Deploy · Deliver";
+---
+
+<BaseLayout>
+        <main class="mainContainer">
+          <Header class="header">
+                  <div class="container byLineContainer">
+                              <h2 class="byLine">{byline}</h2>
+                    </div>
+          </Header>
+
+          <section class="blogCardContainer">
+            <BlogCard
+              class="container"
+              title="Advanced Deck-building Guide: Fast Brewing"
+              url="blogs/fast-brew"
+              urlAria="navigate to the Advanced Deck-building: Fast Brew article"
+              releaseDate="December 29, 2024"
+            >
+              <p>
+                Have you ever had a moment where you find a commander and you think
+                it's cool but you're not sure if there will be enough cards available
+                to make the deck run smoothly, or you weren't sure if it will feel
+                good to play so you've not wanted to waste time brewing up a 100-card
+                deck? Well, in this guide, I'm going to show you how you can
+                dramatically reduce the time it takes to test out a deck idea or even
+                just a commander.
+              </p>
+            </BlogCard>
+
+            <BlogCard
+              class="container"
+              url="blogs/first-commander-deck"
+              title="Build your first Magic: The Gathering - Commander deck"
+              urlAria="navigate to the Build your first commander deck article"
+              releaseDate="September 29, 2024"
+            >
+              <p>
+                Building your first Commander deck can be both exciting and overwhelming.
+                With thousands of cards to choose from and countless strategies to explore,
+                it's easy to feel lost. This guide is designed to help new players step
+                into the world of Commander. We'll start by commanders that are perfect
+                for beginners. Then, we'll walk you through a simple framework for building
+                your first deck. Finally, we'll give you a few extra tools to help you
+                refine your deck as you play and make it your own!
+              </p>
+            </BlogCard>
+
+            <BlogCard
+              class="container"
+              title="Learning Rust"
+              url="blogs/rust-game"
+              urlAria="navigate to Learning Rust blog post"
+              releaseDate="December 10, 2023"
+            >
+              <p>
+                Starting out in the industry there's been one thing I've heard continually:
+                Rust is cool, and you should learn it. So, after endless nagging by a few colleagues
+                and the swathes of social media that pushes it, I've made the plunge…
+              </p>
+            </BlogCard>
+          </section>
+
+          <footer class="container footer">
+            <ul class="socialsList">
+              <li>
+                <a href="https://github.com/SamBWagner" rel="nofollow" target="_blank" aria-label="GitHub profile">
+                  <Icon name="simple-line-icons:social-github" class="gitHub" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/sam-b-wagner" rel="nofollow" target="_blank" aria-label="LinkedIn profile">
+                  <Icon name="simple-line-icons:social-linkedin" class="linkedIn" />
+                </a>
+              </li>
+            </ul>
+          </footer>
+        </main>
+</BaseLayout>
+
+<style>
+        .mainContainer {
+            align-items: center;
+            text-align: center;
+            margin-top: auto;
+            margin-bottom:auto;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            margin-bottom: 5rem;
+            margin-top: 5rem;
+        }
+
+        .header h1 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .header h2 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        /* .byLineContainer {
+        } */
+
+        .byLine {
+            font-weight: 600;
+            font-size: 2.5rem;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 505px) {
+            .byLine {
+                font-size: 2rem;
+            }
+        }
+
+        .byLine::before {
+            content: " ";
+            display: block;
+            width: auto;
+            border-bottom: 3px solid var(--accent2);
+        }
+
+        .footer {
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            max-width: var(--max-width);
+            border-top-left-radius: var(--border-radius);
+            border-top-right-radius: var(--border-radius);
+            width: 100%;
+        }
+
+        .homeLink {
+            font-size: 1.5rem;
+            font-family: var(--neuton), 'sans-serif';
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #f4963e;
+            text-decoration: none;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .homeLink:hover {
+            transform: scale(1.1);
+            transition: fill 0.2s ease-in-out, transform 0.2s ease;
+        }
+
+        .socialsList {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            gap: 1rem;
+        }
+
+        .blogCardContainer {
+            padding-bottom: 5rem;
+            padding-top:5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            justify-content: center;
+        }
+
+        .blogContainerHeading {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .gitHub, .linkedIn {
+            font-size: 2rem;
+            color: var(--accent1);
+            transition: fill 0.3s ease, transform 0.3s ease;
+        }
+
+        .gitHub:hover, .linkedIn:hover {
+            cursor: pointer;
+            color: var(--accent1-link-hover);
+            transform: scale(1.2);
+        }
+</style>

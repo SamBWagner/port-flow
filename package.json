@@ -1,0 +1,29 @@
+{
+  "name": "port-flow",
+  "version": "1.0.0",
+  "description": "My portfolio site! The primary use is a static site where my blogs are stored.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamBWagner/port-flow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/SamBWagner/port-flow/issues"
+  },
+  "homepage": "https://github.com/SamBWagner/port-flow#readme",
+  "dependencies": {
+    "@iconify-json/simple-line-icons": "^1.2.1",
+    "astro": "^5.13.3",
+    "astro-icon": "^1.1.5"
+  }
+}

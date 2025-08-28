@@ -1,0 +1,85 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { class: className = "", title, url, urlAria, releaseDate } = Astro.props;
+---
+
+<a href={url} aria-label={urlAria} class={`${className} cardLink`}>
+  <article class="card">
+    <p class="releaseDate">{releaseDate}</p>
+    <h3>{title}</h3>
+    <div class="cardContent">
+            <slot />
+    </div>
+    <div class="cardEnd">
+      <Icon name="simple-line-icons:arrow-right" class="seeMoreIcon" />
+    </div>
+  </article>
+</a>
+
+<style>
+  .cardLink {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+
+    background-color: var(--background-color-lightened);
+
+    transition: transform 0.2s ease, box-shadow 0.3s ease-in-out;
+    transform-origin: center;
+
+    color: var(--white);
+  }
+
+  .card h3:first-of-type {
+    margin-bottom: 0;
+    margin-top: 0rem;
+  }
+
+  .card p {
+    text-align: center;
+  }
+
+  .cardContent p:first-of-type {
+    margin-top: 2rem;
+  }
+
+  .card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: scale(1.01);
+    color: var(--white);
+  }
+
+  .cardEnd {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .seeMoreIcon {
+    height: 32px;
+    color: var(--accent1);
+    transition: transform 0.2s ease;
+  }
+
+  .card:hover .seeMoreIcon {
+    color: var(--accent1-link-hover);
+    transform: scale(1.2);
+  }
+
+  .releaseDate {
+    margin-bottom: 0rem;
+    color: var(--accent1);
+    font-style: italic;
+    font-size: medium;
+    text-wrap: wrap;
+  }
+</style>

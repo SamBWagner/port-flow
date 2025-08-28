@@ -1,0 +1,25 @@
+---
+const { class: className = "" } = Astro.props;
+---
+
+<header class={`${className} headerContainer`}>
+  <h1 id="heading-page-name" class="heading">Sam Wagner</h1>
+  <slot />
+</header>
+
+<style>
+  .headerContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .heading {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+</style>
