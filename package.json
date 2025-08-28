@@ -25,5 +25,8 @@
     "@iconify-json/simple-line-icons": "^1.2.1",
     "astro": "^5.13.3",
     "astro-icon": "^1.1.5"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.7.10"
   }
 }
