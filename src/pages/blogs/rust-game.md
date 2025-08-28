@@ -2,7 +2,7 @@
 layout: '../../layouts/BlogLayout.astro'
 title: "Learning Rust"
 description: "My first steps with the Rust programming language and game development with Bevy."
-publishDate: "December 10th 2023"
+publishDate: "December 10th, 2023"
 ---
 
 ## My first game

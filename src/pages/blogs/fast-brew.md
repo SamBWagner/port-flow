@@ -2,7 +2,7 @@
 layout: '../../layouts/BlogLayout.astro'
 title: "Fast Brewing"
 description: "In this guide, I'll show you how to quickly test whether a deck idea is a viable choice in less than 10 minutes."
-publishDate: "December 29th 2024"
+publishDate: "December 29th, 2024"
 ---
 
 Have you ever had a moment where you find a commander and you think it's cool but you're not sure if there will be enough cards available to make the deck run smoothly, or you weren't sure if it will feel good to play so you've not wanted to waste time brewing up a 100-card deck? Well, in this guide, I'm going to show you how you can dramatically reduce the time it takes to test out a deck idea or even just a commander.
