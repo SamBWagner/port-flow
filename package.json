@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/SamBWagner/port-flow#readme",
   "dependencies": {
+    "@astrojs/rss": "^4.0.13",
     "@iconify-json/simple-line-icons": "^1.2.1",
     "astro": "^5.15.3",
     "astro-icon": "^1.1.5"
