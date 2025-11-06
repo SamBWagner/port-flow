@@ -23,7 +23,7 @@
   "homepage": "https://github.com/SamBWagner/port-flow#readme",
   "dependencies": {
     "@iconify-json/simple-line-icons": "^1.2.1",
-    "astro": "^5.13.3",
+    "astro": "^5.15.3",
     "astro-icon": "^1.1.5"
   },
   "devDependencies": {
