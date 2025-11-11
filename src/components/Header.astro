@@ -1,10 +1,13 @@
 ---
+import { Image } from "astro:assets";
+import logo from "../../public/logo-xl.png";
+
 const { class: className = "" } = Astro.props;
 ---
 
 <header class={`${className} headerContainer`}>
   <h1 id="heading-page-name" class="heading">
-    <img src="/logo-xl.png" alt="Sam Wagner" class="logo" />
+    <Image src={logo} alt="Sam Wagner" class="logo" width={1500} height={1500} />
   </h1>
   <slot />
 </header>
@@ -21,10 +24,19 @@ const { class: className = "" } = Astro.props;
     display: flex;
     justify-content: center;
     margin: 0;
+    min-height: 37rem;
   }
 
   .logo {
     max-width: 37rem;
+    width: 100%;
     height: auto;
+    aspect-ratio: 1 / 1;
+  }
+  
+  @media (max-width: 640px) {
+    .heading {
+      min-height: calc(100vw - 2rem);
+    }
   }
 </style>
