@@ -3,7 +3,9 @@ const { class: className = "" } = Astro.props;
 ---
 
 <header class={`${className} headerContainer`}>
-  <h1 id="heading-page-name" class="heading">Sam Wagner</h1>
+  <h1 id="heading-page-name" class="heading">
+    <img src="/logo-xl.png" alt="Sam Wagner" class="logo" />
+  </h1>
   <slot />
 </header>
 
@@ -13,13 +15,16 @@ const { class: className = "" } = Astro.props;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
   }
 
   .heading {
     display: flex;
     justify-content: center;
     margin: 0;
+  }
+
+  .logo {
+    max-width: 37rem;
+    height: auto;
   }
 </style>
