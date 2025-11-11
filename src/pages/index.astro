@@ -74,6 +74,11 @@ import { Icon } from "astro-icon/components";
                   <Icon name="simple-line-icons:social-linkedin" class="linkedIn" />
                 </a>
               </li>
+              <li>
+                <a href="/rss.xml" target="_blank" aria-label="RSS feed">
+                  <Icon name="simple-line-icons:feed" class="rss" />
+                </a>
+              </li>
             </ul>
           </footer>
         </main>
@@ -176,13 +181,13 @@ import { Icon } from "astro-icon/components";
             margin-bottom: 0;
         }
 
-        .gitHub, .linkedIn {
+        .gitHub, .linkedIn, .rss {
             font-size: 2rem;
             color: var(--accent1);
             transition: fill 0.3s ease, transform 0.3s ease;
         }
 
-        .gitHub:hover, .linkedIn:hover {
+        .gitHub:hover, .linkedIn:hover, .rss:hover {
             cursor: pointer;
             color: var(--accent1-link-hover);
             transform: scale(1.2);

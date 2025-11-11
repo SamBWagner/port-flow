@@ -12,6 +12,7 @@ const { title, description, publishDate } = frontmatter;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} - Sam Wagner</title>
     <meta name="description" content={description}>
+    <link rel="icon" type="image/png" href="/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Fira+Code:wght@400&family=Neuton:wght@200;300;400;700;800&display=swap" rel="stylesheet">
@@ -53,6 +54,11 @@ const { title, description, publishDate } = frontmatter;
         <li>
           <a href="https://www.linkedin.com/in/sam-b-wagner" rel="nofollow" target="_blank" aria-label="LinkedIn profile">
             <Icon name="simple-line-icons:social-linkedin" class="linkedIn" />
+          </a>
+        </li>
+        <li>
+          <a href="/rss.xml" target="_blank" aria-label="RSS feed">
+            <Icon name="simple-line-icons:feed" class="rss" />
           </a>
         </li>
       </ul>
@@ -143,13 +149,13 @@ const { title, description, publishDate } = frontmatter;
     padding: 0;
   }
 
-  .gitHub, .linkedIn {
+  .gitHub, .linkedIn, .rss {
     font-size: 2rem;
     color: var(--accent1);
     transition: fill 0.3s ease, transform 0.3s ease;
   }
 
-  .gitHub:hover, .linkedIn:hover {
+  .gitHub:hover, .linkedIn:hover, .rss:hover {
     cursor: pointer;
     color: var(--accent1-link-hover);
     transform: scale(1.2);
