@@ -7,7 +7,7 @@ const { class: className = "" } = Astro.props;
 
 <header class={`${className} headerContainer`}>
   <h1 id="heading-page-name" class="heading">
-    <Image src={logo} alt="Sam Wagner" class="logo" width={1500} height={1500} />
+    <Image class="header-image" src={logo} alt="Sam Wagner" class="logo" width={1500} height={1500} />
   </h1>
   <slot />
 </header>
@@ -25,6 +25,10 @@ const { class: className = "" } = Astro.props;
     justify-content: center;
     margin: 0;
     min-height: 37rem;
+  }
+
+  .header-image {
+    filter: drop-shadow(1px 1px 0.1rem rgba(0,0,0,0.5))
   }
 
   .logo {
