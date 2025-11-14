@@ -57,6 +57,11 @@ const { title, description, publishDate } = frontmatter;
           </a>
         </li>
         <li>
+          <a href="https://www.ssw.com.au/people/sam-wagner/" rel="nofollow" target="_blank" aria-label="SSW People Profile">
+            <Icon name="simple-line-icons:people" class="ssw-people" />
+          </a>
+        </li>
+        <li>
           <a href="/rss.xml" target="_blank" aria-label="RSS feed">
             <Icon name="simple-line-icons:feed" class="rss" />
           </a>
@@ -149,13 +154,13 @@ const { title, description, publishDate } = frontmatter;
     padding: 0;
   }
 
-  .gitHub, .linkedIn, .rss {
+  .gitHub, .linkedIn, .rss, .ssw-people {
     font-size: 2rem;
     color: var(--accent1);
     transition: fill 0.3s ease, transform 0.3s ease;
   }
 
-  .gitHub:hover, .linkedIn:hover, .rss:hover {
+  .gitHub:hover, .linkedIn:hover, .rss:hover, .ssw-people:hover {
     cursor: pointer;
     color: var(--accent1-link-hover);
     transform: scale(1.2);
