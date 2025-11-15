@@ -242,8 +242,6 @@ img {
   max-width: var(--max-width);
   margin-right: auto;
   margin-left: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .contentContainer {
