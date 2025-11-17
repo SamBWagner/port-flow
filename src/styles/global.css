@@ -17,6 +17,7 @@
   --border-radius: 8px;
 
   --max-width: 52rem;
+  --content-width: 65ch;
   
   --neuton: 'Neuton', serif;
   --cabin: 'Cabin', sans-serif;
