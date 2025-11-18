@@ -12,9 +12,63 @@ import "../styles/global.css";
                 <link rel="preconnect" href="https://fonts.googleapis.com">
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                 <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400&family=Fira+Code:wght@400&family=Neuton:wght@200;300;400;700;800&display=swap" rel="stylesheet">
+                <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                                const cursor = document.getElementById('cursor');
+                                const cursorSpans = cursor.querySelectorAll('span');
+                                
+                                let mouseX = 0;
+                                let mouseY = 0;
+                                
+                                const cursorPositions = Array.from({ length: cursorSpans.length }, () => ({ x: 0, y: 0 }));
+                                
+                                document.addEventListener('mousemove', (e) => {
+                                        mouseX = e.clientX;
+                                        mouseY = e.clientY;
+                                });
+                                
+                                function animateCursor() {
+                                        let targetX = mouseX;
+                                        let targetY = mouseY;
+                                        
+                                        cursorSpans.forEach((span, index) => {
+                                                cursorPositions[index].x += (targetX - cursorPositions[index].x) * 0.3;
+                                                cursorPositions[index].y += (targetY - cursorPositions[index].y) * 0.3;
+                                                
+                                                span.style.left = cursorPositions[index].x + 'px';
+                                                span.style.top = cursorPositions[index].y + 'px';
+                                                
+                                                targetX = cursorPositions[index].x;
+                                                targetY = cursorPositions[index].y;
+                                        });
+                                        
+                                        requestAnimationFrame(animateCursor);
+                                }
+                                
+                                animateCursor();
+                        });
+                </script>
         </head>
 
         <body>
+                <svg style="display: none;">
+                        <defs>
+                                <filter id="goo">
+                                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                                        <feBlend in="SourceGraphic" in2="goo" />
+                                </filter>
+                        </defs>
+                </svg>
+                
+                <div class="Cursor" id="cursor">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                </div>
+                
                 <slot />
         </body>
 </html>
