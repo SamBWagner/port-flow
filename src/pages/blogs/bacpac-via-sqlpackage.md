@@ -7,7 +7,9 @@ publishDate: "December 23rd, 2025"
 
 As a .NET developer working on MacOS, you'll likely run into a situation where you're trying to use a backed up version of your SQLServer database and do some testing. But, you'll find that the current release of VSCode's MSSQL package doesn't support `.bacpac` imports right now. It is in preview though!
 
-*Figure: VSCode | MSSQL extension page | .bacpac in the preview*
+![MSSQL Extension Page](/bacpac-via-sqlpackage/mssqlExtensionPage.png)
+
+**Figure: VSCode | MSSQL extension page | .bacpac in the preview**
 
 ## What can you do now?
 
