@@ -30,3 +30,22 @@ sqlpackage /Action:Import \
 ```
 
 Run that, pointed at your database and you'll end up doing a nice little import. From the CLI, no need for tools. YAY!
+
+## Using AI to generate the command
+
+If you're working with a SQL Server connection string and want to quickly convert it to a SqlPackage command, you can use AI to help. Here's a prompt that works great:
+
+```
+I have a SQL Server connection string and a .bacpac file. Please transform this connection string into a sqlpackage CLI import command.
+
+Connection String: {your-connection-string}
+Bacpac File: {filename}.bacpac
+
+Requirements:
+- Use /Action:Import
+- Extract the server, database, user, and password from the connection string
+- Include /TargetTrustServerCertificate:true if needed
+- Format the command with proper line breaks for readability
+```
+
+This will save you from manually parsing the connection string and mapping each parameter to the correct SqlPackage argument.
