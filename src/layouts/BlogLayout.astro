@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import { Icon } from "astro-icon/components";
+import Giscus from "../components/Giscus.astro";
 
 const { frontmatter } = Astro.props;
 const { title, description, publishDate } = frontmatter;
@@ -37,6 +38,10 @@ const { title, description, publishDate } = frontmatter;
 
       <div class="container contentContainer">
         <slot />
+      </div>
+
+      <div class="container contentContainer">
+        <Giscus />
       </div>
     </main>
 
