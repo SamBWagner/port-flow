@@ -2,7 +2,7 @@
 layout: '../../layouts/BlogLayout.astro'
 title: "Responsibility and Agency - How to build great internal processes"
 description: "If you're struggling with building a company of highly motivated, happy workers. This advice should help you!"
-publishDate: "Febuary 5th, 2026"
+publishDate: "February 5th, 2026"
 ---
 
 At any company, you’ll end up having to have jobs that “keep the lights on”. This is common and to be expected. Much the same as when you own a home, someone’s gotta do the dishes.

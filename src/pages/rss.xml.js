@@ -19,6 +19,8 @@ export async function GET(context) {
     };
   });
   
+  items.sort((a, b) => b.pubDate - a.pubDate);
+
   return rss({
     title: 'Port Flow Blog',
     description: 'My portfolio site where my blogs are stored',
