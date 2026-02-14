@@ -7,7 +7,7 @@ publishDate: "February 5th, 2026"
 
 At any company, you’ll end up having to have jobs that “keep the lights on”. This is common and to be expected. Much the same as when you own a home, someone’s gotta do the dishes.
 
-There is a common dysfunction that occurs in companies though, which doesn’t usually happen at home. People end up getting an ever-growing set of responsibilities, without an equivalently growing agency to do them.
+There is a common dysfunction that occurs in companies though, which doesn’t usually happen at home. People end up getting an ever-growing set of responsibilities, without an equivalently growing level of agency to do them.
 
 When you give someone the responsibility to “run XYZ meeting”, “keep the dishes done”, “Check in on XYZ employees”, or “Know what people are working on”, but then force them to work in a strict way, do routine check-ins and micromanaging, you’re creating a dysfunction that leads to work being done slower, and people being less and less happy.
 
