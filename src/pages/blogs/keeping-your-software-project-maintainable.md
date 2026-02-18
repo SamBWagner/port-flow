@@ -68,3 +68,7 @@ complexity. That's something valuable to see.
 In your life growing as a Software Engineer, your goal is to learn how to drive
 down that number project-to-project and to opt into those concepts, only when
 the cost is outweighed by the benefits.
+
+So, the next time you finish off a personal project, or some part of a project
+at work. Stop, and count up all the different concepts you've needed to use to
+make it all work. Doing this will help you continually inspect and grow.
