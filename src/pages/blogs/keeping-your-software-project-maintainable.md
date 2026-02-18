@@ -72,3 +72,9 @@ the cost is outweighed by the benefits.
 So, the next time you finish off a personal project, or some part of a project
 at work. Stop, and count up all the different concepts you've needed to use to
 make it all work. Doing this will help you continually inspect and grow.
+
+## Complexity CLI
+
+I've created a little CLI tool which will help you to use AI in your project to
+manage your project's complexity. See it here on
+[GitHub](https://github.com/SamBWagner/complexity-cli). 
