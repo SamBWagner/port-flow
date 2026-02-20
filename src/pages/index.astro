@@ -56,6 +56,8 @@ import { Icon } from "astro-icon/components";
                 </p>
             </BlogCard>
 
+            <h2 class="yearSeparator">2025</h2>
+
             <BlogCard
               class="container"
               title="Importing a database via a .bacpac file on MacOS"
@@ -70,6 +72,8 @@ import { Icon } from "astro-icon/components";
                 MSSQL package doesn't support .bacpac imports right now.
               </p>
             </BlogCard>
+
+            <h2 class="yearSeparator">2024</h2>
 
             <BlogCard
               class="container"
@@ -106,6 +110,8 @@ import { Icon } from "astro-icon/components";
                 refine your deck as you play and make it your own!
               </p>
             </BlogCard>
+
+            <h2 class="yearSeparator">2023</h2>
 
             <BlogCard
               class="container"
@@ -248,6 +254,25 @@ import { Icon } from "astro-icon/components";
         .blogContainerHeading {
             margin-top: 0;
             margin-bottom: 0;
+        }
+
+        .yearSeparator {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: var(--neuton), sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent2);
+            letter-spacing: 2px;
+        }
+
+        .yearSeparator::before,
+        .yearSeparator::after {
+            content: "";
+            flex: 1;
+            border-top: 1px solid var(--accent2);
+            opacity: 0.4;
         }
 
         .gitHub, .linkedIn, .rss, .ssw-people {
