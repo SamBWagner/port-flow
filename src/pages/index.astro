@@ -146,6 +146,11 @@ import { Icon } from "astro-icon/components";
                 </a>
               </li>
               <li>
+                <a href="https://buymeacoffee.com/sambwagner" rel="nofollow" target="_blank" title="Buy Me A Coffee" aria-label="Buy Me A Coffee">
+                  <Icon name="simple-line-icons:cup" class="buyMeACoffee" />
+                </a>
+              </li>
+              <li>
                 <a href="/rss.xml" target="_blank" title="RSS feed" aria-label="RSS feed">
                   <Icon name="simple-line-icons:feed" class="rss" />
                 </a>
@@ -275,13 +280,13 @@ import { Icon } from "astro-icon/components";
             opacity: 0.4;
         }
 
-        .gitHub, .linkedIn, .rss, .ssw-people {
+        .gitHub, .linkedIn, .rss, .ssw-people, .buyMeACoffee {
             font-size: 2rem;
             color: var(--accent1);
             transition: fill 0.3s ease, transform 0.3s ease;
         }
 
-        .gitHub:hover, .linkedIn:hover, .rss:hover, .ssw-people:hover {
+        .gitHub:hover, .linkedIn:hover, .rss:hover, .ssw-people:hover, .buyMeACoffee:hover {
             cursor: pointer;
             color: var(--accent1-link-hover);
             transform: scale(1.2);

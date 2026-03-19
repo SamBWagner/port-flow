@@ -67,6 +67,11 @@ const { title, description, publishDate } = frontmatter;
           </a>
         </li>
         <li>
+          <a href="https://buymeacoffee.com/sambwagner" rel="nofollow" target="_blank" title="Buy Me A Coffee" aria-label="Buy Me A Coffee">
+            <Icon name="simple-line-icons:cup" class="buyMeACoffee" />
+          </a>
+        </li>
+        <li>
           <a href="/rss.xml" target="_blank" title="RSS feed" aria-label="RSS feed">
             <Icon name="simple-line-icons:feed" class="rss" />
           </a>
@@ -172,22 +177,21 @@ const { title, description, publishDate } = frontmatter;
     padding: 0;
   }
 
-  .gitHub, .linkedIn, .rss, .ssw-people {
+  .gitHub, .linkedIn, .rss, .ssw-people, .buyMeACoffee {
     font-size: 1.5rem;
     color: var(--accent1);
     transition: fill 0.3s ease, transform 0.3s ease;
   }
 
   @media (min-width: 640px) {
-    .gitHub, .linkedIn, .rss, .ssw-people {
+    .gitHub, .linkedIn, .rss, .ssw-people, .buyMeACoffee {
       font-size: 2rem;
     }
   }
 
-  .gitHub:hover, .linkedIn:hover, .rss:hover, .ssw-people:hover {
+  .gitHub:hover, .linkedIn:hover, .rss:hover, .ssw-people:hover, .buyMeACoffee:hover {
     cursor: pointer;
     color: var(--accent1-link-hover);
     transform: scale(1.2);
   }
 </style>
-
