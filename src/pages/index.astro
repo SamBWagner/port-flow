@@ -96,6 +96,9 @@ const blogGroups = blogs.reduce((groups, blog) => {
               title={project.title}
               meta={project.releaseDate}
               summary={project.summary}
+              primaryHref={project.liveUrl !== project.repoUrl ? project.liveUrl : undefined}
+              primaryLabel={project.liveUrl !== project.repoUrl ? "Visit site" : undefined}
+              primaryAria={project.liveUrl !== project.repoUrl ? `Visit ${project.title}` : undefined}
               secondaryHref={project.repoUrl}
               secondaryLabel="View code"
               secondaryAria={`View ${project.title} on GitHub`}
