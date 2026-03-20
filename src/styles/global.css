@@ -26,6 +26,7 @@
 
 * {
   font-family: var(--cabin), 'sans-serif';
+  box-sizing: border-box;
 }
 
 :focus {
@@ -152,6 +153,7 @@ body {
   width: 100%;
   align-items: center;
   margin: 0;
+  overflow-x: hidden;
 }
 
 main {

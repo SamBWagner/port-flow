@@ -2,293 +2,395 @@
 import Header from "../components/Header.astro";
 import BlogCard from "../components/BlogCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { blogs, projects } from "../data/homeContent";
 
 import { Icon } from "astro-icon/components";
+
+const blogGroups = blogs.reduce((groups, blog) => {
+  const existingGroup = groups.find((group) => group.year === blog.year);
+
+  if (existingGroup) {
+    existingGroup.entries.push(blog);
+  } else {
+    groups.push({ year: blog.year, entries: [blog] });
+  }
+
+  return groups;
+}, [] as { year: string; entries: typeof blogs }[]);
 ---
 
 <BaseLayout>
-        <main class="mainContainer">
-          <Header class="header"></Header>
+  <main class="mainContainer">
+    <Header class="header"></Header>
 
-          <section class="blogCardContainer">
+    <section class="homeShell">
+      <div class="sectionNavContainer">
+        <div class="sectionNav" role="tablist" aria-label="Content sections">
+          <button
+            type="button"
+            class="sectionNavButton isActive"
+            data-section-trigger
+            data-section="blogs"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-blogs"
+            id="tab-blogs"
+            tabindex="0"
+          >
+            Blogs
+          </button>
+          <button
+            type="button"
+            class="sectionNavButton"
+            data-section-trigger
+            data-section="projects"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-projects"
+            id="tab-projects"
+            tabindex="-1"
+          >
+            Projects
+          </button>
+        </div>
+      </div>
+
+      <div class="sectionPanels">
+        <section
+          class="blogCardContainer sectionPanel"
+          data-section-panel="blogs"
+          id="panel-blogs"
+          role="tabpanel"
+          aria-labelledby="tab-blogs"
+        >
+          {blogGroups.map((group, groupIndex) => (
+            <>
+              {groupIndex > 0 && <h2 class="yearSeparator">{group.year}</h2>}
+              {group.entries.map((blog) => (
+                <BlogCard
+                  class="container"
+                  title={blog.title}
+                  meta={blog.publishDate}
+                  summary={blog.summary}
+                  primaryHref={blog.href}
+                  primaryLabel="Read article"
+                  primaryAria={blog.ariaLabel}
+                  linkEntireCard={true}
+                />
+              ))}
+            </>
+          ))}
+        </section>
+
+        <section
+          class="blogCardContainer sectionPanel"
+          data-section-panel="projects"
+          id="panel-projects"
+          role="tabpanel"
+          aria-labelledby="tab-projects"
+          hidden
+        >
+          {projects.map((project) => (
             <BlogCard
               class="container"
-              title="Keeping Your Software Project Maintainable"
-              url="blogs/keeping-your-software-project-maintainable"
-              urlAria="navigate to the Keeping Your Software Project Maintainable article"
-              releaseDate="February 18th, 2026"
-            >
-              <p>
-                Writing great software is hard. Building systems that solve real problems is hard. So, when you're embarking on any software journey, there is a concept called conceptual complexity. Put simply, it's the idea that the more "concepts" you introduce into a system, the more complex it gets.
-              </p>
-              <p>
-                When you're building great software, there are a few principles that you can abide by that will make your, and your colleagues', lives easier.
-              </p>
-            </BlogCard>
+              title={project.title}
+              meta={project.releaseDate}
+              summary={project.summary}
+              secondaryHref={project.repoUrl}
+              secondaryLabel="View code"
+              secondaryAria={`View ${project.title} on GitHub`}
+              installCommand={project.installCommand}
+            />
+          ))}
+        </section>
+      </div>
+    </section>
 
-            <BlogCard
-              class="container"
-              title="OAuth Sucks"
-              url="blogs/oauth-sucks"
-              urlAria="navigate to the OAuth Sucks article"
-              releaseDate="February 17th, 2026"
-            >
-              <p>
-                OAuth is the biggest pile of crap and any security benefits that there might be are vastly out-matched by the constant annoyance that is using it.
-              </p>
-              <p>
-                What I love in my life is whenever I try and log into a website, I have to play this game where I have to figure out, "which OAuth provider did I create an account with?"
-              </p>
-            </BlogCard>
-
-            <BlogCard
-              class="container"
-              title="Responsibility and Agency - How to build great internal processes"
-              url="blogs/great-internal-processes"
-              urlAria="navigate to the Responsibility and Agency - How to build great internal processes article"
-              releaseDate="Febuary 5th, 2026"
-            >
-              <p>
-                At any company, you'll end up having to have jobs that "keep the lights on". This is common and to be expected. Much the same as when you own a home, someone's gotta do the dishes.
-              </p>
-                <p>
-                    There is a common dysfunction that occurs in companies though, which doesn't usually happen at home. People end up getting an ever-growing set of responsibilities, without an equivalently growing agency to do them.
-                </p>
-            </BlogCard>
-
-            <h2 class="yearSeparator">2025</h2>
-
-            <BlogCard
-              class="container"
-              title="Importing a database via a .bacpac file on MacOS"
-              url="blogs/bacpac-via-sqlpackage"
-              urlAria="navigate to the Importing a database via a .bacpac file on MacOS article"
-              releaseDate="December 23, 2025"
-            >
-              <p>
-                As a .NET developer working on MacOS, you'll likely run into a situation 
-                where you're trying to use a backed up version of your SQLServer database 
-                and do some testing. But, you'll find that the current release of VSCode's 
-                MSSQL package doesn't support .bacpac imports right now.
-              </p>
-            </BlogCard>
-
-            <h2 class="yearSeparator">2024</h2>
-
-            <BlogCard
-              class="container"
-              title="Advanced Deck-building Guide: Fast Brewing"
-              url="blogs/fast-brew"
-              urlAria="navigate to the Advanced Deck-building: Fast Brew article"
-              releaseDate="December 29, 2024"
-            >
-              <p>
-                Have you ever had a moment where you find a commander and you think
-                it's cool but you're not sure if there will be enough cards available
-                to make the deck run smoothly, or you weren't sure if it will feel
-                good to play so you've not wanted to waste time brewing up a 100-card
-                deck? Well, in this guide, I'm going to show you how you can
-                dramatically reduce the time it takes to test out a deck idea or even
-                just a commander.
-              </p>
-            </BlogCard>
-
-            <BlogCard
-              class="container"
-              url="blogs/first-commander-deck"
-              title="Build your first Magic: The Gathering - Commander deck"
-              urlAria="navigate to the Build your first commander deck article"
-              releaseDate="September 29, 2024"
-            >
-              <p>
-                Building your first Commander deck can be both exciting and overwhelming.
-                With thousands of cards to choose from and countless strategies to explore,
-                it's easy to feel lost. This guide is designed to help new players step
-                into the world of Commander. We'll start by commanders that are perfect
-                for beginners. Then, we'll walk you through a simple framework for building
-                your first deck. Finally, we'll give you a few extra tools to help you
-                refine your deck as you play and make it your own!
-              </p>
-            </BlogCard>
-
-            <h2 class="yearSeparator">2023</h2>
-
-            <BlogCard
-              class="container"
-              title="Learning Rust"
-              url="blogs/rust-game"
-              urlAria="navigate to Learning Rust blog post"
-              releaseDate="December 10, 2023"
-            >
-              <p>
-                Starting out in the industry there's been one thing I've heard continually:
-                Rust is cool, and you should learn it. So, after endless nagging by a few colleagues
-                and the swathes of social media that pushes it, I've made the plunge…
-              </p>
-            </BlogCard>
-          </section>
-
-          <footer class="container footer">
-            <ul class="socialsList">
-              <li>
-                <a href="https://github.com/SamBWagner" rel="nofollow" target="_blank" title="GitHub profile" aria-label="GitHub profile">
-                  <Icon name="simple-line-icons:social-github" class="gitHub" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/sam-b-wagner" rel="nofollow" target="_blank" title="LinkedIn profile" aria-label="LinkedIn profile">
-                  <Icon name="simple-line-icons:social-linkedin" class="linkedIn" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.ssw.com.au/people/sam-wagner/" rel="nofollow" target="_blank" title="SSW People Profile" aria-label="SSW People Profile">
-                  <Icon name="simple-line-icons:people" class="ssw-people" />
-                </a>
-              </li>
-              <li>
-                <a href="https://buymeacoffee.com/sambwagner" rel="nofollow" target="_blank" title="Buy Me A Coffee" aria-label="Buy Me A Coffee">
-                  <Icon name="simple-line-icons:cup" class="buyMeACoffee" />
-                </a>
-              </li>
-              <li>
-                <a href="/rss.xml" target="_blank" title="RSS feed" aria-label="RSS feed">
-                  <Icon name="simple-line-icons:feed" class="rss" />
-                </a>
-              </li>
-            </ul>
-          </footer>
-        </main>
+    <footer class="container footer">
+      <ul class="socialsList">
+        <li>
+          <a href="https://github.com/SamBWagner" rel="nofollow" target="_blank" title="GitHub profile" aria-label="GitHub profile">
+            <Icon name="simple-line-icons:social-github" class="gitHub" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/sam-b-wagner" rel="nofollow" target="_blank" title="LinkedIn profile" aria-label="LinkedIn profile">
+            <Icon name="simple-line-icons:social-linkedin" class="linkedIn" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.ssw.com.au/people/sam-wagner/" rel="nofollow" target="_blank" title="SSW People Profile" aria-label="SSW People Profile">
+            <Icon name="simple-line-icons:people" class="ssw-people" />
+          </a>
+        </li>
+        <li>
+          <a href="https://buymeacoffee.com/sambwagner" rel="nofollow" target="_blank" title="Buy Me A Coffee" aria-label="Buy Me A Coffee">
+            <Icon name="simple-line-icons:cup" class="buyMeACoffee" />
+          </a>
+        </li>
+        <li>
+          <a href="/rss.xml" target="_blank" title="RSS feed" aria-label="RSS feed">
+            <Icon name="simple-line-icons:feed" class="rss" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </main>
 </BaseLayout>
 
+<script is:inline>
+  const validSections = ["blogs", "projects"];
+  const tabButtons = Array.from(document.querySelectorAll("[data-section-trigger]"));
+  const panels = Array.from(document.querySelectorAll("[data-section-panel]"));
+
+  function setActiveSection(section, pushHash = false) {
+    const nextSection = validSections.includes(section) ? section : "blogs";
+
+    tabButtons.forEach((button) => {
+      const isActive = button.dataset.section === nextSection;
+      button.classList.toggle("isActive", isActive);
+      button.setAttribute("aria-selected", isActive ? "true" : "false");
+      button.setAttribute("tabindex", isActive ? "0" : "-1");
+    });
+
+    panels.forEach((panel) => {
+      panel.hidden = panel.dataset.sectionPanel !== nextSection;
+    });
+
+    if (pushHash) {
+      window.history.replaceState(null, "", `#${nextSection}`);
+    }
+  }
+
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      setActiveSection(button.dataset.section, true);
+    });
+  });
+
+  document.addEventListener("click", async (event) => {
+    const button = event.target instanceof Element
+      ? event.target.closest("[data-copy-text]")
+      : null;
+
+    if (!(button instanceof HTMLButtonElement)) {
+      return;
+    }
+
+    const copyText = button.dataset.copyText;
+
+    if (!copyText) {
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(copyText);
+      const originalAriaLabel = button.getAttribute("aria-label");
+      button.dataset.copyState = "copied";
+      button.setAttribute("aria-label", "Copied");
+      button.setAttribute("title", "Copied");
+      window.setTimeout(() => {
+        delete button.dataset.copyState;
+        button.setAttribute("aria-label", originalAriaLabel ?? "Copy");
+        button.setAttribute("title", "Copy install command");
+      }, 1600);
+    } catch {
+      button.setAttribute("aria-label", "Copy failed");
+      button.setAttribute("title", "Copy failed");
+      window.setTimeout(() => {
+        button.setAttribute("aria-label", `Copy command: ${copyText}`);
+        button.setAttribute("title", "Copy install command");
+      }, 1600);
+    }
+  });
+
+  window.addEventListener("hashchange", () => {
+    setActiveSection(window.location.hash.replace("#", ""));
+  });
+
+  setActiveSection(window.location.hash.replace("#", ""));
+</script>
+
 <style>
-        .mainContainer {
-            align-items: center;
-            text-align: center;
-            margin-top: auto;
-            margin-bottom:auto;
-        }
+  .mainContainer {
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 
-        .header {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
 
-            margin-bottom: 5rem;
-            margin-top: 5rem;
-        }
+  .homeShell {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+  }
 
-        .header h1 {
-            margin-top: 0;
-            margin-bottom: 0;
-        }
+  .sectionNavContainer {
+    display: flex;
+    justify-content: center;
+  }
 
-        .header h2 {
-            margin-top: 0;
-            margin-bottom: 0;
-        }
+  .sectionNav {
+    width: auto;
+    max-width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+  }
 
-        /* .byLineContainer {
-        } */
+  .sectionNavButton {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: var(--accent2);
+    cursor: pointer;
+    padding: 0.35rem 0.25rem;
+    font-family: var(--neuton), serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
 
-        .byLine {
-            font-weight: 600;
-            font-size: 2.5rem;
-            margin-bottom: 0;
-        }
+  .sectionNavButton:hover {
+    color: var(--accent1-link-hover);
+  }
 
-        @media (max-width: 505px) {
-            .byLine {
-                font-size: 2rem;
-            }
-        }
+  .sectionNavButton.isActive {
+    color: var(--accent2);
+    border-color: var(--accent2);
+  }
 
-        .byLine::before {
-            content: " ";
-            display: block;
-            width: auto;
-            border-bottom: 3px solid var(--accent2);
-        }
+  .sectionPanels {
+    min-width: 0;
+    width: 100%;
+    overflow-x: clip;
+  }
 
-        .footer {
-            padding-top: 2rem;
-            padding-bottom: 1rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 100;
-            max-width: var(--max-width);
-            border-top-left-radius: var(--border-radius);
-            border-top-right-radius: var(--border-radius);
-        }
+  .sectionPanel[hidden] {
+    display: none;
+  }
 
-        .homeLink {
-            font-size: 1.5rem;
-            font-family: var(--neuton), 'sans-serif';
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            color: #f4963e;
-            text-decoration: none;
-            transition: transform 0.2s ease-in-out;
-        }
+  .blogCardContainer {
+    padding: 0.5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
 
-        .homeLink:hover {
-            transform: scale(1.1);
-            transition: fill 0.2s ease-in-out, transform 0.2s ease;
-        }
+  .yearSeparator {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    font-family: var(--neuton), serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent2);
+    letter-spacing: 2px;
+  }
 
-        .socialsList {
-            display: flex;
-            list-style-type: none;
-            padding: 0;
-            gap: 2rem;
-        }
+  .yearSeparator::before,
+  .yearSeparator::after {
+    content: "";
+    flex: 1;
+    border-top: 1px solid var(--accent2);
+    opacity: 0.4;
+  }
 
-        .blogCardContainer {
-            padding-bottom: 5rem;
-            padding-top:5rem;
-            padding-right:1rem;
-            padding-left:1rem;
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
-            justify-content: center;
-        }
+  .footer {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    max-width: var(--max-width);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+  }
 
-        .blogContainerHeading {
-            margin-top: 0;
-            margin-bottom: 0;
-        }
+  .socialsList {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    gap: 2rem;
+  }
 
-        .yearSeparator {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-family: var(--neuton), sans-serif;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--accent2);
-            letter-spacing: 2px;
-        }
+  .gitHub, .linkedIn, .rss, .ssw-people, .buyMeACoffee {
+    font-size: 2rem;
+    color: var(--accent1);
+    transition: fill 0.3s ease, transform 0.3s ease;
+  }
 
-        .yearSeparator::before,
-        .yearSeparator::after {
-            content: "";
-            flex: 1;
-            border-top: 1px solid var(--accent2);
-            opacity: 0.4;
-        }
+  .gitHub:hover, .linkedIn:hover, .rss:hover, .ssw-people:hover, .buyMeACoffee:hover {
+    cursor: pointer;
+    color: var(--accent1-link-hover);
+    transform: scale(1.2);
+  }
 
-        .gitHub, .linkedIn, .rss, .ssw-people, .buyMeACoffee {
-            font-size: 2rem;
-            color: var(--accent1);
-            transition: fill 0.3s ease, transform 0.3s ease;
-        }
+  @media (min-width: 900px) {
+    .homeShell {
+      display: block;
+    }
 
-        .gitHub:hover, .linkedIn:hover, .rss:hover, .ssw-people:hover, .buyMeACoffee:hover {
-            cursor: pointer;
-            color: var(--accent1-link-hover);
-            transform: scale(1.2);
-        }
+    .sectionNavContainer {
+      position: absolute;
+      top: 0;
+      left: max(1rem, calc(50% - (var(--max-width) / 2) - 8rem));
+      width: 7rem;
+      justify-content: flex-start;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .sectionNav {
+      position: sticky;
+      top: 2rem;
+      width: 7rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      align-self: start;
+      max-width: none;
+      justify-items: start;
+      pointer-events: auto;
+    }
+
+    .sectionNavButton {
+      text-align: left;
+      font-size: 0.9rem;
+      padding: 0.2rem 0;
+    }
+
+    .sectionPanels {
+      width: 100%;
+    }
+
+    .blogCardContainer {
+      padding-top: 0;
+    }
+  }
 </style>

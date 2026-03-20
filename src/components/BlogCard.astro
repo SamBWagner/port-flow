@@ -1,24 +1,114 @@
 ---
+import { Fragment } from "astro/jsx-runtime";
 import { Icon } from "astro-icon/components";
 
-const { class: className = "", title, url, urlAria, releaseDate } = Astro.props;
+const {
+  class: className = "",
+  title,
+  meta,
+  summary = [],
+  primaryHref,
+  primaryLabel,
+  primaryAria = primaryLabel,
+  secondaryHref,
+  secondaryLabel,
+  secondaryAria = secondaryLabel,
+  installCommand,
+  linkEntireCard = false,
+} = Astro.props;
+
+const Wrapper = linkEntireCard ? "a" : Fragment;
+const wrapperProps = linkEntireCard
+  ? {
+      href: primaryHref,
+      "aria-label": primaryAria,
+      class: `${className} cardLink`,
+    }
+  : {};
+const primaryExternalProps =
+  typeof primaryHref === "string" && primaryHref.startsWith("http")
+    ? { target: "_blank", rel: "noreferrer" }
+    : {};
+const secondaryExternalProps =
+  typeof secondaryHref === "string" && secondaryHref.startsWith("http")
+    ? { target: "_blank", rel: "noreferrer" }
+    : {};
 ---
 
-<a href={url} aria-label={urlAria} class={`${className} cardLink`}>
-  <article class="card">
-    <p class="releaseDate">{releaseDate}</p>
+<Wrapper {...wrapperProps}>
+  <article class={linkEntireCard ? "card isInteractive" : `${className} card`}>
+    <p class="meta">{meta}</p>
     <h3>{title}</h3>
     <div class="cardContent">
-            <slot />
+      {summary.map((paragraph: string) => (
+        <p>{paragraph}</p>
+      ))}
     </div>
+    {installCommand && (
+      <div class="codeSample" aria-label="Install command">
+        <span class="codeSampleLabel">install</span>
+        <pre class="commandBlock"><code>{installCommand}</code></pre>
+        <button
+          type="button"
+          class="copyButton"
+          data-copy-text={installCommand}
+          aria-label={`Copy command: ${installCommand}`}
+          title="Copy install command"
+        >
+          <svg
+            class="copyIcon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M9 9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V9Zm-4 6H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+          <span class="srOnly">Copy install command</span>
+        </button>
+      </div>
+    )}
     <div class="cardEnd">
-      <Icon name="simple-line-icons:arrow-right" class="seeMoreIcon" />
+      {secondaryHref && secondaryLabel && (
+        <a
+          href={secondaryHref}
+          aria-label={secondaryAria}
+          class="cardLinkText"
+          {...secondaryExternalProps}
+        >
+          <span>{secondaryLabel}</span>
+          <Icon name="simple-line-icons:social-github" class="actionIcon" />
+        </a>
+      )}
+      {!linkEntireCard && primaryHref && primaryLabel && (
+        <a
+          href={primaryHref}
+          aria-label={primaryAria}
+          class="cardLinkText"
+          {...primaryExternalProps}
+        >
+          <span>{primaryLabel}</span>
+          <Icon name="simple-line-icons:arrow-right" class="actionIcon" />
+        </a>
+      )}
+      {linkEntireCard && (
+        <span class="cardChevron" aria-hidden="true">
+          <Icon name="simple-line-icons:arrow-right" class="chevronIcon" />
+        </span>
+      )}
     </div>
   </article>
-</a>
+</Wrapper>
 
 <style>
   .cardLink {
+    display: block;
     text-decoration: none;
     color: inherit;
   }
@@ -26,14 +116,9 @@ const { class: className = "", title, url, urlAria, releaseDate } = Astro.props;
   .card {
     padding: 20px;
     border-radius: 8px;
-    cursor: pointer;
-    transition: box-shadow 0.2s ease;
-
     background-color: var(--background-color-lightened);
-
     transition: transform 0.2s ease, box-shadow 0.3s ease-in-out;
     transform-origin: center;
-
     color: var(--white);
   }
 
@@ -47,10 +132,92 @@ const { class: className = "", title, url, urlAria, releaseDate } = Astro.props;
   }
 
   .cardContent p:first-of-type {
-    margin-top: 2rem;
+    margin-top: 1.75rem;
   }
 
-  .card:hover {
+  .codeSample {
+    margin-top: 2rem;
+    width: min(100%, 34rem);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    border-radius: 12px;
+    background-color: rgba(22, 23, 30, 0.88);
+    padding: 0.9rem 1rem;
+    text-align: left;
+    overflow: hidden;
+  }
+
+  .codeSampleLabel {
+    flex: 0 0 auto;
+    color: rgba(255, 255, 253, 0.72);
+    font-family: var(--fira-code), monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: lowercase;
+  }
+
+  .copyButton {
+    appearance: none;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--accent1);
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    flex: 0 0 auto;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .copyButton:hover {
+    background: rgba(157, 109, 241, 0.14);
+    color: var(--white);
+  }
+
+  .copyButton[data-copy-state="copied"] {
+    background: rgba(157, 109, 241, 0.22);
+    color: var(--accent1-link-hover);
+  }
+
+  .copyIcon {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  .commandBlock {
+    flex: 1 1 auto;
+    margin: 0;
+    overflow-x: auto;
+    min-width: 0;
+  }
+
+  .commandBlock code {
+    display: block;
+    padding: 0;
+    line-height: 1.4;
+    background: transparent;
+    white-space: nowrap;
+    overflow-x: auto;
+    color: var(--white);
+    font-size: 1rem;
+  }
+
+  @media (max-width: 520px) {
+    .codeSample {
+      gap: 0.65rem;
+      padding: 0.8rem 0.85rem;
+    }
+  }
+
+  .isInteractive:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transform: scale(1.01);
     color: var(--white);
@@ -60,26 +227,65 @@ const { class: className = "", title, url, urlAria, releaseDate } = Astro.props;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: 2rem;
   }
 
-  .seeMoreIcon {
-    height: 32px;
-    color: var(--accent1);
-    transition: transform 0.2s ease;
+  .cardLinkText {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
   }
 
-  .card:hover .seeMoreIcon {
+  .cardLinkText:hover {
+    transform: translateY(-1px);
+    text-decoration: none;
     color: var(--accent1-link-hover);
-    transform: scale(1.2);
   }
 
-  .releaseDate {
+  .actionIcon {
+    font-size: 0.95rem;
+  }
+
+  .cardChevron {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent1);
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  .chevronIcon {
+    height: 32px;
+  }
+
+  .isInteractive:hover .cardChevron {
+    color: var(--accent1-link-hover);
+    transform: scale(1.15);
+  }
+
+  .meta {
     margin-bottom: 0rem;
     color: var(--accent1);
     font-style: italic;
     font-size: medium;
     text-wrap: wrap;
+  }
+
+  .srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 </style>
