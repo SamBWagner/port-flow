@@ -18,6 +18,17 @@ export type HomeProjectEntry = {
 
 export const blogs: HomeBlogEntry[] = [
   {
+    title: "Learn How to Learn",
+    href: "/blogs/learn-how-to-learn",
+    ariaLabel: "navigate to the Learn How to Learn article",
+    publishDate: "April 21, 2026",
+    year: "2026",
+    summary: [
+      "Everyone wants to get better at stuff. But, from my experience, not many people actually have a concrete way of doing it.",
+      "This is a simple framework for learning in a structured way, especially in a world where it's easy to let AI do the thinking for you.",
+    ],
+  },
+  {
     title: "Keeping Your Software Project Maintainable",
     href: "/blogs/keeping-your-software-project-maintainable",
     ariaLabel:
