@@ -2,7 +2,7 @@
 import Header from "../components/Header.astro";
 import BlogCard from "../components/BlogCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { blogs, projects } from "../data/homeContent";
+import { blogs, projects, resources } from "../data/homeContent";
 
 import { Icon } from "astro-icon/components";
 
@@ -51,6 +51,19 @@ const blogGroups = blogs.reduce((groups, blog) => {
             tabindex="-1"
           >
             Projects
+          </button>
+          <button
+            type="button"
+            class="sectionNavButton"
+            data-section-trigger
+            data-section="resources"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-resources"
+            id="tab-resources"
+            tabindex="-1"
+          >
+            Resources
           </button>
         </div>
       </div>
@@ -106,6 +119,28 @@ const blogGroups = blogs.reduce((groups, blog) => {
             />
           ))}
         </section>
+
+        <section
+          class="blogCardContainer sectionPanel"
+          data-section-panel="resources"
+          id="panel-resources"
+          role="tabpanel"
+          aria-labelledby="tab-resources"
+          hidden
+        >
+          {resources.map((resource) => (
+            <BlogCard
+              class="container"
+              title={resource.title}
+              meta={resource.category}
+              summary={resource.summary}
+              primaryHref={resource.url}
+              primaryLabel="Visit resource"
+              primaryAria={`Visit ${resource.title}`}
+              primaryIcon="simple-line-icons:share-alt"
+            />
+          ))}
+        </section>
       </div>
     </section>
 
@@ -142,7 +177,7 @@ const blogGroups = blogs.reduce((groups, blog) => {
 </BaseLayout>
 
 <script is:inline>
-  const validSections = ["blogs", "projects"];
+  const validSections = ["blogs", "projects", "resources"];
   const tabButtons = Array.from(document.querySelectorAll("[data-section-trigger]"));
   const panels = Array.from(document.querySelectorAll("[data-section-panel]"));
 

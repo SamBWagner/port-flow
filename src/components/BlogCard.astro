@@ -10,6 +10,7 @@ const {
   primaryHref,
   primaryLabel,
   primaryAria = primaryLabel,
+  primaryIcon = "simple-line-icons:arrow-right",
   secondaryHref,
   secondaryLabel,
   secondaryAria = secondaryLabel,
@@ -94,7 +95,7 @@ const secondaryExternalProps =
           {...primaryExternalProps}
         >
           <span>{primaryLabel}</span>
-          <Icon name="simple-line-icons:arrow-right" class="actionIcon" />
+          <Icon name={primaryIcon} class="actionIcon" />
         </a>
       )}
       {linkEntireCard && (
@@ -109,11 +110,15 @@ const secondaryExternalProps =
 <style>
   .cardLink {
     display: block;
+    width: 100%;
+    max-width: var(--max-width);
     text-decoration: none;
     color: inherit;
   }
 
   .card {
+    width: 100%;
+    max-width: var(--max-width);
     padding: 20px;
     border-radius: 8px;
     background-color: var(--background-color-lightened);

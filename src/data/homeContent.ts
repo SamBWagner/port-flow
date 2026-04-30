@@ -16,6 +16,13 @@ export type HomeProjectEntry = {
   installCommand?: string;
 };
 
+export type HomeResourceEntry = {
+  title: string;
+  category: string;
+  summary: string[];
+  url: string;
+};
+
 export const blogs: HomeBlogEntry[] = [
   {
     title: "Learn How to Learn",
@@ -129,6 +136,17 @@ export const projects: HomeProjectEntry[] = [
     liveUrl: "https://github.com/SamBWagner/braeburn",
     repoUrl: "https://github.com/SamBWagner/braeburn",
     installCommand: "npm install -g braeburn",
+  },
+];
+
+export const resources: HomeResourceEntry[] = [
+  {
+    title: "Laws of UX",
+    category: "UX Design",
+    summary: [
+      "A handy reference collection of UX principles, cognitive biases, and usability heuristics to keep in mind when designing interfaces.",
+    ],
+    url: "https://lawsofux.com",
   },
 ];
 
