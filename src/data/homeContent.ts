@@ -148,6 +148,14 @@ export const resources: HomeResourceEntry[] = [
     ],
     url: "https://lawsofux.com",
   },
+  {
+    title: "Refactoring.Guru",
+    category: "Software Design",
+    summary: [
+      "A clear reference for refactoring, design patterns, SOLID principles, code smells, and practical examples across programming languages.",
+    ],
+    url: "https://refactoring.guru",
+  },
 ];
 
 export function parseDisplayDate(dateString: string) {
