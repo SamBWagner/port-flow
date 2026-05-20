@@ -109,12 +109,14 @@ const blogGroups = blogs.reduce((groups, blog) => {
               title={project.title}
               meta={project.releaseDate}
               summary={project.summary}
-              primaryHref={project.liveUrl !== project.repoUrl ? project.liveUrl : undefined}
-              primaryLabel={project.liveUrl !== project.repoUrl ? "Visit site" : undefined}
-              primaryAria={project.liveUrl !== project.repoUrl ? `Visit ${project.title}` : undefined}
-              secondaryHref={project.repoUrl}
-              secondaryLabel="View code"
-              secondaryAria={`View ${project.title} on GitHub`}
+              primaryHref={project.primaryAction.href}
+              primaryLabel={project.primaryAction.label}
+              primaryAria={project.primaryAction.ariaLabel}
+              primaryIcon={project.primaryAction.icon}
+              secondaryHref={project.secondaryAction?.href}
+              secondaryLabel={project.secondaryAction?.label}
+              secondaryAria={project.secondaryAction?.ariaLabel}
+              secondaryIcon={project.secondaryAction?.icon}
               installCommand={project.installCommand}
             />
           ))}

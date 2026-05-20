@@ -14,6 +14,7 @@ const {
   secondaryHref,
   secondaryLabel,
   secondaryAria = secondaryLabel,
+  secondaryIcon = "simple-line-icons:share-alt",
   installCommand,
   linkEntireCard = false,
 } = Astro.props;
@@ -84,7 +85,7 @@ const secondaryExternalProps =
           {...secondaryExternalProps}
         >
           <span>{secondaryLabel}</span>
-          <Icon name="simple-line-icons:social-github" class="actionIcon" />
+          <Icon name={secondaryIcon} class="actionIcon" />
         </a>
       )}
       {!linkEntireCard && primaryHref && primaryLabel && (

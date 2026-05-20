@@ -11,9 +11,17 @@ export type HomeProjectEntry = {
   title: string;
   releaseDate: string;
   summary: string[];
-  liveUrl: string;
-  repoUrl: string;
+  primaryAction: HomeProjectAction;
+  secondaryAction?: HomeProjectAction;
+  feedUrl?: string;
   installCommand?: string;
+};
+
+export type HomeProjectAction = {
+  href: string;
+  label: string;
+  ariaLabel: string;
+  icon?: string;
 };
 
 export type HomeResourceEntry = {
@@ -117,14 +125,36 @@ export const blogs: HomeBlogEntry[] = [
 
 export const projects: HomeProjectEntry[] = [
   {
+    title: "Grimora",
+    releaseDate: "May 20, 2026",
+    summary: [
+      "A native Magic: The Gathering card search and list-building app for iOS, iPadOS, macOS, and visionOS.",
+      "Built around fast local search, card-image browsing, list management, price snapshots, and iCloud-backed lists when available.",
+    ],
+    primaryAction: {
+      href: "/apps/grimora",
+      label: "App page",
+      ariaLabel: "Visit the Grimora app page",
+    },
+  },
+  {
     title: "TwentyTwenty",
     releaseDate: "March 19, 2026",
     summary: [
       "A retrospective web app for teams. Run retro sessions with your project members, collect feedback, vote on items, bundle themes, assign actions, and hold each other accountable in the next session's review phase.",
       "Built to help teams turn retros into a rhythm instead of a one-off conversation.",
     ],
-    liveUrl: "https://twentytwenty.dev",
-    repoUrl: "https://github.com/SamBWagner/twenty-twenty",
+    primaryAction: {
+      href: "https://twentytwenty.dev",
+      label: "Visit site",
+      ariaLabel: "Visit TwentyTwenty",
+    },
+    secondaryAction: {
+      href: "https://github.com/SamBWagner/twenty-twenty",
+      label: "View code",
+      ariaLabel: "View TwentyTwenty on GitHub",
+      icon: "simple-line-icons:social-github",
+    },
   },
   {
     title: "Braeburn",
@@ -133,8 +163,12 @@ export const projects: HomeProjectEntry[] = [
       "A macOS system updater CLI that keeps tools installed via Homebrew, npm, pip, .NET, and others up to date.",
       "Built for keeping a Mac development toolchain current without turning updates into a manual chore.",
     ],
-    liveUrl: "https://github.com/SamBWagner/braeburn",
-    repoUrl: "https://github.com/SamBWagner/braeburn",
+    primaryAction: {
+      href: "https://github.com/SamBWagner/braeburn",
+      label: "View code",
+      ariaLabel: "View Braeburn on GitHub",
+      icon: "simple-line-icons:social-github",
+    },
     installCommand: "npm install -g braeburn",
   },
 ];

@@ -1,0 +1,234 @@
+---
+import "../styles/global.css";
+
+const {
+  title,
+  description,
+  currentPath = "",
+} = Astro.props;
+
+const pageTitle = title ? `${title} - Sam Wagner` : "Sam Wagner";
+const appLinks = [
+  { href: "/apps/grimora", label: "Grimora" },
+  { href: "/apps/grimora/privacy", label: "Privacy" },
+  { href: "/apps/grimora/support", label: "Support" },
+  { href: "/apps/grimora/legal", label: "Legal" },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={description}>
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Fira+Code:wght@400&family=Neuton:wght@200;300;400;700;800&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="appHeader">
+      <a href="/" class="siteLink" title="Go back home">Sam Wagner</a>
+      <nav class="appNav" aria-label="Grimora pages">
+        {appLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={["appNavLink", { isActive: currentPath === link.href }]}
+            aria-current={currentPath === link.href ? "page" : undefined}
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+    </header>
+
+    <main class="appMain">
+      <slot />
+    </main>
+
+    <footer class="appFooter">
+      <a href="/" class="footerHome">Sam Wagner</a>
+      <nav class="footerNav" aria-label="Grimora footer pages">
+        {appLinks.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+      </nav>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :global(body) {
+    height: auto;
+    min-height: 100dvh;
+    align-items: stretch;
+  }
+
+  .appHeader,
+  .appFooter {
+    width: min(calc(100% - 2rem), 72rem);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .appHeader {
+    padding: 1.5rem 0;
+  }
+
+  .siteLink,
+  .footerHome {
+    color: var(--accent2);
+    font-family: var(--neuton), serif;
+    font-size: 1.55rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .siteLink:hover,
+  .footerHome:hover {
+    color: var(--accent1-link-hover);
+  }
+
+  .appNav,
+  .footerNav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.25rem;
+  }
+
+  .appNavLink,
+  .footerNav a {
+    color: var(--white);
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  .appNavLink {
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.2rem;
+  }
+
+  .appNavLink:hover,
+  .footerNav a:hover,
+  .appNavLink.isActive {
+    color: var(--accent1-link-hover);
+  }
+
+  .appNavLink.isActive {
+    border-color: var(--accent2);
+  }
+
+  .appMain {
+    width: 100%;
+  }
+
+  :global(.contentPage) {
+    width: min(calc(100% - 2rem), 52rem);
+    margin: 3.5rem auto 0;
+  }
+
+  :global(.contentPageHeader) {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  :global(.contentPageHeader .eyebrow),
+  :global(.contentSection .eyebrow) {
+    margin: 0 0 0.5rem;
+    color: var(--accent1-link-hover);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  :global(.contentPage h1) {
+    margin: 0;
+    color: var(--accent2);
+    font-size: 4rem;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  :global(.contentPage h2) {
+    margin: 0 0 0.75rem;
+    color: var(--accent2);
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+
+  :global(.contentPage h3) {
+    margin: 0 0 0.35rem;
+    color: var(--white);
+    font-size: 1.45rem;
+    letter-spacing: 0;
+  }
+
+  :global(.contentPage p),
+  :global(.contentPage li) {
+    color: rgba(255, 255, 253, 0.86);
+  }
+
+  :global(.contentIntro) {
+    color: rgba(255, 255, 253, 0.9);
+    font-size: 1.22rem;
+  }
+
+  :global(.contentSection) {
+    margin-top: 2.25rem;
+    padding-top: 2.25rem;
+    border-top: 1px solid rgba(255, 255, 253, 0.16);
+  }
+
+  :global(.linkPanel) {
+    margin-top: 1.25rem;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 253, 0.14);
+    border-radius: 8px;
+    background: rgba(72, 72, 107, 0.34);
+  }
+
+  :global(.linkPanel p) {
+    margin-top: 0;
+  }
+
+  :global(.lastUpdated) {
+    color: var(--accent1-link-hover);
+    font-style: italic;
+    text-align: center;
+  }
+
+  .appFooter {
+    padding: 2.5rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 253, 0.18);
+  }
+
+  @media (max-width: 720px) {
+    .appHeader,
+    .appFooter {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .appNav,
+    .footerNav {
+      justify-content: flex-start;
+    }
+
+    :global(.contentPage h1) {
+      font-size: 3rem;
+    }
+  }
+</style>

@@ -24,7 +24,7 @@ export async function GET(context) {
     title: project.title,
     description: project.summary.join(' '),
     pubDate: parseDisplayDate(project.releaseDate),
-    link: project.liveUrl,
+    link: project.feedUrl ?? project.primaryAction.href,
   }));
 
   const items = [...blogItems, ...projectItems];

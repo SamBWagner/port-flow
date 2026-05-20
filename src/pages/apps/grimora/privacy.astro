@@ -1,0 +1,91 @@
+---
+import AppLayout from "../../../layouts/AppLayout.astro";
+---
+
+<AppLayout
+  title="Grimora Privacy"
+  description="Privacy policy for Grimora, a free native Magic: The Gathering card search and list-building app."
+  currentPath="/apps/grimora/privacy"
+>
+  <article class="contentPage">
+    <header class="contentPageHeader">
+      <p class="eyebrow">Grimora</p>
+      <h1>Privacy Policy</h1>
+      <p class="contentIntro">
+        This policy applies to Grimora on iOS, iPadOS, macOS, and visionOS.
+      </p>
+      <p class="lastUpdated">Last updated: May 20, 2026</p>
+    </header>
+
+    <section class="contentSection">
+      <h2>Developer Data Collection</h2>
+      <p>
+        Grimora does not have a Grimora account system, advertising, tracking,
+        developer-operated analytics, or sale of personal data. Sam Wagner does
+        not operate a Grimora backend that stores your card lists, search
+        history, preferences, or card-library data.
+      </p>
+    </section>
+
+    <section class="contentSection">
+      <h2>On-Device Storage</h2>
+      <p>
+        Grimora stores app data on your device so the app can work quickly after
+        setup. This can include the local card database, downloaded card images,
+        image cache, preferences, search history, and user-created lists.
+      </p>
+      <p>
+        You can remove locally stored Grimora data by deleting the app or by
+        using device and system storage controls provided by Apple.
+      </p>
+    </section>
+
+    <section class="contentSection">
+      <h2>iCloud And CloudKit</h2>
+      <p>
+        User-created lists may sync through your Apple ID and iCloud account
+        when iCloud is available and enabled for Grimora. Sam Wagner does not
+        operate, administer, or access your Apple ID or iCloud account.
+      </p>
+      <p>
+        iCloud availability, sync behavior, and account controls are provided by
+        Apple through iOS, iPadOS, macOS, and visionOS.
+      </p>
+    </section>
+
+    <section class="contentSection">
+      <h2>External Services</h2>
+      <p>
+        Grimora downloads card data, card images, pricing data, or related
+        Magic: The Gathering metadata from Scryfall and MTGJSON. Those services
+        may receive normal network request metadata such as IP address, device
+        network details, request time, and requested URLs.
+      </p>
+      <p>
+        Grimora is designed to use local and bulk-style data where possible
+        instead of making excessive live API requests.
+      </p>
+      <div class="linkPanel">
+        <p>Relevant third-party documentation:</p>
+        <ul>
+          <li><a href="https://scryfall.com/docs/api">Scryfall API docs</a></li>
+          <li><a href="https://scryfall.com/docs/api/images">Scryfall card imagery docs</a></li>
+          <li><a href="https://scryfall.com/docs/api/rate-limits">Scryfall rate limits</a></li>
+          <li><a href="https://scryfall.com/docs/terms">Scryfall terms</a></li>
+          <li><a href="https://mtgjson.com/license/">MTGJSON license</a></li>
+          <li><a href="https://company.wizards.com/en/legal/fancontentpolicy">Wizards Fan Content Policy</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contentSection">
+      <h2>Support</h2>
+      <p>
+        For privacy questions or support requests, use the
+        <a href="/apps/grimora/support">Grimora support page</a>.
+        Do not include passwords, private Apple ID details, or sensitive personal
+        information in support reports.
+      </p>
+    </section>
+  </article>
+</AppLayout>

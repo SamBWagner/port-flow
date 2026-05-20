@@ -1,0 +1,325 @@
+---
+import AppLayout from "../../../layouts/AppLayout.astro";
+
+const screenshots = [
+  {
+    src: "/apps/grimora/mac-search-library.png",
+    alt: "Grimora on macOS showing a card search grid with filters and a sidebar.",
+    title: "Fast local search",
+  },
+  {
+    src: "/apps/grimora/ipad-list-detail-printings.png",
+    alt: "Grimora on iPadOS showing a list detail view, selected card, printings, and value details.",
+    title: "List details and printings",
+  },
+  {
+    src: "/apps/grimora/iphone-card-value-details.png",
+    alt: "Grimora on iPhone showing an Arcane Signet card detail page with value and metadata sections.",
+    title: "Card values and metadata",
+  },
+  {
+    src: "/apps/grimora/visionos-search-results.png",
+    alt: "Grimora on visionOS showing card search results in a spatial window.",
+    title: "Native visionOS support",
+  },
+];
+---
+
+<AppLayout
+  title="Grimora"
+  description="Grimora is a free native Magic: The Gathering card search and list-building app for iOS, iPadOS, macOS, and visionOS."
+  currentPath="/apps/grimora"
+>
+  <section class="hero" aria-labelledby="grimora-heading">
+    <div class="heroContent">
+      <p class="eyebrow">Native card search and list building</p>
+      <h1 id="grimora-heading">Grimora</h1>
+      <p class="heroLead">
+        A free Magic: The Gathering utility for searching cards, building lists,
+        checking printings, and browsing card details across iOS, iPadOS, macOS,
+        and visionOS.
+      </p>
+      <div class="heroActions" aria-label="Grimora page links">
+        <a href="/apps/grimora/privacy">Privacy</a>
+        <a href="/apps/grimora/support">Support</a>
+        <a href="/apps/grimora/legal">Legal</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="platformBand" aria-label="Supported platforms">
+    <span>iOS</span>
+    <span>iPadOS</span>
+    <span>macOS</span>
+    <span>visionOS</span>
+  </section>
+
+  <section class="introSection">
+    <div class="introCopy">
+      <h2>Search, Build, Browse</h2>
+      <p>
+        Grimora keeps card data local where possible, so search and list work
+        stays quick after setup. Use it to explore the card library, create
+        lists, inspect printings, and keep track of card values without creating
+        a Grimora account.
+      </p>
+      <p class="notice">
+        Grimora is unofficial fan content. It is not affiliated with, approved
+        by, endorsed by, or sponsored by Wizards of the Coast, Scryfall,
+        MTGJSON, or Apple.
+      </p>
+    </div>
+    <div class="featureGrid" aria-label="Grimora features">
+      <article>
+        <h3>Card Search</h3>
+        <p>Search across the card library with filters, sorting, and card-grid browsing.</p>
+      </article>
+      <article>
+        <h3>Lists</h3>
+        <p>Create and manage card lists with grid and detail views across devices.</p>
+      </article>
+      <article>
+        <h3>Printings</h3>
+        <p>Compare printings, card metadata, image variants, and useful set details.</p>
+      </article>
+      <article>
+        <h3>Values</h3>
+        <p>View local value snapshots and list totals where pricing data is available.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="gallerySection" aria-labelledby="screenshots-heading">
+    <div class="sectionHeader">
+      <p class="eyebrow">Screenshots</p>
+      <h2 id="screenshots-heading">Built For Apple Platforms</h2>
+    </div>
+    <div class="screenshotGrid">
+      {screenshots.map((screenshot) => (
+        <figure>
+          <img src={screenshot.src} alt={screenshot.alt} loading="lazy">
+          <figcaption>{screenshot.title}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+</AppLayout>
+
+<style>
+  .hero {
+    min-height: 54svh;
+    padding: 4rem max(1rem, calc((100% - 72rem) / 2)) 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 253, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 253, 0.08);
+  }
+
+  .hero::before,
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  .hero::before {
+    background-image: url("/apps/grimora/mac-search-library.png");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.4;
+  }
+
+  .hero::after {
+    background:
+      linear-gradient(90deg, rgba(22, 23, 30, 0.96) 0%, rgba(22, 23, 30, 0.78) 46%, rgba(22, 23, 30, 0.44) 100%),
+      linear-gradient(0deg, rgba(22, 23, 30, 0.34), rgba(22, 23, 30, 0.34));
+  }
+
+  .heroContent {
+    width: min(100%, 45rem);
+  }
+
+  .eyebrow {
+    margin: 0 0 0.75rem;
+    color: var(--accent1-link-hover);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .hero h1 {
+    margin: 0;
+    color: var(--white);
+    font-size: 5rem;
+    line-height: 0.95;
+    letter-spacing: 0;
+    text-shadow: 0 1px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  .heroLead {
+    max-width: 42rem;
+    margin: 1.5rem 0 0;
+    color: rgba(255, 255, 253, 0.9);
+    font-size: 1.35rem;
+    line-height: 1.55;
+  }
+
+  .heroActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 2rem;
+  }
+
+  .heroActions a {
+    border: 1px solid rgba(255, 255, 253, 0.28);
+    border-radius: 8px;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.72rem 1rem;
+    text-decoration: none;
+    background: rgba(22, 23, 30, 0.54);
+  }
+
+  .heroActions a:hover {
+    border-color: var(--accent1-link-hover);
+    color: var(--accent1-link-hover);
+  }
+
+  .platformBand {
+    width: min(calc(100% - 2rem), 72rem);
+    margin: 1.25rem auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .platformBand span {
+    border: 1px solid rgba(255, 255, 253, 0.18);
+    border-radius: 8px;
+    background: rgba(72, 72, 107, 0.54);
+    color: var(--white);
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.5rem 0.85rem;
+  }
+
+  .introSection,
+  .gallerySection {
+    width: min(calc(100% - 2rem), 72rem);
+    margin: 4rem auto 0;
+  }
+
+  .introSection {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .introCopy h2,
+  .sectionHeader h2 {
+    margin: 0;
+    color: var(--accent2);
+    letter-spacing: 0;
+  }
+
+  .introCopy p {
+    color: rgba(255, 255, 253, 0.86);
+  }
+
+  .notice {
+    border-left: 3px solid var(--accent2);
+    padding-left: 1rem;
+  }
+
+  .featureGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .featureGrid article {
+    min-height: 11rem;
+    padding: 1.25rem;
+    border: 1px solid rgba(255, 255, 253, 0.14);
+    border-radius: 8px;
+    background: rgba(72, 72, 107, 0.34);
+  }
+
+  .featureGrid h3 {
+    margin: 0;
+    color: var(--white);
+    font-size: 1.55rem;
+    letter-spacing: 0;
+  }
+
+  .featureGrid p {
+    margin-bottom: 0;
+    color: rgba(255, 255, 253, 0.82);
+    font-size: 1rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 1.5rem;
+  }
+
+  .screenshotGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  figure img {
+    display: block;
+    aspect-ratio: 16 / 10;
+    border: 1px solid rgba(255, 255, 253, 0.14);
+    object-fit: cover;
+  }
+
+  figure:nth-child(3) img {
+    object-position: top;
+  }
+
+  figcaption {
+    margin-top: 0.55rem;
+    color: rgba(255, 255, 253, 0.78);
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 760px) {
+    .hero {
+      min-height: 48svh;
+      padding-top: 2.5rem;
+      padding-bottom: 2.25rem;
+    }
+
+    .hero h1 {
+      font-size: 3.1rem;
+    }
+
+    .heroLead {
+      font-size: 1.1rem;
+    }
+
+    .introSection,
+    .screenshotGrid {
+      grid-template-columns: 1fr;
+    }
+
+    .featureGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
