@@ -7,6 +7,8 @@ export type HomeBlogEntry = {
   summary: string[];
 };
 
+import { GRIMORA_APP_STORE_URL } from "./grimoraReleases";
+
 export type HomeProjectEntry = {
   title: string;
   releaseDate: string;
@@ -15,6 +17,7 @@ export type HomeProjectEntry = {
   secondaryAction?: HomeProjectAction;
   feedUrl?: string;
   installCommand?: string;
+  appStoreUrl?: string;
 };
 
 export type HomeProjectAction = {
@@ -128,14 +131,15 @@ export const projects: HomeProjectEntry[] = [
     title: "Grimora",
     releaseDate: "May 20, 2026",
     summary: [
-      "A native Magic: The Gathering card search and list-building app for iOS, iPadOS, macOS, and visionOS.",
-      "Built around fast local search, card-image browsing, list management, price snapshots, and iCloud-backed lists when available.",
+      "A native Magic: The Gathering card search and collection-building app for iOS, iPadOS, macOS, and visionOS.",
+      "Built around fast local search, card-image browsing, collection management, price snapshots, and iCloud-backed collections when available.",
     ],
     primaryAction: {
       href: "/apps/grimora",
       label: "App page",
       ariaLabel: "Visit the Grimora app page",
     },
+    appStoreUrl: GRIMORA_APP_STORE_URL,
   },
   {
     title: "TwentyTwenty",
