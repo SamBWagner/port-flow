@@ -16,7 +16,6 @@ const {
   secondaryAria = secondaryLabel,
   secondaryIcon = "simple-line-icons:share-alt",
   installCommand,
-  appStoreUrl,
   linkEntireCard = false,
 } = Astro.props;
 
@@ -75,24 +74,6 @@ const secondaryExternalProps =
           </svg>
           <span class="srOnly">Copy install command</span>
         </button>
-      </div>
-    )}
-    {appStoreUrl && (
-      <div class="appStore">
-        <a
-          href={appStoreUrl}
-          class="appStoreLink"
-          aria-label={`Download ${title} on the App Store`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src="/apps/grimora/download-on-the-app-store.svg"
-            alt="Download on the App Store"
-            width="120"
-            height="40"
-          />
-        </a>
       </div>
     )}
     <div class="cardEnd">
@@ -240,29 +221,6 @@ const secondaryExternalProps =
       gap: 0.65rem;
       padding: 0.8rem 0.85rem;
     }
-  }
-
-  .appStore {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  .appStoreLink {
-    display: inline-flex;
-    text-decoration: none;
-  }
-
-  .appStoreLink img {
-    display: block;
-    height: 46px;
-    width: auto;
-    border-radius: 8px;
-    transition: transform 0.15s ease;
-  }
-
-  .appStoreLink:hover img {
-    transform: translateY(-2px);
   }
 
   .isInteractive:hover {

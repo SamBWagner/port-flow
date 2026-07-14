@@ -17,7 +17,6 @@ export type HomeProjectEntry = {
   secondaryAction?: HomeProjectAction;
   feedUrl?: string;
   installCommand?: string;
-  appStoreUrl?: string;
 };
 
 export type HomeProjectAction = {
@@ -135,11 +134,17 @@ export const projects: HomeProjectEntry[] = [
       "Built around fast local search, card-image browsing, collection management, price snapshots, and iCloud-backed collections when available.",
     ],
     primaryAction: {
-      href: "/apps/grimora",
-      label: "App page",
-      ariaLabel: "Visit the Grimora app page",
+      href: GRIMORA_APP_STORE_URL,
+      label: "Download",
+      ariaLabel: "Download Grimora on the App Store",
+      icon: "simple-line-icons:cloud-download",
     },
-    appStoreUrl: GRIMORA_APP_STORE_URL,
+    secondaryAction: {
+      href: "/apps/grimora",
+      label: "Learn more",
+      ariaLabel: "Learn more about Grimora on its app page",
+      icon: "simple-line-icons:book-open",
+    },
   },
   {
     title: "TwentyTwenty",
