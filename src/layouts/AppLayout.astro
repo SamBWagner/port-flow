@@ -216,19 +216,37 @@ const appLinks = [
   }
 
   @media (max-width: 720px) {
+    :global(.contentPage h1) {
+      font-size: 3rem;
+    }
+  }
+
+  /* Masthead: once the brand and links can no longer share a row, the brand
+     takes its own line and the nav becomes a full-width bar — separated by a
+     hairline divider, links spread edge to edge — rather than reflowing. */
+  @media (max-width: 560px) {
     .appHeader,
     .appFooter {
-      align-items: flex-start;
       flex-direction: column;
+      align-items: stretch;
+      gap: 0;
     }
 
     .appNav,
     .footerNav {
-      justify-content: flex-start;
+      width: 100%;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      gap: 0.5rem;
+      border-top: 1px solid rgba(255, 255, 253, 0.14);
     }
 
-    :global(.contentPage h1) {
-      font-size: 3rem;
+    .appNavLink,
+    .footerNav a {
+      font-size: clamp(0.82rem, 3.2vw, 1rem);
+      white-space: nowrap;
     }
   }
 </style>

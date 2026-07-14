@@ -25,7 +25,8 @@
     "@astrojs/rss": "^4.0.17",
     "@iconify-json/simple-line-icons": "^1.2.1",
     "astro": "^5.18.1",
-    "astro-icon": "^1.1.5"
+    "astro-icon": "^1.1.5",
+    "marked": "^18.0.6"
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.7.10"

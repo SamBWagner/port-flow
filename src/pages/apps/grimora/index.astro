@@ -1,5 +1,16 @@
 ---
+import { marked } from "marked";
 import AppLayout from "../../../layouts/AppLayout.astro";
+import {
+  getGrimoraReleases,
+  GRIMORA_APP_STORE_URL,
+  GRIMORA_RELEASES_URL,
+} from "../../../data/grimoraReleases";
+
+const releases = await getGrimoraReleases();
+const latestRelease = releases[0]
+  ? { ...releases[0], html: marked.parse(releases[0].body) as string }
+  : null;
 
 const screenshots = [
   {
@@ -9,8 +20,8 @@ const screenshots = [
   },
   {
     src: "/apps/grimora/ipad-list-detail-printings.png",
-    alt: "Grimora on iPadOS showing a list detail view, selected card, printings, and value details.",
-    title: "List details and printings",
+    alt: "Grimora on iPadOS showing a collection detail view, selected card, printings, and value details.",
+    title: "Collection details and printings",
   },
   {
     src: "/apps/grimora/iphone-card-value-details.png",
@@ -27,17 +38,17 @@ const screenshots = [
 
 <AppLayout
   title="Grimora"
-  description="Grimora is a free native Magic: The Gathering card search and list-building app for iOS, iPadOS, macOS, and visionOS."
+  description="Grimora is a free native Magic: The Gathering card search and collection-building app for iOS, iPadOS, macOS, and visionOS."
   currentPath="/apps/grimora"
 >
   <section class="hero" aria-labelledby="grimora-heading">
     <div class="heroContent">
-      <p class="eyebrow">Native card search and list building</p>
+      <p class="eyebrow">Native card search and collection building</p>
       <h1 id="grimora-heading">Grimora</h1>
       <p class="heroLead">
-        A free Magic: The Gathering utility for searching cards, building lists,
-        checking printings, and browsing card details across iOS, iPadOS, macOS,
-        and visionOS.
+        A free Magic: The Gathering utility for searching cards, building
+        collections, checking printings, and browsing card details across iOS,
+        iPadOS, macOS, and visionOS.
       </p>
       <div class="heroActions" aria-label="Grimora page links">
         <a href="/apps/grimora/privacy">Privacy</a>
@@ -54,14 +65,39 @@ const screenshots = [
     <span>visionOS</span>
   </section>
 
+  <section class="downloadSection" aria-labelledby="download-heading">
+    <div class="sectionHeader">
+      <p class="eyebrow">Download</p>
+      <h2 id="download-heading">Get Grimora</h2>
+    </div>
+    <p class="downloadLead">
+      Grimora is a free, universal purchase on the App Store &mdash; download it
+      on iPhone, iPad, Mac, and Apple Vision Pro.
+    </p>
+    <a
+      class="badgeLink"
+      href={GRIMORA_APP_STORE_URL}
+      rel="noopener"
+      aria-label="Download Grimora on the App Store"
+    >
+      <img
+        src="/apps/grimora/download-on-the-app-store.svg"
+        alt="Download on the App Store"
+        width="120"
+        height="40"
+      >
+    </a>
+  </section>
+
   <section class="introSection">
     <div class="introCopy">
+      <p class="eyebrow">Overview</p>
       <h2>Search, Build, Browse</h2>
       <p>
-        Grimora keeps card data local where possible, so search and list work
-        stays quick after setup. Use it to explore the card library, create
-        lists, inspect printings, and keep track of card values without creating
-        a Grimora account.
+        Grimora keeps card data local where possible, so searching and building
+        collections stays quick after setup. Use it to explore the card library,
+        scan cards, create collections, inspect printings, and keep track of
+        card values without creating a Grimora account.
       </p>
       <p class="notice">
         Grimora is unofficial fan content. It is not affiliated with, approved
@@ -75,8 +111,8 @@ const screenshots = [
         <p>Search across the card library with filters, sorting, and card-grid browsing.</p>
       </article>
       <article>
-        <h3>Lists</h3>
-        <p>Create and manage card lists with grid and detail views across devices.</p>
+        <h3>Collections</h3>
+        <p>Create and manage collections with grid and detail views across devices.</p>
       </article>
       <article>
         <h3>Printings</h3>
@@ -84,7 +120,11 @@ const screenshots = [
       </article>
       <article>
         <h3>Values</h3>
-        <p>View local value snapshots and list totals where pricing data is available.</p>
+        <p>View local value snapshots and collection totals where pricing data is available.</p>
+      </article>
+      <article>
+        <h3>Scry</h3>
+        <p>Scan cards with your camera and Grimora recognises them on-device, filing them into a Scanned collection.</p>
       </article>
     </div>
   </section>
@@ -103,6 +143,30 @@ const screenshots = [
       ))}
     </div>
   </section>
+
+  {latestRelease && (
+    <section class="releasesSection" aria-labelledby="releases-heading">
+      <div class="sectionHeader">
+        <p class="eyebrow">Release Notes</p>
+        <h2 id="releases-heading">What's New</h2>
+      </div>
+      <article class="releaseCard">
+        <header class="releaseHeader">
+          <h3>{latestRelease.version}</h3>
+          {latestRelease.date && <p class="releaseDate">{latestRelease.date}</p>}
+        </header>
+        <div class="releaseNotes" set:html={latestRelease.html} />
+      </article>
+      <a
+        class="releasesMore"
+        href={GRIMORA_RELEASES_URL}
+        rel="noopener"
+        target="_blank"
+      >
+        See all releases on GitHub &rarr;
+      </a>
+    </section>
+  )}
 </AppLayout>
 
 <style>
@@ -111,6 +175,8 @@ const screenshots = [
     padding: 4rem max(1rem, calc((100% - 72rem) / 2)) 3rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     position: relative;
     isolation: isolate;
     overflow: hidden;
@@ -135,12 +201,13 @@ const screenshots = [
 
   .hero::after {
     background:
-      linear-gradient(90deg, rgba(22, 23, 30, 0.96) 0%, rgba(22, 23, 30, 0.78) 46%, rgba(22, 23, 30, 0.44) 100%),
+      linear-gradient(180deg, rgba(22, 23, 30, 0.82) 0%, rgba(22, 23, 30, 0.88) 100%),
       linear-gradient(0deg, rgba(22, 23, 30, 0.34), rgba(22, 23, 30, 0.34));
   }
 
   .heroContent {
     width: min(100%, 45rem);
+    margin: 0 auto;
   }
 
   .eyebrow {
@@ -164,7 +231,7 @@ const screenshots = [
 
   .heroLead {
     max-width: 42rem;
-    margin: 1.5rem 0 0;
+    margin: 1.5rem auto 0;
     color: rgba(255, 255, 253, 0.9);
     font-size: 1.35rem;
     line-height: 1.55;
@@ -173,6 +240,7 @@ const screenshots = [
   .heroActions {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.85rem;
     margin-top: 2rem;
   }
@@ -198,6 +266,7 @@ const screenshots = [
     margin: 1.25rem auto 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.75rem;
   }
 
@@ -214,7 +283,7 @@ const screenshots = [
   .introSection,
   .gallerySection {
     width: min(calc(100% - 2rem), 72rem);
-    margin: 4rem auto 0;
+    margin: 6rem auto 0;
   }
 
   .introSection {
@@ -231,7 +300,7 @@ const screenshots = [
     letter-spacing: 0;
   }
 
-  .introCopy p {
+  .introCopy p:not(.eyebrow) {
     color: rgba(255, 255, 253, 0.86);
   }
 
@@ -267,8 +336,19 @@ const screenshots = [
     font-size: 1rem;
   }
 
+  /* An odd final card fills the row instead of leaving a trailing gap. */
+  .featureGrid > article:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
   .sectionHeader {
     margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  /* Content-heavy sections read better left-aligned. */
+  .releasesSection .sectionHeader {
+    text-align: left;
   }
 
   .screenshotGrid {
@@ -296,6 +376,120 @@ const screenshots = [
     margin-top: 0.55rem;
     color: rgba(255, 255, 253, 0.78);
     font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .downloadSection,
+  .releasesSection {
+    width: min(calc(100% - 2rem), 72rem);
+    margin: 6rem auto 0;
+  }
+
+  .downloadLead {
+    max-width: 42rem;
+    margin: 0 auto 1.5rem;
+    color: rgba(255, 255, 253, 0.86);
+    font-size: 1.05rem;
+    text-align: center;
+  }
+
+  .badgeLink {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    text-decoration: none;
+  }
+
+  .badgeLink img {
+    display: block;
+    height: 52px;
+    width: auto;
+    border-radius: 8px;
+    transition: transform 0.15s ease;
+  }
+
+  .badgeLink:hover img {
+    transform: translateY(-2px);
+  }
+
+  .releaseCard {
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 253, 0.14);
+    border-radius: 8px;
+    background: rgba(72, 72, 107, 0.34);
+  }
+
+  .releaseHeader {
+    margin-bottom: 1rem;
+  }
+
+  .releaseHeader h3 {
+    margin: 0;
+    color: var(--white);
+    font-size: 1.55rem;
+    letter-spacing: 0;
+  }
+
+  .releaseDate {
+    margin: 0.15rem 0 0;
+    color: var(--accent1-link-hover);
+    font-size: 0.95rem;
+  }
+
+  .releasesMore {
+    display: inline-block;
+    margin-top: 1.25rem;
+    color: var(--accent2);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .releasesMore:hover {
+    color: var(--accent1-link-hover);
+  }
+
+  .releaseNotes {
+    color: rgba(255, 255, 253, 0.86);
+    line-height: 1.6;
+  }
+
+  .releaseNotes :global(p) {
+    margin: 0 0 0.85rem;
+  }
+
+  .releaseNotes :global(ul),
+  .releaseNotes :global(ol) {
+    margin: 0 0 0.85rem;
+    padding-left: 1.35rem;
+  }
+
+  .releaseNotes :global(li) {
+    margin-bottom: 0.4rem;
+  }
+
+  .releaseNotes :global(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .releaseNotes :global(a) {
+    color: var(--accent2);
+  }
+
+  .releaseNotes :global(a:hover) {
+    color: var(--accent1-link-hover);
+  }
+
+  .releaseNotes :global(h1),
+  .releaseNotes :global(h2),
+  .releaseNotes :global(h3) {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .releaseNotes :global(code) {
+    font-family: var(--fira-code), monospace;
+    font-size: 0.9em;
   }
 
   @media (max-width: 760px) {
@@ -320,6 +514,33 @@ const screenshots = [
 
     .featureGrid {
       grid-template-columns: 1fr;
+    }
+
+    .featureGrid article {
+      min-height: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .heroActions {
+      gap: 0.5rem;
+    }
+
+    .heroActions a {
+      flex: 1 1 0;
+      min-width: 0;
+      padding: 0.65rem 0.4rem;
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    .releaseCard {
+      padding: 1.15rem;
+    }
+
+    .releaseNotes :global(ul),
+    .releaseNotes :global(ol) {
+      padding-left: 1.1rem;
     }
   }
 </style>
