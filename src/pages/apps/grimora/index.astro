@@ -1,16 +1,9 @@
 ---
-import { marked } from "marked";
 import AppLayout from "../../../layouts/AppLayout.astro";
 import {
-  getGrimoraReleases,
   GRIMORA_APP_STORE_URL,
   GRIMORA_RELEASES_URL,
 } from "../../../data/grimoraReleases";
-
-const releases = await getGrimoraReleases();
-const latestRelease = releases[0]
-  ? { ...releases[0], html: marked.parse(releases[0].body) as string }
-  : null;
 
 const screenshots = [
   {
@@ -144,30 +137,84 @@ const screenshots = [
     </div>
   </section>
 
-  {latestRelease && (
-    <section class="releasesSection" aria-labelledby="releases-heading">
-      <div class="sectionHeader">
-        <p class="eyebrow">Release Notes</p>
-        <h2 id="releases-heading">What's New</h2>
-      </div>
-      <article class="releaseCard">
-        <header class="releaseHeader">
-          <h3>{latestRelease.version}</h3>
-          {latestRelease.date && <p class="releaseDate">{latestRelease.date}</p>}
-        </header>
-        <div class="releaseNotes" set:html={latestRelease.html} />
-      </article>
-      <a
-        class="releasesMore"
-        href={GRIMORA_RELEASES_URL}
-        rel="noopener"
-        target="_blank"
-      >
-        See all releases on GitHub &rarr;
-      </a>
-    </section>
-  )}
+  <section
+    class="releasesSection"
+    aria-labelledby="releases-heading"
+    data-grimora-releases
+  >
+    <div class="sectionHeader">
+      <p class="eyebrow">Release Notes</p>
+      <h2 id="releases-heading">What's New</h2>
+    </div>
+    <article class="releaseCard" data-release-card hidden>
+      <header class="releaseHeader">
+        <h3 data-release-version></h3>
+        <p class="releaseDate" data-release-date></p>
+      </header>
+      <div class="releaseNotes" data-release-notes></div>
+    </article>
+    <a
+      class="releasesMore"
+      href={GRIMORA_RELEASES_URL}
+      rel="noopener"
+      target="_blank"
+    >
+      See all releases on GitHub &rarr;
+    </a>
+  </section>
 </AppLayout>
+
+<script>
+  import { marked } from "marked";
+  import { GRIMORA_RELEASES_API } from "../../../data/grimoraReleases";
+
+  const section = document.querySelector<HTMLElement>("[data-grimora-releases]");
+
+  async function loadLatestRelease() {
+    if (!section) return;
+    try {
+      const res = await fetch(GRIMORA_RELEASES_API, {
+        headers: { Accept: "application/vnd.github+json" },
+      });
+      if (!res.ok) return;
+
+      const releases = await res.json();
+      if (!Array.isArray(releases)) return;
+
+      // Latest published release, excluding drafts, prereleases, and App Store
+      // review builds (tags containing "review").
+      const release = releases.find(
+        (r) => !r.draft && !r.prerelease && !/review/i.test(r.tag_name),
+      );
+      if (!release) return;
+
+      const card = section.querySelector<HTMLElement>("[data-release-card]");
+      const versionEl = section.querySelector("[data-release-version]");
+      const dateEl = section.querySelector("[data-release-date]");
+      const notesEl = section.querySelector("[data-release-notes]");
+      if (!card || !versionEl || !dateEl || !notesEl) return;
+
+      versionEl.textContent = release.name || release.tag_name;
+      if (release.published_at) {
+        dateEl.textContent = new Intl.DateTimeFormat("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          timeZone: "UTC",
+        }).format(new Date(release.published_at));
+      } else {
+        dateEl.remove();
+      }
+      // Release notes come from the owner's own repo (trusted authoring).
+      notesEl.innerHTML = marked.parse(release.body || "") as string;
+      card.hidden = false;
+    } catch {
+      // Leave just the heading and the "See all releases" link.
+    }
+  }
+
+  loadLatestRelease();
+</script>
 
 <style>
   .hero {
