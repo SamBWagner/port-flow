@@ -17,6 +17,8 @@ primary_region = 'syd'
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
+  # Pre-built Astro output is served by Nginx; 256 MB keeps one warm
+  # Machine without the cost of the previous 1 GB allocation.
+  memory = '256mb'
   cpu_kind = 'shared'
   cpus = 1
